@@ -4,11 +4,12 @@ import "./SignUp.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle, FaPhone } from "react-icons/fa";
 
 const SignUp = () => {
-  const [inputUsername, setInputUsername] = useState("");
+  const [inputUserFullName, setInputUserFullName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputNumber, setInputNumber] = useState("");
   const [inputCPassword, setInputCPassword] = useState("");
+  const [rememberPolicy, setRememberPolicy] = useState(false);
 
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -16,21 +17,31 @@ const SignUp = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
-    console.log(`Username :${inputUsername}, Password :${inputPassword}`);
-    if (inputUsername !== "admin" || inputPassword !== "admin") {
-      setShow(true);
+    console.log(
+      `Username :${inputUserFullName}, Password :${inputPassword}`,
+      inputEmail,
+      inputNumber,
+      inputCPassword,
+      rememberPolicy
+    );
+    if (inputPassword === inputCPassword) {
+      // write API call for user Register
+    } else {
+      alert("Password and Confirm Password should be same");
     }
     setLoading(false);
   };
 
-  const handlePassword = () => {};
+  const handleRememberPolicyChange = () => {
+    setRememberPolicy(!rememberPolicy);
+  };
 
   return (
     <>
       <Col>
         <Form className="shadow p-4 bg-white rounded" onSubmit={handleSubmit}>
           <div className="h4 mt-2 text-center mb-4">Sign In</div>
-          <Form.Group className="mb-4" controlId="username">
+          <Form.Group className="mb-4" controlId="userFullName">
             <InputGroup>
               <InputGroup.Text
                 className="rounded-0 mx-0"
@@ -50,9 +61,9 @@ const SignUp = () => {
                 }}
                 className="rounded-0 mx-0"
                 type="text"
-                value={inputUsername}
-                placeholder="Type Full Name *"
-                onChange={(e) => setInputUsername(e.target.value)}
+                value={inputUserFullName}
+                placeholder="Full Name *"
+                onChange={(e) => setInputUserFullName(e.target.value)}
                 required
               />
             </InputGroup>
@@ -76,9 +87,9 @@ const SignUp = () => {
                   backgroundColor: "#f3f8fc",
                 }}
                 className="rounded-0 mx-0"
-                type="text"
+                type="email"
                 value={inputEmail}
-                placeholder="Type Email Address *"
+                placeholder="Email Address *"
                 onChange={(e) => setInputEmail(e.target.value)}
                 required
               />
@@ -107,7 +118,6 @@ const SignUp = () => {
                 value={inputNumber}
                 placeholder="Phone Number"
                 onChange={(e) => setInputNumber(e.target.value)}
-                required
               />
             </InputGroup>
           </Form.Group>
@@ -139,7 +149,7 @@ const SignUp = () => {
             </InputGroup>
           </Form.Group>
 
-          <Form.Group className="mb-4" controlId="password">
+          <Form.Group className="mb-4" controlId="confirmPassword">
             <InputGroup>
               <InputGroup.Text
                 className="rounded-0 mx-0"
@@ -168,7 +178,12 @@ const SignUp = () => {
 
           <Form.Group className="mb-2" controlId="checkbox">
             <div className="d-flex justify-content-between align-items-left">
-              <Form.Check type="checkbox" label="Remember Password" />
+              <Form.Check
+                type="checkbox"
+                label="Accept our Terms and Conditions & Privacy Policy"
+                checked={rememberPolicy}
+                onChange={handleRememberPolicyChange}
+              />
             </div>
           </Form.Group>
 
@@ -176,8 +191,9 @@ const SignUp = () => {
             className="w-100 rounded-0 mb-4 mt-4"
             variant="primary"
             type="submit"
+            disabled={!rememberPolicy}
           >
-            Sign Up
+            Register
           </Button>
         </Form>
       </Col>

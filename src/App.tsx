@@ -4,18 +4,19 @@ import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import  Navbar  from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Singleproductpage from "./components/Singleproductpage/Singleproductpage";
+import Sign from "./components/Sign/Sign";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <header className="sticky-top">
-        <Navbar/>
-        <Header/>
-      </header>
+        <header className="sticky-top">
+          <Navbar />
+          <Header />
+        </header>
         <Routes>
           <Route
             path="/"
@@ -29,7 +30,7 @@ function App() {
             path="/home"
             element={
               <>
-                <Home />
+                <Sign />
               </>
             }
           />
@@ -53,13 +54,13 @@ function App() {
             path="/singleproductpage"
             element={
               <>
-                <Singleproductpage/>
+                <Singleproductpage />
               </>
             }
           />
         </Routes>
         <footer>
-          <Footer/>
+          <Footer />
         </footer>
       </BrowserRouter>
     </div>

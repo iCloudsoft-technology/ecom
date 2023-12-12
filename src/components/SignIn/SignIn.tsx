@@ -2,20 +2,47 @@ import React, { useState } from "react";
 import { Form, Button, Alert, InputGroup } from "react-bootstrap";
 import "./SignIn.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle } from "react-icons/fa";
+import EcomDataService from "../../services/api.service";
 
 const SignIn = () => {
-  const [inputUsername, setInputUsername] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [rememberPassword, setRememberPassword] = useState(false);
+
+  React.useEffect(() => {
+    EcomDataService.getUserData().then((res: any) =>
+      console.log("fake resp to check axios setup", res)
+    );
+  }, []);
+
+  React.useEffect(() => {
+    // for getting user from local storage if user remembered
+    const localStorageEmail = localStorage.getItem("ecomEmail");
+    // incript the password before storing
+    const localStoragePassword = localStorage.getItem("ecomPassword");
+    if (localStorageEmail && localStoragePassword) {
+      setInputEmail(localStorageEmail);
+      setInputPassword(localStoragePassword);
+    }
+  }, []);
+
+  const handleRememberPasswordChange = () => {
+    setRememberPassword(!rememberPassword);
+  };
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    console.log("user", inputEmail, inputPassword, rememberPassword);
     setLoading(true);
-    console.log(`Username :${inputUsername}, Password :${inputPassword}`);
-    if (inputUsername !== "admin" || inputPassword !== "admin") {
-      setShow(true);
+    // write API call for user auth with inputEmail and inputPassword
+    // in . then
+    if (rememberPassword) {
+      localStorage.setItem("ecomEmail", inputEmail);
+      localStorage.setItem("ecomPassword", inputPassword);
     }
+
     setLoading(false);
   };
 
@@ -25,7 +52,7 @@ const SignIn = () => {
     <div>
       <Form className="shadow p-4 bg-white rounded" onSubmit={handleSubmit}>
         <div className="h4 mt-2 text-center mb-4">Sign In</div>
-        <Form.Group className="mb-4" controlId="username">
+        <Form.Group className="mb-4" controlId="email">
           <InputGroup>
             <InputGroup.Text
               className="rounded-0 mx-0"
@@ -45,10 +72,10 @@ const SignIn = () => {
                 boxShadow: "none",
               }}
               className="rounded-0 mx-0 "
-              type="text"
-              value={inputUsername}
+              type="email"
+              value={inputEmail}
               placeholder="Type Email Address *"
-              onChange={(e) => setInputUsername(e.target.value)}
+              onChange={(e) => setInputEmail(e.target.value)}
               required
             />
           </InputGroup>
@@ -82,7 +109,12 @@ const SignIn = () => {
         </Form.Group>
         <Form.Group className="mb-4" controlId="checkbox">
           <div className="d-flex justify-content-between align-items-center">
-            <Form.Check type="checkbox" label="Remember Password" />
+            <Form.Check
+              type="checkbox"
+              label="Remember Password"
+              checked={rememberPassword}
+              onChange={handleRememberPasswordChange}
+            />
             <Button
               className="text-muted px-0"
               variant="link"

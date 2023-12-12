@@ -20,10 +20,16 @@ const Contact = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log("contact", inputName, inputEmail, inputNumber, inputMessage);
+    // write API call
+    console.log(
+      "contact",
+      selectedOption,
+      inputName,
+      inputEmail,
+      inputNumber,
+      inputMessage
+    );
   };
-
-  const handlePassword = () => {};
 
   return (
     <div>
@@ -130,7 +136,7 @@ const Contact = () => {
                     backgroundColor: "#f3f8fc",
                   }}
                   className="rounded-0 mx-0"
-                  type="text"
+                  type="email"
                   value={inputEmail}
                   placeholder="Email Address *"
                   onChange={(e) => setInputEmail(e.target.value)}
