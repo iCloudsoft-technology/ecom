@@ -4,17 +4,22 @@ import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import  Navbar  from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <header className="sticky-top">
+        <Navbar/>
+        <Header/>
+      </header>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Header />
                 <Home />
               </>
             }
@@ -23,7 +28,6 @@ function App() {
             path="/home"
             element={
               <>
-                <Header />
                 <Home />
               </>
             }
@@ -32,7 +36,6 @@ function App() {
             path="/about"
             element={
               <>
-                <Header />
                 <About />
               </>
             }
@@ -41,12 +44,14 @@ function App() {
             path="/contact"
             element={
               <>
-                <Header />
                 <Contact />
               </>
             }
           />
         </Routes>
+        <footer>
+          <Footer/>
+        </footer>
       </BrowserRouter>
     </div>
   );

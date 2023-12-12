@@ -1,0 +1,40 @@
+
+
+
+.FONT{
+    font-family: 'Alegreya', serif;
+}
+
+.SEARCHWIDTH{
+    width: 43%;
+}
+
+.BORDERhoVer{
+    color: #fff;
+    border: 1px solid #041E42;
+}
+
+.BORDERhoVer:hover{
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+.ALLWidtH{
+    width: 12%;
+}
+
+
+
+@media only screen and (max-width: 980px) {
+
+    .SEARCHWIDTH{
+        width: 100%;
+    }
+
+    .ALLWidtH{
+        width: 15%;
+    }
+
+}

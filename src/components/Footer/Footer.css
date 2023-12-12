@@ -1,0 +1,40 @@
+
+
+.FONT {
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+}
+
+.FontFamilyMontSerret {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ROBOTOfontFamily {
+    font-family: 'Roboto', sans-serif;
+}
+
+  /* //////////  Footer Icon Css Start   //////////////// */
+
+.FOOTERSocialIcon {
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    padding: 11px  13px;
+    width: 48px;
+    height: 47px;
+    border-radius: 50%;
+    
+}
+
+.FOOTERSocialIcon1 {
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    padding: 11px  15px;
+    width: 48px;
+    height: 47px;
+    border-radius: 50%;
+}
+
+
+ /* //////////  Footer Icon Css End   //////////////// */
