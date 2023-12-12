@@ -1,5 +1,3 @@
-
-
 .FONT {
     font-family: 'Alegreya', serif;
     font-weight: 400;
@@ -13,28 +11,27 @@
     font-family: 'Roboto', sans-serif;
 }
 
-  /* //////////  Footer Icon Css Start   //////////////// */
-
+/* //////////  Footer Icon Css Start   //////////////// */
 .FOOTERSocialIcon {
     background-color: transparent;
-    border: 2px solid white;
+    border: 1px solid #fff;
     color: #fff;
-    padding: 11px  13px;
-    width: 48px;
-    height: 47px;
+    padding: 12px 12px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    
+    font-size: 14px;
+    transition: all 0.3s ease-in;
+    display: inline-block;
 }
 
-.FOOTERSocialIcon1 {
-    background-color: transparent;
-    border: 2px solid white;
-    color: #fff;
-    padding: 11px  15px;
-    width: 48px;
-    height: 47px;
-    border-radius: 50%;
+.logo {
+    border-radius: 50px;
+    padding: 1rem;
+    border: 1px solid #aaaaaa;
+    background: #f6f7f9;
+    margin-right: 8px;
 }
 
 
- /* //////////  Footer Icon Css End   //////////////// */
+/* //////////  Footer Icon Css End   //////////////// */

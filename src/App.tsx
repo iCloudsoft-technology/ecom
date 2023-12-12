@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import  Navbar  from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Singleproductpage from "./components/Singleproductpage/Singleproductpage";
 
 function App() {
   return (
@@ -45,6 +46,14 @@ function App() {
             element={
               <>
                 <Contact />
+              </>
+            }
+          />
+          <Route
+            path="/singleproductpage"
+            element={
+              <>
+                <Singleproductpage/>
               </>
             }
           />

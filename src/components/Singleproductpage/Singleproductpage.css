@@ -1,0 +1,159 @@
+
+
+
+
+.FONTFamily{
+    font-family: 'Roboto', sans-serif;
+}
+
+.FONTFamily{
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+}
+
+
+
+.DONATEButtonHOVER{
+    color: #fff;
+    border: 1px solid #2866bc;
+    background-color: #2866bc;
+}
+
+.DONATEButtonHOVER:hover{
+    color: #2866bc;
+    border: 1px solid #2866bc;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.VIRALButtonHOVER{
+    color: #fff;
+    border: 1px solid #007749;
+    background-color: #007749;
+}
+
+.VIRALButtonHOVER:hover{
+    color: #007749;
+    border: 1px solid #007749;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+
+.RECURRINGButtonHOVER{
+    color: #fff;
+    border: 1px solid #800080;
+    background-color: #800080;
+}
+
+.RECURRINGButtonHOVER:hover{
+    color: #800080;
+    border: 1px solid #800080;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+.FolloWButtonHover{
+    color: #fff;
+    border: 1px solid #2866BC;
+    background-color: #2866BC;
+}
+
+.FolloWButtonHover:hover{
+    color: #2866BC;
+    border: 1px solid #2866BC;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.heartHOVER{
+    background-color: #2866bc;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.SocialIcon1 {
+    background-color: #3b5999;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.SocialIcon2 {
+    background-color: #55acee;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.SocialIcon3 {
+    background-color: #0077B5;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.SocialIcon4 {
+    background-color: #bd081c;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+    .btnStyle {
+        width: 100%;
+        padding: 10px;
+        color: #0072BA;
+        border: none;
+        background-color: #fff;
+    }
+
+    .btnStyle:hover {
+        border-bottom: 2px solid #2866BC;  
+    }
+    
+    .newStyle {
+        width: 100%;
+        padding: 10px;
+        color: #0072BA;
+        border: none;
+        background-color: #fff;    }
+
+    .newStyle:hover {
+        border-bottom: 2px solid #2866BC;   
+    }
+
+    .btn3Style {
+        width: 100%;
+        padding: 10px;
+        color: #0072BA;
+        border: none;
+        background-color: #fff;  
+      }
+
+    .btn3Style:hover {
+        border-bottom: 2px solid #2866BC;   
+    }
+    
+    .btn4Style {
+        width: 100%;
+        padding: 10px;
+        color: #0072BA;
+        border: none;
+        background-color: #fff; 
+       }
+
+    .btn4Style:hover {
+        border-bottom: 2px solid #2866BC; 
+    }
+
+  
