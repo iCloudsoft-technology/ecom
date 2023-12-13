@@ -421,6 +421,75 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <section>
+        <div className="container-fluid" style={{ backgroundColor: "#2866BC" }} >
+          <div className="row  text-white text-lg-start p-lg-4 mt-5 FONT">
+            <div className="col-lg-3 col-md-6 pt-4 pb-4 ">
+              <div className="row d-flex  align-items-center">
+                <div className="col-lg-2 ">
+                  <img src={require("../../Img/fastShiping.png")} alt="" />
+                </div>
+
+                <div className="col-lg-10 ">
+                  <div>
+                    <h3 className="" style={{ fontSize: "16px", lineHeight: "16px" }} > FAST SHIPPING</h3>
+                    <h3 className="" style={{ fontSize: "16px" }} > Experience fast shipping with DHL</h3>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 pt-4 pb-4">
+              <div className="row d-flex  align-items-center">
+                <div className="col-lg-2 ">
+                  <img src={require("../../Img/fastShiping.png")} alt="" />
+                </div>
+
+                <div className="col-lg-10 ">
+                  <div>
+                    <h3 className="" style={{ fontSize: "16px", lineHeight: "16px" }} > PAYMENT METHOD </h3>
+                    <h3 className="" style={{ fontSize: "16px" }} > Secure Payment </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 pt-4 pb-4">
+              <div className="row d-flex  align-items-center">
+                <div className="col-lg-2 ">
+                  <img src={require("../../Img/fastShiping.png")} alt="" />
+                </div>
+
+                <div className="col-lg-10 ">
+                  <div>
+                    <h3 className="" style={{ fontSize: "16px", lineHeight: "16px" }} > MULTI BUSINESSES </h3>
+                    <h3 className="" style={{ fontSize: "16px" }} > Manage multiple businesses from one account </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 pt-4 pb-4">
+              <div className="row d-flex  align-items-center">
+                <div className="col-lg-2 ">
+                  <img src={require("../../Img/fastShiping.png")} alt="" />
+                </div>
+
+                <div className="col-lg-10 ">
+                  <div>
+                    <h3 className="" style={{ fontSize: "16px", lineHeight: "16px" }} > HELP CENTER </h3>
+                    <h3 className="" style={{ fontSize: "16px" }} > 24/7 Support System </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

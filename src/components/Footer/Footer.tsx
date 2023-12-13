@@ -7,11 +7,11 @@ const Footer = () => {
         <>
 
             <section>
-                <div className="container-fluid" style={{ backgroundColor: "#041E42" }}>
+                <div className="container-fluid pb-2" style={{ backgroundColor: "#041E42" }}>
                     <div className="container mt-5 p-lg-4">
                         <div className="row p-3 d-flex justify-content-center text-white text-start FONT">
                             <div className="col-lg-2">
-                                <div>
+                                <div className='mt-2'>
                                     <p> HOME </p>
                                     <p> ABOUT US </p>
                                     <p> SUPPORT </p>
@@ -19,7 +19,7 @@ const Footer = () => {
                             </div>
 
                             <div className="col-lg-3">
-                                <div>
+                                <div className='mt-2'>
                                     <p> TERMS & CONDITIONS </p>
                                     <p> PRIVACY POLICY </p>
                                     <p> ADVERTISEMENTS </p>
@@ -27,7 +27,7 @@ const Footer = () => {
                             </div>
 
                             <div className="col-lg-3">
-                                <div>
+                                <div className='mt-2'>
                                     <p> PROFILE </p>
                                     <p> LOCATION SETTINGS </p>
                                     <p> MANAGE BUSINESSES </p>
@@ -35,20 +35,20 @@ const Footer = () => {
                             </div>
 
                             <div className="col-lg-3">
-                                <div>
-                                    <h4
+                                <div className='text-start'>
+                                    <h4 className='mt-2'
                                         style={{
                                             fontSize: "21px",
                                             fontWeight: "600",
                                             fontFamily: "'Roboto', sans-serif",
-                                            paddingLeft: "50px",
+                                            
                                         }}
                                     >
                                         {" "}
                                         INTERACTIVE{" "}
                                     </h4>
                                     <div className="row align-items-center g-2 mt-3">
-                                        <div className=" d-flex justify-content-center">
+                                        <div className=" d-flex justify-content-lg-center">
                                             <NavLink
                                                 className="text-decoration-none"
                                                 to=""
@@ -117,28 +117,28 @@ const Footer = () => {
                                     >
                                         <div className="logo">
                                             <a href="">
-                                                <img
+                                                <img className='w-100'
                                                     src={require("../../Img/dhl-logo.png")}
                                                     alt=""
-                                                    style={{ width: "91px", height: "30px" }}
+                                                    style={{  height: "30px" }}
                                                 />
                                             </a>
                                         </div>
                                         <div className="logo">
                                             <a href="">
-                                                <img
+                                                <img className='w-100'
                                                     src={require("../../Img/bs.png")}
                                                     alt=""
-                                                    style={{ width: "91px", height: "30px" }}
+                                                    style={{ height: "30px" }}
                                                 />
                                             </a>
                                         </div>
                                         <div className="logo">
                                             <a href="">
-                                                <img
+                                                <img className='w-100'
                                                     src={require("../../Img/bs.png")}
                                                     alt=""
-                                                    style={{ width: "91px", height: "30px" }}
+                                                    style={{  height: "30px" }}
                                                 />
                                             </a>
                                         </div>
@@ -148,7 +148,7 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <p className="text-white text-center mt-4 pt-4">
+                            <p className="text-white text-center mt-4 pt-4 ">
                                 Copyright© 2018 – 2023. All rights reserved. Cangelx.com
                             </p>
                         </div>

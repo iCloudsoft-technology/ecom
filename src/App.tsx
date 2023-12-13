@@ -8,6 +8,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Singleproductpage from "./components/Singleproductpage/Singleproductpage";
 import Sign from "./components/Sign/Sign";
+import Userprofile from "./components/UserProfile/Userprofile";
+import Cart from "./components/Cart/Cart";
+import Category from "./components/Category/Category";
 
 function App() {
   return (
@@ -55,6 +58,30 @@ function App() {
             element={
               <>
                 <Singleproductpage />
+              </>
+            }
+          />
+          <Route
+            path="/userprofile"
+            element={
+              <>
+                <Userprofile />
+              </>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <>
+                <Cart />
+              </>
+            }
+          />
+          <Route
+            path="/category"
+            element={
+              <>
+                <Category />
               </>
             }
           />
