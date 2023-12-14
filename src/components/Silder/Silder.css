@@ -1,0 +1,18 @@
+
+
+.CarouselHeight{
+    height: 65vh;
+    width: 100%;
+}
+
+.FirstContent{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Alegreya', serif;
+}
+
+.SecondContent{
+    font-size: 25px;
+    margin-top: 30px;
+    font-family: 'Alegreya', serif;
+}
