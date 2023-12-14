@@ -7,13 +7,16 @@ const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const items = ["Item 2", "Item 3", "Item 4", "Item 5"];
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = React.useState("Please Select");
 
   const handleSelect = (item: any) => {
     setSelectedItem(item);
+    setIsDropdownOpen(false);
   };
 
-  const handleSearchChange = (e: any) => {
-    setSearchTerm(e.target.value);
+  const handleDropdownToggle = (isOpen: any) => {
+    setIsDropdownOpen(isOpen);
   };
 
   const filteredItems = items.filter((item) =>
@@ -103,37 +106,30 @@ const Navbar = () => {
                 <form className="p-3 d-flex justify-content-lg-start align-items-lg-center mt-1">
                   <div
                     className="input-group "
-                    style={{ borderRadius: "50px", height: "46px" }}
+                    style={{
+                      borderRadius: "50px",
+                      height: "46px",
+                    }}
                   >
-                    <Dropdown
-                      onSelect={handleSelect}
-                      style={{
-                        backgroundColor: "rgb(40, 102, 188)",
-                        borderRadius: "50px 0px 0px 50px",
-                        height: "46px",
-                        width: "70px",
-                      }}
-                    >
-                      <Dropdown.Toggle
-                        id="dropdown-basic"
+                    <Form.Group>
+                      <Form.Select
+                        // className="rounded-0 mx-0"
                         style={{
                           backgroundColor: "rgb(40, 102, 188)",
                           borderRadius: "50px 0px 0px 50px",
                           height: "46px",
                           width: "70px",
                         }}
+                        value={selectedOption}
+                        onChange={(e) => setSelectedOption(e.target.value)}
                       >
-                        {selectedItem}
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Divider />
-                        {filteredItems.map((item) => (
-                          <Dropdown.Item key={item} eventKey={item}>
-                            {item}
-                          </Dropdown.Item>
-                        ))}
-                      </Dropdown.Menu>
-                    </Dropdown>
+                        <option value="All"> All</option>
+                        <option value="item1">item1</option>
+                        <option value="item2">item1</option>
+                        <option value="item3">item1</option>
+                        <option value="item4">item4</option>
+                      </Form.Select>
+                    </Form.Group>
                     <Form onSubmit={() => {}} style={{ width: "60%" }}>
                       <Form.Group controlId="username">
                         <Form.Control
