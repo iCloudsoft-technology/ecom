@@ -2,18 +2,17 @@ import { environment } from "./apiEndPoint";
 import httpCommonClients from "./http-common";
 
 const getUserData = async () => {
-  const apiUrl = process.env.REACT_APP_API + environment.getUser;
+  const apiUrl = process.env.REACT_APP_API + environment.login;
 
   return await httpCommonClients.httpClient.get<any>(apiUrl);
 };
 
-// const createBookingRequest = async (createBooking: ICreateBooking) => {
-//   return await httpCommonClients.httpClient.post<ICreateBooking>(
-//     process.env.REACT_APP_APIURLBooking +
-//       environment.apiEndpoints.createBookingRequest,
-//     createBooking
-//   );
-// };
+const userLogin = async (user: any) => {
+  return await httpCommonClients.httpClient.post<any>(
+    process.env.REACT_APP_API + environment.login,
+    user
+  );
+};
 
 // const updateBookingRequest = async (updateBooking: IUpdateBooking) => {
 //   return await httpCommonClients.httpClient.put<IUpdateBooking>(
@@ -25,6 +24,7 @@ const getUserData = async () => {
 
 const EcomDataService = {
   getUserData,
+  userLogin,
 };
 
 export default EcomDataService;

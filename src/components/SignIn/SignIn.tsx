@@ -3,6 +3,7 @@ import { Form, Button, Alert, InputGroup } from "react-bootstrap";
 import "./SignIn.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle } from "react-icons/fa";
 import EcomDataService from "../../services/api.service";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [inputEmail, setInputEmail] = useState("");
@@ -10,12 +11,13 @@ const SignIn = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [rememberPassword, setRememberPassword] = useState(false);
+  const navigate = useNavigate();
 
-  React.useEffect(() => {
-    EcomDataService.getUserData().then((res: any) =>
-      console.log("fake resp to check axios setup", res)
-    );
-  }, []);
+  // React.useEffect(() => {
+  //   EcomDataService.getUserData().then((res: any) =>
+  //     console.log("fake resp to check axios setup", res)
+  //   );
+  // }, []);
 
   React.useEffect(() => {
     // for getting user from local storage if user remembered
@@ -36,12 +38,22 @@ const SignIn = () => {
     event.preventDefault();
     console.log("user", inputEmail, inputPassword, rememberPassword);
     setLoading(true);
-    // write API call for user auth with inputEmail and inputPassword
-    // in . then
-    if (rememberPassword) {
-      localStorage.setItem("ecomEmail", inputEmail);
-      localStorage.setItem("ecomPassword", inputPassword);
-    }
+    EcomDataService.userLogin({
+      username: inputEmail, // "mor_2314"
+      password: inputPassword, // "83r5^_"
+    })
+      .then((res) => {
+        localStorage.setItem("isUserLog", "true");
+        localStorage.setItem("authJWT", res.data.token);
+        if (rememberPassword) {
+          localStorage.setItem("ecomEmail", inputEmail);
+          localStorage.setItem("ecomPassword", inputPassword);
+        }
+        navigate("/");
+      })
+      .catch(() => {
+        alert("please enter valid email and password");
+      });
 
     setLoading(false);
   };
@@ -72,7 +84,7 @@ const SignIn = () => {
                 boxShadow: "none",
               }}
               className="rounded-0 mx-0 "
-              type="email"
+              type="text"
               value={inputEmail}
               placeholder="Type Email Address *"
               onChange={(e) => setInputEmail(e.target.value)}
