@@ -11,7 +11,7 @@
   background-size: cover;
   position: relative;
 }
-input:focus,
+/* input:focus,
 input.form-control:focus {
   outline: none !important;
   outline-width: 0 !important;
@@ -19,7 +19,7 @@ input.form-control:focus {
   border-color: rgb(230, 228, 228) !important;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-}
+} */
 
 .sign-in__backdrop {
   position: absolute;

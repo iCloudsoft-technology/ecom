@@ -1,8 +1,24 @@
-import React from "react";
-import { NavLink } from "react-bootstrap";
+import { Col, Form, Nav, NavLink, Row } from "react-bootstrap";
 import "./Navbar.css";
-
+import React, { useState } from "react";
+import { Dropdown, FormControl, InputGroup } from "react-bootstrap";
+import { BsSearch } from "react-icons/bs";
 const Navbar = () => {
+  const [selectedItem, setSelectedItem] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+  const items = ["Item 2", "Item 3", "Item 4", "Item 5"];
+
+  const handleSelect = (item: any) => {
+    setSelectedItem(item);
+  };
+
+  const handleSearchChange = (e: any) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <>
       <nav
@@ -89,24 +105,48 @@ const Navbar = () => {
                     className="input-group "
                     style={{ borderRadius: "50px", height: "46px" }}
                   >
-                    <span
-                      className="input-group-text text-center "
+                    <Dropdown
+                      onSelect={handleSelect}
                       style={{
+                        backgroundColor: "rgb(40, 102, 188)",
                         borderRadius: "50px 0px 0px 50px",
-                        width: "12%",
+                        height: "46px",
+                        width: "70px",
                       }}
-                      id="basic-addon1"
                     >
-                      {" "}
-                      &nbsp;All
-                    </span>
-                    <input
-                      type="text "
-                      className="form-control FontFamilyMontSerret text-center"
-                      placeholder="Search for what you are looking for"
-                      aria-label="Username"
-                      aria-describedby="basic-addon1"
-                    />
+                      <Dropdown.Toggle
+                        id="dropdown-basic"
+                        style={{
+                          backgroundColor: "rgb(40, 102, 188)",
+                          borderRadius: "50px 0px 0px 50px",
+                          height: "46px",
+                          width: "70px",
+                        }}
+                      >
+                        {selectedItem}
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Divider />
+                        {filteredItems.map((item) => (
+                          <Dropdown.Item key={item} eventKey={item}>
+                            {item}
+                          </Dropdown.Item>
+                        ))}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                    <Form onSubmit={() => {}} style={{ width: "60%" }}>
+                      <Form.Group controlId="username">
+                        <Form.Control
+                          style={{ height: "46px" }}
+                          className="rounded-0 mx-0"
+                          type="text"
+                          value={""}
+                          placeholder="Search for what you are looking for"
+                          onChange={(e) => {}}
+                          required
+                        />
+                      </Form.Group>
+                    </Form>
                     <span
                       className="input-group-text"
                       style={{
@@ -116,7 +156,7 @@ const Navbar = () => {
                       }}
                       id="basic-addon1"
                     >
-                      <i className="fa-solid fa-magnifying-glass text-white"></i>
+                      <BsSearch onClick={() => {}} />
                     </span>
                   </div>
                 </form>
@@ -126,19 +166,31 @@ const Navbar = () => {
                 <div className="text-white mt-1 d-flex justify-content-lg-end pe-lg-3 align-items-lg-center ">
                   <ul className="d-flex justify-content-lg-start align-items-lg-center FONT">
                     <li className="d-flex justify-content-lg-start align-items-lg-center mt-4">
-                      <span
-                        className=""
-                        style={{ fontSize: "19px", fontWeight: "500" }}
+                      <NavLink
+                        className="  BORDERhoVer pb-2 px-2 "
+                        style={{
+                          fontSize: "21px",
+                          fontWeight: "500",
+                          textDecoration: "none",
+                        }}
+                        aria-current="page"
+                        href="/home"
                       >
                         Sign in
-                      </span>
+                      </NavLink>
                       &nbsp; | &nbsp;
-                      <span
-                        className=""
-                        style={{ fontSize: "19px", fontWeight: "500" }}
+                      <NavLink
+                        className="  BORDERhoVer pb-2 px-2 "
+                        style={{
+                          fontSize: "21px",
+                          fontWeight: "500",
+                          textDecoration: "none",
+                        }}
+                        aria-current="page"
+                        href="/home"
                       >
                         Sign up
-                      </span>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>

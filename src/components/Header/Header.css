@@ -1,113 +1,108 @@
-
-   /* ///////////////  Header Css Start //////////////// */
-
-   
+/* ///////////////  Header Css Start //////////////// */
 
 .FONT {
-    font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
 }
 
 .FontFamilyMontSerret {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .ROBOTOfontFamily {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .ButtonHOVER {
-    background-color: #2866bc;
-    color: #fff;
-    border: 1px solid #2866bc;
+  background-color: #2866bc;
+  color: #fff;
+  border: 1px solid #2866bc;
 }
 
 .ButtonHOVER:hover {
-    color: #2866bc;
-    background-color: #fff;
-    border: 1px solid #fff;
+  color: #2866bc;
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 .navbar-nav {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-.navbar-dark .navbar-nav .nav-link{
-    color: black;
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
 }
 
 .dropend .dropdown-toggle {
-    color: black;
-    font-weight: 400;
+  color: black;
+  font-weight: 400;
 }
 
 .HEADERhoVER {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .HEADERhoVER:hover {
-    background-color: #558ED5;
-    color: yellow;
+  background-color: #558ed5;
+  color: yellow;
 }
 
 .navbar-toggler:focus {
-    text-decoration: none;
-    box-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .dropdown-item {
-    color: #333;
-    padding: 8px;
-    font-size: 15px;
-    /* background-color: white; */
+  color: #333;
+  padding: 8px;
+  font-size: 15px;
+  /* background-color: white; */
 }
 
 .dropdown-item:hover {
-    background-color: #558ED5;
-    color: yellow;
+  background-color: #558ed5;
+  color: yellow;
 }
 
 .dropdown .dropdown-menu {
-    display: none;
+  display: none;
 }
 
-.dropdown:hover>.dropdown-menu,
-.dropend:hover>.dropdown-menu {
-    display: block;
-    padding: 0px;
-    font-size: 1rem;
-    background-color: white;
-    color: black;
-    border-radius: 0px;
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  padding: 0px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
 }
 
 @media screen and (min-width: 1200px) {
-    .dropend:hover>.dropdown-menu {
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
 
-    .dropend .dropdown-toggle {
-        margin-left: 0.5em;
-    }
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
 
-    .FORMWIDTH{
-        width: 100%;
-    }
+  .FORMWIDTH {
+    width: 100%;
+  }
 }
 
-
 @media screen and (min-width: 800px) {
-    .dropend:hover>.dropdown-menu {
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
 
-    .dropend .dropdown-toggle {
-        margin-left: 0.5em;
-    }
-
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
 }
