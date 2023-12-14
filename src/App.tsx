@@ -39,7 +39,18 @@ function App() {
           />
           <Route
             path="/home"
-            element={<>{isUserLog ? <Home /> : <Sign />}</>}
+            element={
+              <>
+                {isUserLog ? (
+                  <>
+                    <Home />
+                    <Silder />
+                  </>
+                ) : (
+                  <Sign />
+                )}
+              </>
+            }
           />
           <Route
             path="/about"
