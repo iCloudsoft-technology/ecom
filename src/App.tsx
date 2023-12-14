@@ -11,8 +11,13 @@ import Sign from "./components/Sign/Sign";
 import Userprofile from "./components/UserProfile/Userprofile";
 import Cart from "./components/Cart/Cart";
 import Category from "./components/Category/Category";
+import React from "react";
 
 function App() {
+  const [isUserLog, setIsUserLog] = React.useState(false);
+  React.useEffect(() => {
+    setIsUserLog(!!localStorage.getItem("isUserLog"));
+  }, []);
   return (
     <div className="App">
       <BrowserRouter>
@@ -31,11 +36,7 @@ function App() {
           />
           <Route
             path="/home"
-            element={
-              <>
-                <Sign />
-              </>
-            }
+            element={<>{isUserLog ? <Home /> : <Sign />}</>}
           />
           <Route
             path="/about"

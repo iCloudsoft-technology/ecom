@@ -1,3 +1,3 @@
 export const environment = {
-  getUser: "users",
+  login: "auth/login",
 };
