@@ -42,7 +42,14 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ productData }) => {
                   <Card.Body>
                     <Card.Title>{product.title}</Card.Title>
 
-                    <Card.Text>Price: ${product.price}</Card.Text>
+                    <Card.Text className="product-price">
+                      <span>Price: ${product.price}</span>
+                      <p>
+                        <button className="btn btn-primary add-to-cart">
+                          Add to Cart
+                        </button>
+                      </p>
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

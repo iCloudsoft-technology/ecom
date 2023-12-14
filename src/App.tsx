@@ -13,6 +13,7 @@ import Cart from "./components/Cart/Cart";
 import Category from "./components/Category/Category";
 import React from "react";
 import Silder from "./components/Silder/Silder";
+import CategoryPage from "./pages/Category/CategoryPage";
 
 function App() {
   const [isUserLog, setIsUserLog] = React.useState(false);
@@ -32,7 +33,7 @@ function App() {
             element={
               <>
                 <Home />
-                <Silder/>
+                <Silder />
               </>
             }
           />
@@ -81,10 +82,18 @@ function App() {
             }
           />
           <Route
-            path="/category"
+            path="/categories"
             element={
               <>
                 <Category />
+              </>
+            }
+          />
+          <Route
+            path="/category"
+            element={
+              <>
+                <CategoryPage />
               </>
             }
           />
