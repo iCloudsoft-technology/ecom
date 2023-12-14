@@ -12,6 +12,7 @@ import Userprofile from "./components/UserProfile/Userprofile";
 import Cart from "./components/Cart/Cart";
 import Category from "./components/Category/Category";
 import React from "react";
+import Silder from "./components/Silder/Silder";
 
 function App() {
   const [isUserLog, setIsUserLog] = React.useState(false);
@@ -31,6 +32,7 @@ function App() {
             element={
               <>
                 <Home />
+                <Silder/>
               </>
             }
           />
@@ -83,6 +85,14 @@ function App() {
             element={
               <>
                 <Category />
+              </>
+            }
+          />
+          <Route
+            path="/silder"
+            element={
+              <>
+                <Silder />
               </>
             }
           />
