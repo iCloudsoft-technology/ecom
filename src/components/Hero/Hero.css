@@ -1,0 +1,10 @@
+.hero-background {
+    background-color: #444;
+    position: relative;
+    background-image: url(../../Img/HomeBG.png);
+    background-attachment: "local";
+    background-repeat: "no-repeat";
+    background-size: "cover";
+    background-position: "center center ";
+    height: "47vh";
+}

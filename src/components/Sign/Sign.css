@@ -98,7 +98,7 @@
   padding: 10px 15px;
   position: relative;
   z-index: 1;
-  overflow: hidden;
+
   min-height: 265px;
   transition: 0.7s;
   margin: 10px;
@@ -110,7 +110,7 @@
   height: 60px;
   border-radius: 50%;
   background: #fff;
-  overflow: hidden;
+
 }
 
 .so_top_icon img {
