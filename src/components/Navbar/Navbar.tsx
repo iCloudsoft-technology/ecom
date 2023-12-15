@@ -29,11 +29,10 @@ const Navbar = () => {
         style={{ backgroundColor: "#041E42" }}
       >
         <div className="container-fluid p-0 ">
-          <div className="ms-lg-5  col-lg-3">
+          <div className="col-lg-2 Company_logo_main">
             <NavLink href="/">
               <img
-                className=""
-                style={{ height: "3rem" }}
+                className="Company_logo"
                 src={require("../../Img/Logo.png")}
                 alt="icloudsoft_logo"
               />
@@ -57,63 +56,35 @@ const Navbar = () => {
                 className="collapse navbar-collapse  col-lg-3 "
                 id="navbarNav"
               >
-                <div className="d-flex justify-content-lg-start align-items-center FONT">
+                <div className="d-flex justify-content-lg-start align-items-center ">
                   <ul className="navbar-nav text-white  ">
-                    <li className="nav-item pe-lg-3">
+                    <li className="nav-item">
                       <NavLink
-                        className="  BORDERhoVer col-lg-3 "
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
+                        className="navigation_hover"
                         aria-current="page"
                         href="/home"
                       >
                         Home
                       </NavLink>
                     </li>
-                    <li className="nav-item col-lg-3">
-                      <NavLink
-                        className="   BORDERhoVer p-2"
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        href="/about"
-                      >
+                    <li className="nav-item">
+                      <NavLink className="navigation_hover" href="/about">
                         About us
                       </NavLink>
                     </li>
-                    <li className="nav-item col-lg-3">
-                      <NavLink
-                        className="   BORDERhoVer p-2"
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        href="/contact"
-                      >
+                    <li className="nav-item ">
+                      <NavLink className="navigation_hover" href="/contact">
                         Support
                       </NavLink>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-5 SEARCHWIDTH FONT">
+              <div className="col-lg-5 search_input_bar">
                 <form className="p-3 d-flex justify-content-lg-start align-items-lg-center mt-1">
-                  <div
-                    className="input-group "
-                    style={{
-                      borderRadius: "50px",
-                      height: "46px",
-                    }}
-                  >
+                  <div className="input-group">
                     <Form.Group>
                       <Form.Select
-                        // className="rounded-0 mx-0"
                         style={{
                           backgroundColor: "rgb(40, 102, 188)",
                           borderRadius: "50px 0px 0px 50px",
@@ -158,38 +129,26 @@ const Navbar = () => {
                 </form>
               </div>
 
-              <div className=" col-lg-3 ">
-                <div className="text-white mt-1 d-flex justify-content-lg-end pe-lg-3 align-items-lg-center ">
-                  <ul className="d-flex justify-content-lg-start align-items-lg-center FONT">
-                    <li className="d-flex justify-content-lg-start align-items-lg-center mt-4">
-                      <NavLink
-                        className="  BORDERhoVer pb-2 px-2 "
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        aria-current="page"
-                        href="/home"
-                      >
-                        Sign in
-                      </NavLink>
-                      &nbsp; | &nbsp;
-                      <NavLink
-                        className="  BORDERhoVer pb-2 px-2 "
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        aria-current="page"
-                        href="/home"
-                      >
-                        Sign up
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
+              <div className="col-lg-3 ">
+                <ul className="text-white">
+                  <li className="d-flex justify-content-lg-start align-items-lg-center mt-4">
+                    <NavLink
+                      className="navigation_hover px-2 "
+                      aria-current="page"
+                      href="/home"
+                    >
+                      Sign in
+                    </NavLink>
+                    &nbsp; | &nbsp;
+                    <NavLink
+                      className="navigation_hover  px-2 "
+                      aria-current="page"
+                      href="/home"
+                    >
+                      Sign up
+                    </NavLink>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

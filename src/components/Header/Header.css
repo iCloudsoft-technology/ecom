@@ -2,39 +2,180 @@
 .navmenu {
   color: #f9fb08
 }
-.FONT {
+
+.category_main_dropdownn{
+  width: 270px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+
+.category_main_dropdownn_hover {
+  background-color: white;
+  color: black;
+}
+
+.category_main_dropdownn_hover:hover {
+  background-color: #558ed5;
+  color: yellow;
+}
+
+.category_main_dropdownn_image {
+  height: 1rem;
+}
+
+.enginaring_product_main_dropdownn_icon {
+  margin-left: 120px;
+ }
+
+.fashion_style_product_main_dropdownn_icon {
+  margin-left: 95px;
+ }
+
+ .art_carft_product_main_dropdownn_icon {
+  margin-left: 118px;
+ }
+
+ .cell_phones_product_main_dropdownn_icon {
+  margin-left: 55px;
+ }
+
+ .gadgets_product_main_dropdownn_icon {
+  margin-left: 143px;
+ }
+
+ .jewelry_product_main_dropdownn_icon {
+  margin-left: 75px;
+ }
+
+ .health_product_main_dropdownn_icon {
+  margin-left: 153px;
+ }
+
+ .sports_product_main_dropdownn_icon {
+  margin-left: 80px;
+ }
+
+.enginaring_dropdown {
+  width: 550px;
+  height: 670px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
   font-family: "Alegreya", serif;
 }
 
-.FontFamilyMontSerret {
-  font-family: "Montserrat", sans-serif;
-}
-
-.ROBOTOfontFamily {
-  font-family: "Roboto", sans-serif;
-}
-
-.ButtonHOVER {
-  background-color: #2866bc;
-  color: #fff;
-  border: 1px solid #2866bc;
-}
-
-.ButtonHOVER:hover {
-  color: #2866bc;
-  background-color: #fff;
+.fashion_style_dropdown {
+  width: 550px;
+  height: 670px;
   border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
 }
+
+.product_dropdownn_size {
+  font-size: 14px;
+  line-height: 10px;
+  color: #646464;
+  text-decoration: none;
+  font-family: "Alegreya", serif;
+}
+
+.art_carf_dropdown {
+  width: 280px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
+.dropdownn_common_product_size{
+  font-size: 18px;
+  line-height: 10px;
+  color: #646464;
+  text-decoration: none;
+  font-family: "Alegreya", serif;
+}
+
+.call_phones_dropdown {
+  width: 280px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
+.dropdownn_common_product_size{
+  font-size: 18px;
+  line-height: 10px;
+  color: #646464;
+  text-decoration: none;
+  font-family: "Alegreya", serif;
+}
+
+.gadgets_dropdown {
+  width: 280px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
+.dropdownn_common_product_size{
+  font-size: 18px;
+  line-height: 10px;
+  color: #646464;
+  text-decoration: none;
+  font-family: "Alegreya", serif;
+}
+
+.Jewelry_dropdown {
+  width: 550px;
+  height: 470px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
+.health_dropdown {
+  width: 280px;
+  height: 390px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
+.dropdownn_common_product_size{
+  font-size: 18px;
+  line-height: 10px;
+  color: #646464;
+  text-decoration: none;
+  font-family: "Alegreya", serif;
+}
+
+.sports_training_dropdown {
+  width: 570px;
+  height: 370px;
+  border: 1px solid #fff;
+  background-color: white;
+  overflow: auto;
+  font-family: "Alegreya", serif;
+}
+
 
 .navbar-nav {
   display: flex;
   width: 100%;
 }
+
 .nav-link {
   display: flex;
   align-items: center;
   justify-content: start;
 }
+
 .navbar-dark .navbar-nav .nav-link {
   color: black;
 }
@@ -44,15 +185,6 @@
   font-weight: 400;
 }
 
-.HEADERhoVER {
-  background-color: white;
-  color: black;
-}
-
-.HEADERhoVER:hover {
-  background-color: #558ed5;
-  color: yellow;
-}
 
 .navbar-toggler:focus {
   text-decoration: none;
@@ -63,7 +195,6 @@
   color: #333;
   padding: 8px;
   font-size: 15px;
-  /* background-color: white; */
 }
 
 .dropdown-item:hover {
@@ -75,8 +206,8 @@
   display: none;
 }
 
-.dropdown:hover > .dropdown-menu,
-.dropend:hover > .dropdown-menu {
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
   display: block;
   padding: 0px;
   font-size: 1rem;
@@ -86,7 +217,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .dropend:hover > .dropdown-menu {
+  .dropend:hover>.dropdown-menu {
     position: absolute;
     top: 0;
     left: 100%;
@@ -102,7 +233,7 @@
 }
 
 @media screen and (min-width: 800px) {
-  .dropend:hover > .dropdown-menu {
+  .dropend:hover>.dropdown-menu {
     position: absolute;
     top: 0;
     left: 100%;
