@@ -1,0 +1,18 @@
+.product-container {
+    padding: 40px;
+}
+
+.product-img {
+    background-color: #f3f3f3;
+    padding: 40px;
+}
+
+.product-img img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.product-data {
+    margin: 0 40px;
+    text-align: left;
+}

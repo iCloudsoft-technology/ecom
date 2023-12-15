@@ -14,6 +14,7 @@ import Category from "./components/Category/Category";
 import React from "react";
 import Silder from "./components/Silder/Silder";
 import CategoryPage from "./pages/Category/CategoryPage";
+import Product from "./pages/Product/Product";
 
 function App() {
   const [isUserLog, setIsUserLog] = React.useState(false);
@@ -89,6 +90,14 @@ function App() {
             element={
               <>
                 <Cart />
+              </>
+            }
+          />
+          <Route
+            path="/product/:productId"
+            element={
+              <>
+                <Product />
               </>
             }
           />

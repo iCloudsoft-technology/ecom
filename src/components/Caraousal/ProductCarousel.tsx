@@ -11,6 +11,8 @@ interface Product {
   image: string;
 }
 
+
+
 interface ProductCarouselProps {
   productData: Product[];
 }

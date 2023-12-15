@@ -1,5 +1,7 @@
 /* ///////////////  Header Css Start //////////////// */
-
+.navmenu {
+  color: #f9fb08
+}
 .FONT {
   font-family: "Alegreya", serif;
 }
@@ -28,7 +30,11 @@
   display: flex;
   width: 100%;
 }
-
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 .navbar-dark .navbar-nav .nav-link {
   color: black;
 }

@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Carousel, Card, Row, Col, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const CategoryPage = () => {
-  const [category, setCategory] = useState([]);
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+}
+
+const CategoryPage: React.FC = () => {
+  const [category, setCategory] = useState<Product[]>([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/jewelery")
@@ -9,7 +20,36 @@ const CategoryPage = () => {
       .then((json) => setCategory(json));
   }, []);
   console.log(category);
-  return <></>;
+  return (
+    <>
+      <Container className="bg-light">
+        <Row className="carousel-container">
+          {category.map((product) => (
+            <Col key={product.id} md={4}>
+              <Card className="carousel-card">
+                <Card.Img variant="top" src={product.image} />
+                <Card.Body>
+                  <Card.Title>{product.title}</Card.Title>
+
+                  <Card.Text className="product-price">
+                    <span>Price: ${product.price}</span>
+                    <p>
+                      <Link
+                        to={`/product/${product.id}`}
+                        className="btn btn-primary"
+                      >
+                        Add to Cart
+                      </Link>
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
+  );
 };
 
 export default CategoryPage;

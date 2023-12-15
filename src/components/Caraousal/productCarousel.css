@@ -20,7 +20,7 @@
 }
 
 img.card-img-top {
-    max-height: 150px;
+    max-height: 100px;
     object-fit: scale-down;
 }
 .product-price {
