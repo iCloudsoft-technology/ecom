@@ -12,6 +12,7 @@
 }
 
 /* //////////  Footer Icon Css Start   //////////////// */
+
 .FOOTERSocialIcon {
     background-color: transparent;
     border: 1px solid #fff;
@@ -23,6 +24,13 @@
     font-size: 14px;
     transition: all 0.3s ease-in;
     display: inline-block;
+    transition: .5s;
+}
+
+.FOOTERSocialIcon:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.3);
 }
 
 .logo {

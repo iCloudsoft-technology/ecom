@@ -25,7 +25,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ productData }) => {
           <Row className="carousel-container">
             {dataGrid.map((product) => (
               <Col key={product.id} md={4}>
-                <Link to={`/product/${product.id}`}>
+                <Link className="text-decoration-none" to={`/product/${product.id}`}>
                   <Card className="carousel-card mb-3">
                     <Card.Img variant="top" src={product.image} />
                     <Card.Body>

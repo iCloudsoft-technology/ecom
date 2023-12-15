@@ -15,6 +15,7 @@ import React from "react";
 import Silder from "./components/Silder/Silder";
 import CategoryPage from "./pages/Category/CategoryPage";
 import Product from "./pages/Product/Product";
+import Errorpage from "./components/Errorpage";
 
 function App() {
   const [isUserLog, setIsUserLog] = React.useState(false);
@@ -120,6 +121,15 @@ function App() {
             element={
               <>
                 <Silder />
+              </>
+            }
+          />
+
+          <Route
+            path="*"
+            element={
+              <>
+                <Errorpage />
               </>
             }
           />

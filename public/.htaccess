@@ -1,0 +1,113 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# -- REDIRECTION to https (optional):
+# If you need this, uncomment the next two commands
+# RewriteCond %{HTTPS} !on
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+# --
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^(.*) index.html [NC,L]
+</IfModule>
+
+RewriteEngine On
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.clientdemo.icloudsoftdigital\.com [NC] 
+RewriteRule ^(.*)$ http://clientdemo.icloudsoftdigital.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^clientdemo.icloudsoftdigital\.com [NC]
+RewriteRule ^(.*)$ http://clientdemo.icloudsoftdigital.com/$1 [L,R=301]
+
+# Redirect non-www to www
+# RewriteCond %{HTTP_HOST} !^www\.icloudsoft\.in [NC]
+
+
+# Enable mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+
+
+
+
+
+# Force www in the URL
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Set default character set to UTF-8
+AddDefaultCharset UTF-8
+
+# Set the mime type for web fonts
+AddType application/vnd.ms-fontobject .eot
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType font/woff .woff
+AddType font/woff2 .woff2
+
+# Set caching headers for certain file types
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType application/x-font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+</IfModule>
+
+# Set caching headers for static resources
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff|woff2|svg|ttf|eot)$">
+    Header set Cache-Control "public"
+  </FilesMatch>
+</IfModule>
+
+# Set the base URL for your application (replace '/subdirectory' with your actual subdirectory)
+<IfModule mod_env.c>
+  SetEnv BASE_URL /subdirectory
+</IfModule>
+
+# Rewrite URLs for React Router (replace '/subdirectory' with your actual subdirectory)
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /subdirectory/index.html [L]
+</IfModule>
+
+# Set the base URL for your application (replace '/subdirectory' with your actual subdirectory)
+<IfModule mod_env.c>
+  SetEnv BASE_URL /index.html
+</IfModule>
+
+# Rewrite URLs for React Router (replace '/subdirectory' with your actual subdirectory)
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.html [L]
+</IfModule>
+
+
+
+
+
+
+

@@ -111,7 +111,7 @@ const Navbar = () => {
                         <option value="item4">item4</option>
                       </Form.Select>
                     </Form.Group>
-                    <Form onSubmit={() => {}} style={{ width: "60%" }}>
+                    <Form onSubmit={() => { }} style={{ width: "60%" }}>
                       <Form.Group controlId="username">
                         <Form.Control
                           style={{ height: "46px" }}
@@ -119,7 +119,7 @@ const Navbar = () => {
                           type="text"
                           value={""}
                           placeholder="Search for what you are looking for"
-                          onChange={(e) => {}}
+                          onChange={(e) => { }}
                           required
                         />
                       </Form.Group>
@@ -133,7 +133,7 @@ const Navbar = () => {
                       }}
                       id="basic-addon1"
                     >
-                      <BsSearch onClick={() => {}} />
+                      <BsSearch onClick={() => { }} />
                     </span>
                   </div>
                 </form>
@@ -159,12 +159,11 @@ const Navbar = () => {
                         &nbsp; | &nbsp; Sign Up
                       </NavLink>
                     )}
-                  </li>
-                  <li>
                     <Link to="/cart">
-                      <i className="fa-solid fa-cart-shopping"></i>
+                      <i className="fa-solid fa-cart-shopping text-white ms-3 fs-3"></i>
                     </Link>
                   </li>
+
                 </ul>
               </div>
             </div>
