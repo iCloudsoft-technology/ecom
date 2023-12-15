@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
             <div className="mt-4">
               <button
-                className="p-1 ButtonHOVER me-lg-4 FONT"
+                className="p-1 hero_button"
                 style={{
                   height: "37px",
                   borderRadius: "5px 5px 5px 5px",
@@ -45,7 +45,7 @@ const Hero = () => {
                 </b>
               </button>
               <button
-                className="p-1 ButtonHOVER ms-lg-4 FONT"
+                className="p-1 hero_button"
                 style={{
                   height: "37px",
                   borderRadius: "5px 5px 5px 5px",
