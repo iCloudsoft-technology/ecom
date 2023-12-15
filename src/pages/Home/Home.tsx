@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       .then((res) => res.json())
       .then((json) => setProductData(json));
   }, []);
-  console.log(productData);
+
   return (
     <>
       <Hero />

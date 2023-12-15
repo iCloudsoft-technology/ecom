@@ -9,7 +9,10 @@ const Navbar = () => {
   const items = ["Item 2", "Item 3", "Item 4", "Item 5"];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = React.useState("Please Select");
-
+  const [isUserLog, setIsUserLog] = React.useState(false);
+  React.useEffect(() => {
+    setIsUserLog(!!localStorage.getItem("isUserLog"));
+  }, []);
   const handleSelect = (item: any) => {
     setSelectedItem(item);
     setIsDropdownOpen(false);
@@ -137,16 +140,18 @@ const Navbar = () => {
                       aria-current="page"
                       href="/home"
                     >
-                      Sign in
+                      {isUserLog ? "Sign In " : "Sign Out"}
                     </NavLink>
-                    &nbsp; | &nbsp;
-                    <NavLink
-                      className="navigation_hover  px-2 "
-                      aria-current="page"
-                      href="/home"
-                    >
-                      Sign up
-                    </NavLink>
+
+                    {!isUserLog && (
+                      <NavLink
+                        className="navigation_hover  px-2 "
+                        aria-current="page"
+                        href="/home"
+                      >
+                        &nbsp; | &nbsp; Sign Up
+                      </NavLink>
+                    )}
                   </li>
                 </ul>
               </div>

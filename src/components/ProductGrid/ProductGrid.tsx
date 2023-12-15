@@ -16,29 +16,33 @@ interface ProductGridProps {
 }
 const ProductGrid: React.FC<ProductGridProps> = ({ productData }) => {
   const [dataGrid, setDataGrid] = useState<Product[]>(productData);
+    useEffect(() => {
+      setDataGrid(productData);
+    }, [productData]);
+    return (
+      <>
+        <Container className="mt-5">
+          <Row className="carousel-container">
+            {dataGrid.map((product) => (
+              <Col key={product.id} md={4}>
+                <Link to={`/product/${product.id}`}>
+                  <Card className="carousel-card mb-3">
+                    <Card.Img variant="top" src={product.image} />
+                    <Card.Body>
+                      <Card.Title>{product.title}</Card.Title>
 
-  return (
-    <>
-      <Container className="mt-5">
-        <Row className="carousel-container">
-          {dataGrid.map((product) => (
-            <Col key={product.id} md={4}>
-              <Card className="carousel-card mb-3">
-                <Card.Img variant="top" src={product.image} />
-                <Card.Body>
-                  <Card.Title>{product.title}</Card.Title>
-
-                  <Card.Text className="product-price">
-                    <span>Price: ${product.price}</span>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </>
-  );
+                      <Card.Text className="product-price">
+                        <span>Price: ${product.price}</span>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Link>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </>
+    );
 };
 
 export default ProductGrid;

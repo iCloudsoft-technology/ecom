@@ -34,7 +34,6 @@ function App() {
             element={
               <>
                 <Home />
-                <Silder />
               </>
             }
           />
@@ -45,7 +44,6 @@ function App() {
                 {isUserLog ? (
                   <>
                     <Home />
-                    <Silder />
                   </>
                 ) : (
                   <Sign />

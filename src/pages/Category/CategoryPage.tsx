@@ -25,6 +25,7 @@ const CategoryPage: React.FC = () => {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
     const updatedCart = [...existingCart, product];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    alert("Product added to cart");
   };
 
   return (
@@ -42,13 +43,12 @@ const CategoryPage: React.FC = () => {
                   <Card.Text className="product-price">
                     <span>Price: ${product.price}</span>
                     <p>
-                      <Link
-                        to={`/product/${product.id}`}
-                        className="btn btn-primary"
+                      <button
                         onClick={() => handleClick(product)}
+                        className="btn btn-success"
                       >
                         Add to Cart
-                      </Link>
+                      </button>
                     </p>
                   </Card.Text>
                 </Card.Body>
