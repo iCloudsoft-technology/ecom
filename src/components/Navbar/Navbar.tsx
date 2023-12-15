@@ -3,6 +3,9 @@ import "./Navbar.css";
 import React, { useState } from "react";
 import { Dropdown, FormControl, InputGroup } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
+import { FaFontAwesome } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,9 +13,13 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = React.useState("Please Select");
   const [isUserLog, setIsUserLog] = React.useState(false);
+  const [cartValue, setCartValue] = useState<any>([]);
   React.useEffect(() => {
     setIsUserLog(!!localStorage.getItem("isUserLog"));
+    const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
+    setCartValue(cartItems);
   }, []);
+
   const handleSelect = (item: any) => {
     setSelectedItem(item);
     setIsDropdownOpen(false);
@@ -140,7 +147,7 @@ const Navbar = () => {
                       aria-current="page"
                       href="/home"
                     >
-                      {isUserLog ? "Sign In " : "Sign Out"}
+                      {!isUserLog ? "Sign In " : "Sign Out"}
                     </NavLink>
 
                     {!isUserLog && (
@@ -152,6 +159,11 @@ const Navbar = () => {
                         &nbsp; | &nbsp; Sign Up
                       </NavLink>
                     )}
+                  </li>
+                  <li>
+                    <Link to="/cart">
+                      <i className="fa-solid fa-cart-shopping"></i>
+                    </Link>
                   </li>
                 </ul>
               </div>

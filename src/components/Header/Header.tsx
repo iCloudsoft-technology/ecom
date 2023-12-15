@@ -75,354 +75,460 @@ const Header = () => {
                         style={{ fontSize: "14px" }}
                       ></i>{" "}
                       Categories{" "}
-                      &nbsp;&nbsp;
                       <i
                         className="fa-solid fa-angle-down "
+                        style={{ fontSize: "14px" }}
                       ></i>
                     </a>
                     <ul
-                      className="dropdown-menu shadow-lg category_main_dropdownn"
+                      className="dropdown-menu  FONT"
+                      style={{
+                        border: "1px solid #fff",
+                        width: "250px",
+                        backgroundColor: "#fff",
+                      }}
                     >
                       <li className="nav-item dropend ">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER  text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 "
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
-                            Enginaring
-                            <i className="fa-solid fa-angle-right  enginaring_product_main_dropdownn_icon"></i>
+                            Enginaring &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i className="fa-solid fa-angle-right"></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu enginaring_dropdown"
+                          className="dropdown-menu "
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "570px",
+                            height: "670px",
+                            overflow: "auto",
+                          }}
                         >
-                          <div className="row d-flex p-3">
+                          <div className="row ms-lg-2 d-flex p-2 mt-lg-4">
                             <div className="col-lg-6">
-                              <div className="ms-lg-2 mb-5">
-                                <div
-                                  className="mb-2"
-                                  style={{
-                                    borderBottom: "1px solid #e5e5e5",
-                                  }}
-                                >
-                                  <h2
-                                    className="fs-6"
-                                  >
-                                    TV & Visual
-                                  </h2>
-                                </div>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      LCD TV{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item"
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      LED TV{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item"
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Curved TV{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Plasma TV{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Satellite Decoders{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Tv Components{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item"
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Projector{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      VR Headset{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Media Streamers{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item "
-                                  >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Spares{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                              </div>
-
-                              <div className="ms-lg-2">
-                                <div
-                                  className=""
-
-                                >
-                                  <h2
-                                    className="fs-6 pb-2"
+                              <div>
+                                <div className="ms-lg-2 mb-5">
+                                  <div
+                                    className="ms-lg-2 mb-2"
                                     style={{
                                       borderBottom: "1px solid #e5e5e5",
                                     }}
                                   >
-                                    {" "}
-                                    Air Conditioner
-                                  </h2>
-
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      TV & Visual
+                                    </h2>
+                                  </div>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item"
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Air Humidifier{" "}
-                                      </h3>
+                                      {" "}
+                                      LCD TV{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item "
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Air Purifier{" "}
-                                      </h3>
+                                      {" "}
+                                      LED TV{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item "
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Air Conditioner Components{" "}
-                                      </h3>
+                                      {" "}
+                                      Curved TV{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item "
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Air Conditioner Filter{" "}
-                                      </h3>
+                                      {" "}
+                                      Plasma TV{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item "
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Electric Fan{" "}
-                                      </h3>
+                                      {" "}
+                                      Satellite Decoders{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
-                                      className="dropdown-item"
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Air Cooler{" "}
-                                      </h3>
+                                      {" "}
+                                      Tv Components{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Projector{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      VR Headset{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Media Streamers{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Spares{" "}
                                     </NavLink>
                                   </li>
                                 </div>
-                              </div>
 
-                              <div className="ms-lg-2 mt-5 pt-5">
-                                <div
-                                  className="ms-lg-2"
-                                  style={{
-                                    borderBottom: "1px solid #e5e5e5",
-                                  }}
-                                >
-                                  <h2
-                                    className="fs-6"
+                                <div className="ms-lg-2 mt-5 mb-5">
+                                  <div
+                                    className="ms-lg-2"
                                     style={{
-                                      fontSize: "14px",
-                                      color: "#444",
+                                      borderBottom: "1px solid #e5e5e5",
                                     }}
                                   >
-                                    Computer
-                                  </h2>
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Conditioner
+                                    </h2>
+                                  </div>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Humidifier{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Purifier{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Conditioner Components{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Conditioner Filter{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Electric Fan{" "}
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
+                                      {" "}
+                                      Air Cooler{" "}
+                                    </NavLink>
+                                  </li>
                                 </div>
-                                <li className="">
-                                  <NavLink
-                                    className=" dropdown-item "
+
+                                <div className="ms-lg-2 mt-5 pt-5">
+                                  <div
+                                    className="ms-lg-2"
+                                    style={{
+                                      borderBottom: "1px solid #e5e5e5",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      Computer
+                                    </h2>
+                                  </div>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Laptop{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Notebook{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Accessories & Peripherals{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Desktop{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Printers{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       WiFi & Networking{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Computer Components{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Monitor{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Storage Devices{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Scanners{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Wiring & Cables{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
+                                    </NavLink>
+                                  </li>
+                                </div>
                               </div>
                             </div>
 
@@ -434,6 +540,7 @@ const Header = () => {
                                 >
                                   <h2
                                     className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     Refrigerator
                                   </h2>
@@ -441,71 +548,92 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Single Door Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Single Door Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Double Door Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Double Door Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Quad Door Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Quad Door Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Mini Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Mini Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Wine Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Wine Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Bar Fridge{" "}
-                                    </h3>
+                                    {" "}
+                                    Bar Fridge{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Freezers{" "}
-                                    </h3>
+                                    {" "}
+                                    Freezers{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -525,51 +653,66 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Front Loading{" "}
-                                    </h3>
+                                    {" "}
+                                    Front Loading{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Top Loading{" "}
-                                    </h3>
+                                    {" "}
+                                    Top Loading{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Washer Dryer Combo{" "}
-                                    </h3>
+                                    {" "}
+                                    Washer Dryer Combo{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Dish Washing Machine{" "}
-                                    </h3>
+                                    {" "}
+                                    Dish Washing Machine{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Tumble Dryers{" "}
-                                    </h3>
+                                    {" "}
+                                    Tumble Dryers{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -579,7 +722,9 @@ const Header = () => {
                                   className="ms-lg-2"
                                   style={{ borderBottom: "1px solid #e5e5e5" }}
                                 >
-                                  <h2 className="fs-6"
+                                  <h2
+                                    className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     Audio Systems
                                   </h2>
@@ -587,101 +732,131 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Home Theatre{" "}
-                                    </h3>
+                                    {" "}
+                                    Home Theatre{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Amplifier{" "}
-                                    </h3>
+                                    {" "}
+                                    Amplifier{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Subwoofer & Woofer{" "}
-                                    </h3>
+                                    {" "}
+                                    Subwoofer & Woofer{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Midrange Speakers{" "}
-                                    </h3>
+                                    {" "}
+                                    Midrange Speakers{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Tweeters{" "}
-                                    </h3>
+                                    {" "}
+                                    Tweeters{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Full Range Driver Speakers{" "}
-                                    </h3>
+                                    {" "}
+                                    Full Range Driver Speakers{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Outdoors Speakers{" "}
-                                    </h3>
+                                    {" "}
+                                    Outdoors Speakers{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sound Bar{" "}
-                                    </h3>
+                                    {" "}
+                                    Sound Bar{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Piano & Keyboard{" "}
-                                    </h3>
+                                    {" "}
+                                    Piano & Keyboard{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Music Production Equipment{" "}
-                                    </h3>
+                                    {" "}
+                                    Music Production Equipment{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -691,7 +866,9 @@ const Header = () => {
                                   className="ms-lg-2"
                                   style={{ borderBottom: "1px solid #e5e5e5" }}
                                 >
-                                  <h2 className="fs-6"
+                                  <h2
+                                    className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     Cameras & Photo
                                   </h2>
@@ -699,101 +876,131 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Digital Cameras{" "}
-                                    </h3>
+                                    {" "}
+                                    Digital Cameras{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Lenses & Photo{" "}
-                                    </h3>
+                                    {" "}
+                                    Lenses & Photo{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Flash & Accessories{" "}
-                                    </h3>
+                                    {" "}
+                                    Flash & Accessories{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Vintage Filmography{" "}
-                                    </h3>
+                                    {" "}
+                                    Vintage Filmography{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Camera Drones{" "}
-                                    </h3>
+                                    {" "}
+                                    Camera Drones{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Tripods & Supports{" "}
-                                    </h3>
+                                    {" "}
+                                    Tripods & Supports{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Lighting & Studio{" "}
-                                    </h3>
+                                    {" "}
+                                    Lighting & Studio{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Internet Cameras{" "}
-                                    </h3>
+                                    {" "}
+                                    Internet Cameras{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Binoculars & Telescopes{" "}
-                                    </h3>
+                                    {" "}
+                                    Binoculars & Telescopes{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Video Editing Software{" "}
-                                    </h3>
+                                    {" "}
+                                    Video Editing Software{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -803,433 +1010,567 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
-                            Fashion & Style
+                            Fashion & Style &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <i
-                              className="fa-solid fa-angle-right fashion_style_product_main_dropdownn_icon"
+                              className="fa-solid fa-angle-right "
+                              style={{ fontSize: "14px" }}
                             ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg fashion_style_dropdown" style={{ top: "-40px" }}
+                          className="dropdown-menu shadow-lg"
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "570px",
+                            height: "670px",
+                            overflow: "auto",
+                            top: "-41px",
+                          }}
                         >
-                          <div className="row mt-2">
+                          <div className="row ms-lg-2 d-flex p-2 mt-lg-4">
                             <div className="col-lg-6">
-                              <div className="ms-lg-2 mb-5">
-                                <div
-                                  className="ms-lg-2 mb-2"
-                                  style={{
-                                    borderBottom: "1px solid #e5e5e5",
-                                  }}
-                                >
-                                  <h2
-                                    className="fs-6"
+                              <div>
+                                <div className="ms-lg-2 mb-5">
+                                  <div
+                                    className="ms-lg-2 mb-2"
+                                    style={{
+                                      borderBottom: "1px solid #e5e5e5",
+                                    }}
                                   >
-                                    Accessories
-                                  </h2>
-                                </div>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      Accessories
+                                    </h2>
+                                  </div>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Shavers & Trimmers{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Gloves{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Eyewear{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Scarves{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Belts{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Wallets{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Purses{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Headwear{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hairclips & Combs{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Ties{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Umbrellas{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Other Staff{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                              </div>
-
-                              <div className="ms-lg-2 mt-5 ">
-                                <div
-                                  className="ms-lg-2"
-                                  style={{
-                                    borderBottom: "1px solid #e5e5e5",
-                                  }}
-                                >
-                                  <h2
-                                    className="fs-6"
-                                  >
-                                    {" "}
-                                    Bags
-                                  </h2>
+                                    </NavLink>
+                                  </li>
                                 </div>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
+
+                                <div className="ms-lg-2 mt-5 ">
+                                  <div
+                                    className="ms-lg-2"
+                                    style={{
+                                      borderBottom: "1px solid #e5e5e5",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      {" "}
+                                      Bags
+                                    </h2>
+                                  </div>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hand Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       School Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       College Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Garment Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Waist Bag{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Suitcases{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Business Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Travel Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Kids Luggage{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Crossbody Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Shoulder Bags{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                              </div>
-
-                              <div className="ms-lg-2 mt-5">
-                                <div
-                                  className="ms-lg-2"
-                                  style={{
-                                    borderBottom: "1px solid #e5e5e5",
-                                  }}
-                                >
-                                  <h2
-                                    className="fs-6"
-                                  >
-                                    Cosmetics
-                                  </h2>
+                                    </NavLink>
+                                  </li>
                                 </div>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
+
+                                <div className="ms-lg-2 mt-5">
+                                  <div
+                                    className="ms-lg-2"
+                                    style={{
+                                      borderBottom: "1px solid #e5e5e5",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
+                                    <h2
+                                      className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
+                                    >
+                                      Cosmetics
+                                    </h2>
+                                  </div>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Skin Care{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hands & Nail Care{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Make Ups{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hair Care{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Body Cream{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       After Shave{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hair Removal Cream{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Oral Care{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Sanitizer{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Wigs & Weaves{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Eye Lashes{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Hair Styling Products{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
-                                <li>
-                                  <NavLink
-                                    className="dropdown-item text-decoration-none "
-                                  >
-                                    <h3 className="product_dropdownn_size">
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink
+                                      className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
+                                    >
                                       {" "}
                                       Fragrance Candles{" "}
-                                    </h3>
-                                  </NavLink>
-                                </li>
+                                    </NavLink>
+                                  </li>
+                                </div>
                               </div>
                             </div>
 
@@ -1241,6 +1582,7 @@ const Header = () => {
                                 >
                                   <h2
                                     className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     Fragrances
                                   </h2>
@@ -1248,101 +1590,131 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Perfume{" "}
-                                    </h3>
+                                    {" "}
+                                    Perfume{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Cologne{" "}
-                                    </h3>
+                                    {" "}
+                                    Cologne{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Eau De Parfum{" "}
-                                    </h3>
+                                    {" "}
+                                    Eau De Parfum{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Eau De Toilette{" "}
-                                    </h3>
+                                    {" "}
+                                    Eau De Toilette{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Eau De Cologne{" "}
-                                    </h3>
+                                    {" "}
+                                    Eau De Cologne{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Aerosol Spray{" "}
-                                    </h3>
+                                    {" "}
+                                    Aerosol Spray{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Essential Oils{" "}
-                                    </h3>
+                                    {" "}
+                                    Essential Oils{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Fragrance Oils{" "}
-                                    </h3>
+                                    {" "}
+                                    Fragrance Oils{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Scented Candles{" "}
-                                    </h3>
+                                    {" "}
+                                    Scented Candles{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Fragrance Diffuser{" "}
-                                    </h3>
+                                    {" "}
+                                    Fragrance Diffuser{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -1354,6 +1726,7 @@ const Header = () => {
                                 >
                                   <h2
                                     className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     {" "}
                                     Womens Fashion
@@ -1362,141 +1735,183 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Dresses & Skirts{" "}
-                                    </h3>
+                                    {" "}
+                                    Dresses & Skirts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Shorts{" "}
-                                    </h3>
+                                    {" "}
+                                    Shorts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Jeans & Pants{" "}
-                                    </h3>
+                                    {" "}
+                                    Jeans & Pants{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Formal Wear{" "}
-                                    </h3>
+                                    {" "}
+                                    Formal Wear{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Jumpsuits & Playsuits{" "}
-                                    </h3>
+                                    {" "}
+                                    Jumpsuits & Playsuits{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      T-Shirts & Vests{" "}
-                                    </h3>
+                                    {" "}
+                                    T-Shirts & Vests{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Leggings & Tights{" "}
-                                    </h3>
+                                    {" "}
+                                    Leggings & Tights{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sweaters & Jackets{" "}
-                                    </h3>
+                                    {" "}
+                                    Sweaters & Jackets{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Blouses & Shirts{" "}
-                                    </h3>
+                                    {" "}
+                                    Blouses & Shirts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Underwear & Sleepwear{" "}
-                                    </h3>
+                                    {" "}
+                                    Underwear & Sleepwear{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Leisure & Sportswear{" "}
-                                    </h3>
+                                    {" "}
+                                    Leisure & Sportswear{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sneakers & Boots{" "}
-                                    </h3>
+                                    {" "}
+                                    Sneakers & Boots{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Heels & Sandals{" "}
-                                    </h3>
+                                    {" "}
+                                    Heels & Sandals{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Flats & Sleepers{" "}
-                                    </h3>
+                                    {" "}
+                                    Flats & Sleepers{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -1508,6 +1923,7 @@ const Header = () => {
                                 >
                                   <h2
                                     className="fs-6"
+                                    style={{ fontSize: "14px", color: "#444" }}
                                   >
                                     Mens Fashion
                                   </h2>
@@ -1515,121 +1931,157 @@ const Header = () => {
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Jeans & Trousers{" "}
-                                    </h3>
+                                    {" "}
+                                    Jeans & Trousers{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Jackets & Coats{" "}
-                                    </h3>
+                                    {" "}
+                                    Jackets & Coats{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Vests & T-Shirts{" "}
-                                    </h3>
+                                    {" "}
+                                    Vests & T-Shirts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Bermudas & Shorts{" "}
-                                    </h3>
+                                    {" "}
+                                    Bermudas & Shorts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Formal Attire{" "}
-                                    </h3>
+                                    {" "}
+                                    Formal Attire{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sportswear & Leisure{" "}
-                                    </h3>
+                                    {" "}
+                                    Sportswear & Leisure{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Shirts{" "}
-                                    </h3>
+                                    {" "}
+                                    Shirts{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sweaters And Hoodies{" "}
-                                    </h3>
+                                    {" "}
+                                    Sweaters And Hoodies{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Pajamas & Underwear{" "}
-                                    </h3>
+                                    {" "}
+                                    Pajamas & Underwear{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Formal Shoes{" "}
-                                    </h3>
+                                    {" "}
+                                    Formal Shoes{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Boots & Sneakers{" "}
-                                    </h3>
+                                    {" "}
+                                    Boots & Sneakers{" "}
                                   </NavLink>
                                 </li>
                                 <li>
                                   <NavLink
                                     className="dropdown-item text-decoration-none "
+                                    style={{
+                                      fontSize: "14px",
+                                      color: "#646464",
+                                      lineHeight: "15px",
+                                    }}
                                   >
-                                    <h3 className="product_dropdownn_size">
-                                      {" "}
-                                      Sleepers & Flats{" "}
-                                    </h3>
+                                    {" "}
+                                    Sleepers & Flats{" "}
                                   </NavLink>
                                 </li>
                               </div>
@@ -1639,121 +2091,162 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
-                            Art & Crafts
-                            <i className="fa-solid fa-angle-right art_carft_product_main_dropdownn_icon"></i>
+                            Art & Crafts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i
+                              className="fa-solid fa-angle-right"
+                              style={{ fontSize: "14px" }}
+                            ></i>
                           </span>
                         </NavLink>
                         <ul
-                          className="dropdown-menu shadow-lg art_carf_dropdown"
+                          className="dropdown-menu shadow-lg"
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "280px",
+                            overflow: "auto",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 ">
                             <div>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size"  >
-                                    {" "}
-                                    Paintings & Drawings{" "}
-                                  </h4>
+                                  {" "}
+                                  Paintings & Drawings{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Sculptures & Molds{" "}
-                                  </h4>
+                                  {" "}
+                                  Sculptures & Molds{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Antiques{" "}
-                                  </h4>
+                                  {" "}
+                                  Antiques{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Beading & Decorating
-                                  </h4>
+                                  {" "}
+                                  Beading & Decorating
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Crafting
-                                  </h4>
+                                  {" "}
+                                  Crafting
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Knitting & Crochet
-                                  </h4>
+                                  {" "}
+                                  Knitting & Crochet
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Collectibles
-                                  </h4>
+                                  {" "}
+                                  Collectibles
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Art Instruments
-                                  </h4>
+                                  {" "}
+                                  Art Instruments
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Art Accessories
-                                  </h4>
+                                  {" "}
+                                  Art Accessories
                                 </NavLink>
                               </li>
                             </div>
@@ -1762,67 +2255,92 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
-                            Cell Phones & Tablets
-                            <i className="fa-solid fa-angle-right cell_phones_product_main_dropdownn_icon"></i>
+                            Cell Phones & Tablets &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i
+                              className="fa-solid fa-angle-right"
+                              style={{ fontSize: "14px" }}
+                            ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg call_phones_dropdown"
+                          className="dropdown-menu shadow-lg"
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "280px",
+                            overflow: "auto",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 ">
                             <div>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Smartphones{" "}
-                                  </h4>
+                                  {" "}
+                                  Smartphones{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Tablets{" "}
-                                  </h4>
+                                  {" "}
+                                  Tablets{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Smart Watches{" "}
-                                  </h4>
+                                  {" "}
+                                  Smart Watches{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Mobile Accessories
-                                  </h4>
+                                  {" "}
+                                  Mobile Accessories
                                 </NavLink>
                               </li>
                             </div>
@@ -1831,78 +2349,108 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
-                            Gadgets
-                            <i className="fa-solid fa-angle-right gadgets_product_main_dropdownn_icon"></i>
+                            Gadgets &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <i
+                              className="fa-solid fa-angle-right "
+                              style={{ fontSize: "14px" }}
+                            ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg gadgets_dropdown"
+                          className="dropdown-menu shadow-lg"
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "280px",
+                            overflow: "auto",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 ">
                             <div>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Drones{" "}
-                                  </h4>
+                                  {" "}
+                                  Drones{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Personal Safety{" "}
-                                  </h4>
+                                  {" "}
+                                  Personal Safety{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Secrete Surveillance{" "}
-                                  </h4>
+                                  {" "}
+                                  Secrete Surveillance{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Smart Accessories
-                                  </h4>
+                                  {" "}
+                                  Smart Accessories
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Wearables
-                                  </h4>
+                                  {" "}
+                                  Wearables
                                 </NavLink>
                               </li>
                             </div>
@@ -1913,23 +2461,37 @@ const Header = () => {
                       <li className="nav-item dropend">
                         <NavLink className="nav-link">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "16px" }}
                           >
-                            <Link className="text-decoration-none text-dark" to={"/category"}>Jewelry & Watches</Link>
+                            <Link to={"/category"}>Jewelry & Watches</Link>
+
                             <i
-                              className="fa-solid fa-angle-right jewelry_product_main_dropdownn_icon"
+                              className="fa-solid fa-angle-right "
+                              style={{
+                                fontSize: "14px",
+                                justifyContent: "end",
+                              }}
                             ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg Jewelry_dropdown"
-                          style={{ top: "-223px" }}
+                          className="dropdown-menu "
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "570px",
+                            height: "370px",
+                            overflow: "auto",
+                            top: "-201px",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 mt-lg-4">
                             <div className="col-lg-6">
@@ -1943,6 +2505,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Body Jewelry
                                     </h2>
@@ -1950,81 +2516,105 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Wrist Watches{" "}
-                                      </h3>
+                                      {" "}
+                                      Wrist Watches{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Necklaces & Pendants{" "}
-                                      </h3>
+                                      {" "}
+                                      Necklaces & Pendants{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Bracelets & Bangles{" "}
-                                      </h3>
+                                      {" "}
+                                      Bracelets & Bangles{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Rings{" "}
-                                      </h3>
+                                      {" "}
+                                      Rings{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Ear Rings{" "}
-                                      </h3>
+                                      {" "}
+                                      Ear Rings{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Cufflinks{" "}
-                                      </h3>
+                                      {" "}
+                                      Cufflinks{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Anklets{" "}
-                                      </h3>
+                                      {" "}
+                                      Anklets{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Bespoke Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Bespoke Jewelry{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2042,6 +2632,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Ethnic & Tribal Jewelry
                                     </h2>
@@ -2049,51 +2643,66 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Neck & Wrist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Neck & Wrist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Waist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Waist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Artistic Handwork{" "}
-                                      </h3>
+                                      {" "}
+                                      Artistic Handwork{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2107,6 +2716,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Ethnic & Tribal Jewelry
                                     </h2>
@@ -2114,51 +2727,66 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Neck & Wrist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Neck & Wrist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Waist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Waist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Artistic Handwork{" "}
-                                      </h3>
+                                      {" "}
+                                      Artistic Handwork{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2169,123 +2797,162 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
                             Health
-                            <i className="fa-solid fa-angle-right health_product_main_dropdownn_icon"></i>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i
+                              className="fa-solid fa-angle-right"
+                              style={{ fontSize: "14px" }}
+                            ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg health_dropdown"
-                          style={{ top: "-101px" }}
+                          className="dropdown-menu shadow-lg"
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "280px",
+                            height: "390px",
+                            overflow: "auto",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 ">
                             <div>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Dietary Supplements{" "}
-                                  </h4>
+                                  {" "}
+                                  Dietary Supplements{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Natural Herbs{" "}
-                                  </h4>
+                                  {" "}
+                                  Natural Herbs{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Vitamin Supplements{" "}
-                                  </h4>
+                                  {" "}
+                                  Vitamin Supplements{" "}
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Energy Tonics
-                                  </h4>
+                                  {" "}
+                                  Energy Tonics
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Patent Medicine
-                                  </h4>
+                                  {" "}
+                                  Patent Medicine
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Antibacterial & Antiseptic
-                                  </h4>
+                                  {" "}
+                                  Antibacterial & Antiseptic
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Sexual Health
-                                  </h4>
+                                  {" "}
+                                  Sexual Health
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Sports Nutrition
-                                  </h4>
+                                  {" "}
+                                  Sports Nutrition
                                 </NavLink>
                               </li>
                               <li>
                                 <NavLink
                                   className="dropdown-item text-decoration-none mb-2"
-                                  style={{ borderBottom: "1px solid #e5e5e5" }}
+                                  style={{
+                                    fontSize: "18px",
+                                    color: "#646464",
+                                    lineHeight: "25px",
+                                    borderBottom: "1px solid #e5e5e5",
+                                  }}
                                 >
-                                  <h4 className="dropdownn_common_product_size">
-                                    {" "}
-                                    Pain Killers
-                                  </h4>
+                                  {" "}
+                                  Pain Killers
                                 </NavLink>
                               </li>
                             </div>
@@ -2294,25 +2961,36 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link category_main_dropdownn_hover text-decoration-none">
+                        <NavLink className="nav-link HEADERhoVER text-decoration-none">
                           <img
-                            className="category_main_dropdownn_image"
+                            className=""
+                            style={{ height: "15px" }}
                             src={require("../../Img/drop.png")}
                             alt=""
                           />
                           <span
                             className="ms-3 text-start"
+                            style={{ fontSize: "15px", lineHeight: "20px" }}
                           >
                             Sports & Training
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <i
-                              className="fa-solid fa-angle-right sports_product_main_dropdownn_icon"
+                              className="fa-solid fa-angle-right"
+                              style={{ fontSize: "14px" }}
                             ></i>
                           </span>
                         </NavLink>
 
                         <ul
-                          className="dropdown-menu shadow-lg sports_training_dropdown"
-                          style={{ top: "-304px" }}
+                          className="dropdown-menu "
+                          style={{
+                            border: "1px solid #fff",
+                            backgroundColor: "white",
+                            width: "570px",
+                            height: "370px",
+                            overflow: "auto",
+                            top: "-281px",
+                          }}
                         >
                           <div className="row ms-lg-2 d-flex p-2 mt-lg-4">
                             <div className="col-lg-6">
@@ -2326,6 +3004,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Sports & Leisure Items
                                     </h2>
@@ -2333,111 +3015,144 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Golf{" "}
-                                      </h3>
+                                      {" "}
+                                      Golf{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Cycling{" "}
-                                      </h3>
+                                      {" "}
+                                      Cycling{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Soccer And Rugby{" "}
-                                      </h3>
+                                      {" "}
+                                      Soccer And Rugby{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Netball And Tennis{" "}
-                                      </h3>
+                                      {" "}
+                                      Netball And Tennis{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        MMA & Contact Sport{" "}
-                                      </h3>
+                                      {" "}
+                                      MMA & Contact Sport{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Skating And Skateboards{" "}
-                                      </h3>
+                                      {" "}
+                                      Skating And Skateboards{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Yoga Equipment{" "}
-                                      </h3>
+                                      {" "}
+                                      Yoga Equipment{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Fishing Equipment{" "}
-                                      </h3>
+                                      {" "}
+                                      Fishing Equipment{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Cricket And Hockey{" "}
-                                      </h3>
+                                      {" "}
+                                      Cricket And Hockey{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Indoor Sports{" "}
-                                      </h3>
+                                      {" "}
+                                      Indoor Sports{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Other Sports{" "}
-                                      </h3>
+                                      {" "}
+                                      Other Sports{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2455,6 +3170,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Ethnic & Tribal Jewelry
                                     </h2>
@@ -2462,141 +3181,183 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Exercising Equipment{" "}
-                                      </h3>
+                                      {" "}
+                                      Exercising Equipment{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Treadmill And Bikes{" "}
-                                      </h3>
+                                      {" "}
+                                      Treadmill And Bikes{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Dumbells{" "}
-                                      </h3>
+                                      {" "}
+                                      Dumbells{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Home Gyms{" "}
-                                      </h3>
+                                      {" "}
+                                      Home Gyms{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Benches{" "}
-                                      </h3>
+                                      {" "}
+                                      Benches{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Barbells And Attachments{" "}
-                                      </h3>
+                                      {" "}
+                                      Barbells And Attachments{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Sports Nutrition{" "}
-                                      </h3>
+                                      {" "}
+                                      Sports Nutrition{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Hand Grippers{" "}
-                                      </h3>
+                                      {" "}
+                                      Hand Grippers{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Gym Belts{" "}
-                                      </h3>
+                                      {" "}
+                                      Gym Belts{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Multi Purpose Training Machine{" "}
-                                      </h3>
+                                      {" "}
+                                      Multi Purpose Training Machine{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Electronic Training Tools{" "}
-                                      </h3>
+                                      {" "}
+                                      Electronic Training Tools{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Gym Accessories{" "}
-                                      </h3>
+                                      {" "}
+                                      Gym Accessories{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Weights{" "}
-                                      </h3>
+                                      {" "}
+                                      Weights{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Other Training Equipment{" "}
-                                      </h3>
+                                      {" "}
+                                      Other Training Equipment{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2610,6 +3371,10 @@ const Header = () => {
                                   >
                                     <h2
                                       className="fs-6"
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#444",
+                                      }}
                                     >
                                       Ethnic & Tribal Jewelry
                                     </h2>
@@ -2617,51 +3382,66 @@ const Header = () => {
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Neck & Wrist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Neck & Wrist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Head Gear & Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Head Gear & Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Waist Jewelry{" "}
-                                      </h3>
+                                      {" "}
+                                      Waist Jewelry{" "}
                                     </NavLink>
                                   </li>
                                   <li>
                                     <NavLink
                                       className="dropdown-item text-decoration-none "
+                                      style={{
+                                        fontSize: "14px",
+                                        color: "#646464",
+                                        lineHeight: "15px",
+                                      }}
                                     >
-                                      <h3 className="product_dropdownn_size">
-                                        {" "}
-                                        Artistic Handwork{" "}
-                                      </h3>
+                                      {" "}
+                                      Artistic Handwork{" "}
                                     </NavLink>
                                   </li>
                                 </div>
@@ -2670,11 +3450,8 @@ const Header = () => {
                           </div>
                         </ul>
                       </li>
-
                     </ul>
                   </li>
-
-
 
                   <li className="nav-item dropdown ps-lg-3">
                     <a
@@ -2688,7 +3465,7 @@ const Header = () => {
                       Electronics
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -2744,7 +3521,7 @@ const Header = () => {
                       Fashion & Style
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -2808,7 +3585,7 @@ const Header = () => {
                     </a>
 
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -2886,8 +3663,8 @@ const Header = () => {
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
-                          <Link to={"/category"}>Jewelry & Watches</Link>
+
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jewelry & Watches
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         </a>
                       </li>
@@ -2906,7 +3683,7 @@ const Header = () => {
                       Cell Phones & Tablets
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -2963,7 +3740,7 @@ const Header = () => {
                       Gadgets
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -3022,7 +3799,7 @@ const Header = () => {
                       </Link>
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -3071,7 +3848,7 @@ const Header = () => {
                       Health
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",
@@ -3162,7 +3939,7 @@ const Header = () => {
                       Sports & Training
                     </a>
                     <ul
-                      className="dropdown-menu category_main_dropdownn_hover shadow-lg"
+                      className="dropdown-menu HEADERhoVER shadow-lg"
                       style={{
                         border: "1px solid #fff",
                         backgroundColor: "#fff",

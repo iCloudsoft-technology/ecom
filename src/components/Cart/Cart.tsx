@@ -74,7 +74,10 @@ const Cart = () => {
             </div>
           </div>
         ))}
-        <button>Checkout ${Math.round(total)} </button>
+        <div className="total-container">
+          <h3>Total - ${Math.round(total)}</h3>
+          <button className="btn btn-success checkout-button">Checkout</button>
+        </div>
       </Container>
     </>
   );
