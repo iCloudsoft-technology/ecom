@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Carousel, Card, Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Hero from "../../components/Hero/Hero";
 
 interface Product {
   id: number;
@@ -22,11 +23,12 @@ const CategoryPage: React.FC = () => {
   console.log(category);
   return (
     <>
-      <Container className="bg-light">
+      <Hero />
+      <Container className="mt-5">
         <Row className="carousel-container">
           {category.map((product) => (
             <Col key={product.id} md={4}>
-              <Card className="carousel-card">
+              <Card className="carousel-card mb-3">
                 <Card.Img variant="top" src={product.image} />
                 <Card.Body>
                   <Card.Title>{product.title}</Card.Title>

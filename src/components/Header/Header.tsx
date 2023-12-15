@@ -3663,8 +3663,8 @@ const Header = () => {
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          {" "}
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jewelry & Watches
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+                          <Link to={"/category"}>Jewelry & Watches</Link>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         </a>
                       </li>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import ProductTabs from "../../components/Tabs/ProductTabs";
+import ProductCarousel from "../../components/Caraousal/ProductCarousel";
 
 interface Product {
   id: number;
@@ -28,10 +30,10 @@ const Product: React.FC = () => {
   console.log(productData);
   return (
     <>
-      {productData ? (
-        <>
-          <Container className="product-container">
-            <Row>
+      <Container className="product-container">
+        {productData ? (
+          <>
+            <Row className="mb-5">
               <Col md={6} className="product-img">
                 <img src={productData.image} alt="{productData.title}" />
               </Col>
@@ -46,11 +48,13 @@ const Product: React.FC = () => {
                 </Link>
               </Col>
             </Row>
-          </Container>
-        </>
-      ) : (
-        <div>Loading....</div>
-      )}
+          </>
+        ) : (
+          <div>Loading....</div>
+        )}
+        <ProductTabs />
+      </Container>
+      <h3>Related Products</h3>
     </>
   );
 };
