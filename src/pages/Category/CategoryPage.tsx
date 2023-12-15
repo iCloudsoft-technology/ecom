@@ -10,6 +10,7 @@ interface Product {
   description: string;
   category: string;
   image: string;
+  count: number;
 }
 
 const CategoryPage: React.FC = () => {
@@ -23,8 +24,30 @@ const CategoryPage: React.FC = () => {
 
   const handleClick = (product: Product) => {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    console.log(typeof existingCart);
+    if(product.count === undefined){
+      product.count = 1;
+    } else {
+      product.count = product.count + 1;
+    }
+    var check:Boolean  = true;
+    for (var prod of existingCart) {
+      if(prod.id === product.id){
+        prod.count = prod.count + 1
+        check = false;
+      }
+    }
+    
+    for (var prod of existingCart) {
+      console.log(prod.id, prod.count);
+    }
+
+    if (check){
     const updatedCart = [...existingCart, product];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    } else {
+      localStorage.setItem("cart", JSON.stringify(existingCart));
+    } 
     alert("Product added to cart");
   };
 
