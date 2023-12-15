@@ -39,18 +39,14 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ productData }) => {
           <Row className="carousel-container">
             {group.map((product) => (
               <Col key={product.id} md={2}>
-                <Card className="carousel-card">
+                <Card className="carousel-card mt-3 pt-3">
                   <Card.Img variant="top" src={product.image} />
                   <Card.Body>
-                    <Card.Title>{product.title}</Card.Title>
-
                     <Card.Text className="product-price">
                       <span>Price: ${product.price}</span>
-                      <p>
-                        <button className="btn btn-primary add-to-cart">
-                          Add to Cart
-                        </button>
-                      </p>
+                    </Card.Text>
+                    <Card.Text className="product-title">
+                      {product.title}
                     </Card.Text>
                   </Card.Body>
                 </Card>

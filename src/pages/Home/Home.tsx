@@ -6,6 +6,8 @@ import "./Home.css";
 
 import Hero from "../../components/Hero/Hero";
 import ProductCarousel from "../../components/Caraousal/ProductCarousel";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
+import Silder from "../../components/Silder/Silder";
 
 interface Product {
   id: number;
@@ -29,6 +31,8 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <ProductCarousel productData={productData} />
+      <Silder />
+      <ProductGrid productData={productData} />
     </>
   );
 };

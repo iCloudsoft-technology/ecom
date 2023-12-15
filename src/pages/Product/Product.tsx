@@ -54,7 +54,6 @@ const Product: React.FC = () => {
         )}
         <ProductTabs />
       </Container>
-      <h3>Related Products</h3>
     </>
   );
 };

@@ -14,13 +14,19 @@ interface Product {
 
 const CategoryPage: React.FC = () => {
   const [category, setCategory] = useState<Product[]>([]);
-
+  const [cartData, setCartData] = useState<any>([]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/jewelery")
       .then((res) => res.json())
       .then((json) => setCategory(json));
   }, []);
-  console.log(category);
+
+  const handleClick = (product: Product) => {
+    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const updatedCart = [...existingCart, product];
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
   return (
     <>
       <Hero />
@@ -39,6 +45,7 @@ const CategoryPage: React.FC = () => {
                       <Link
                         to={`/product/${product.id}`}
                         className="btn btn-primary"
+                        onClick={() => handleClick(product)}
                       >
                         Add to Cart
                       </Link>

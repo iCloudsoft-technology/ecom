@@ -29,7 +29,7 @@ const Navbar = () => {
         style={{ backgroundColor: "#041E42" }}
       >
         <div className="container-fluid p-0 ">
-          <div className="ms-lg-5 ps-lg-3 col-lg-2">
+          <div className="ms-lg-5  col-lg-3">
             <NavLink href="/">
               <img
                 className=""
@@ -61,7 +61,7 @@ const Navbar = () => {
                   <ul className="navbar-nav text-white  ">
                     <li className="nav-item pe-lg-3">
                       <NavLink
-                        className="  BORDERhoVer p-2 "
+                        className="  BORDERhoVer col-lg-3 "
                         style={{
                           fontSize: "21px",
                           fontWeight: "500",
@@ -73,7 +73,7 @@ const Navbar = () => {
                         Home
                       </NavLink>
                     </li>
-                    <li className="nav-item pe-lg-3">
+                    <li className="nav-item col-lg-3">
                       <NavLink
                         className="   BORDERhoVer p-2"
                         style={{
@@ -86,7 +86,7 @@ const Navbar = () => {
                         About us
                       </NavLink>
                     </li>
-                    <li className="nav-item pe-lg-3">
+                    <li className="nav-item col-lg-3">
                       <NavLink
                         className="   BORDERhoVer p-2"
                         style={{

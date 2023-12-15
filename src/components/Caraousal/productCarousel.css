@@ -10,6 +10,7 @@
     background-color: #fff;
     border: 1px solid #f2f2f2;
     color: #333;
+    
 }
 
 .card-title {
@@ -32,4 +33,7 @@ img.card-img-top {
 
 .add-to-cart {
     text-align: right;
+}
+.product-title {
+    font-weight: 600;
 }
