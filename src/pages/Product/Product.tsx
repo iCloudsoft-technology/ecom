@@ -43,9 +43,9 @@ const Product: React.FC = () => {
                 <p>{productData.description}</p>
                 <h3>Price: $ {productData.price} </h3>
                 <p>Rating:{productData.rating.rate}</p>
-                <Link to={"/cart"} className="btn btn-success">
+                {/* <Link to={"/cart"} className="btn btn-success">
                   Buy Now
-                </Link>
+                </Link> */}
               </Col>
             </Row>
           </>
