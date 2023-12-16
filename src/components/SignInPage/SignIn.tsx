@@ -4,8 +4,10 @@ import "./SignIn.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle } from "react-icons/fa";
 import EcomDataService from "../../services/api.service";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../app/slice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../app/slice/authSlice";
+import { ThunkDispatch } from "redux-thunk";
+import { AnyAction } from "redux";
 
 const SignIn = () => {
   const [inputEmail, setInputEmail] = useState("");
@@ -14,8 +16,10 @@ const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const [rememberPassword, setRememberPassword] = useState(false);
   const navigate = useNavigate();
-  const dispatch: any = useDispatch();
-  const user: any = useSelector((state) => state);
+  const dispatch: ThunkDispatch<any, any, AnyAction> = useDispatch();
+
+  const pp = useSelector((state) => state);
+  console.log("ppp", pp);
 
   React.useEffect(() => {
     // for getting user from local storage if user remembered
@@ -34,8 +38,7 @@ const SignIn = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    // console.log("user", inputEmail, inputPassword, rememberPassword);
-    // setLoading(true);
+    console.log("user", inputEmail, inputPassword, rememberPassword);
     // EcomDataService.userLogin({
     //   username: inputEmail, // "mor_2314"
     //   password: inputPassword, // "83r5^_"
@@ -53,8 +56,7 @@ const SignIn = () => {
     //     alert("please enter valid email and password");
     //   });
 
-    // setLoading(false);
-    await dispatch(loginUser({ inputEmail, inputPassword }));
+    dispatch(loginUser({ inputEmail, inputPassword }));
   };
 
   const handlePassword = () => {};
@@ -65,11 +67,25 @@ const SignIn = () => {
         <div className="h4 mt-2 text-center mb-4">Sign In</div>
         <Form.Group className="mb-4" controlId="email">
           <InputGroup>
-            <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup.Text
+              className="rounded-0 mx-0"
+              style={{
+                borderRight: "none", // Remove right border
+                color: "blue", // Text color
+                backgroundColor: "#f3f8fc",
+              }}
+            >
               <FaUser />
             </InputGroup.Text>
             <Form.Control
-              className="rounded-0 mx-0 inputBox"
+              style={{
+                borderLeft: "none", // Remove right border
+                color: "darkgray", // Text color
+                backgroundColor: "#f3f8fc",
+                boxShadow: "none",
+                height: "100%",
+              }}
+              className="rounded-0 mx-0 "
               type="text"
               value={inputEmail}
               placeholder="Type Email Address *"
@@ -80,16 +96,29 @@ const SignIn = () => {
         </Form.Group>
         <Form.Group className="mb-4" controlId="password">
           <InputGroup>
-            <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup.Text
+              className="rounded-0 mx-0"
+              style={{
+                borderRight: "none", // Remove right border
+                color: "blue", // Text color
+                backgroundColor: "#f3f8fc",
+              }}
+            >
               <FaKey />
             </InputGroup.Text>
             <Form.Control
+              style={{
+                borderLeft: "none", // Remove right border
+                color: "darkgray", // Text color
+                backgroundColor: "#f3f8fc",
+                height: "100%",
+              }}
               type="password"
               value={inputPassword}
               placeholder="Type Password *"
               onChange={(e) => setInputPassword(e.target.value)}
               required
-              className="rounded-0 mx-0 inputBox"
+              className="rounded-0 mx-0 "
             />
           </InputGroup>
         </Form.Group>

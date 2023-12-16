@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Alert, InputGroup, Col } from "react-bootstrap";
 import "./SignUp.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle, FaPhone } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { signUpUser } from "../../app/slice/authSlice";
 
 const SignUp = () => {
   const [inputUserFullName, setInputUserFullName] = useState("");
@@ -10,10 +12,12 @@ const SignUp = () => {
   const [inputNumber, setInputNumber] = useState("");
   const [inputCPassword, setInputCPassword] = useState("");
   const [rememberPolicy, setRememberPolicy] = useState(false);
-
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const dispatch: any = useDispatch();
 
+  const user: any = useSelector((state) => state);
+  console.log("user", user.auth);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
@@ -25,7 +29,15 @@ const SignUp = () => {
       rememberPolicy
     );
     if (inputPassword === inputCPassword) {
-      // write API call for user Register
+      dispatch(
+        signUpUser({
+          firstname: inputUserFullName,
+          lastname: inputUserFullName,
+          email: inputEmail,
+          phonenumber: inputNumber,
+          password: inputPassword,
+        })
+      );
     } else {
       alert("Password and Confirm Password should be same");
     }
@@ -39,27 +51,19 @@ const SignUp = () => {
   return (
     <>
       <Col>
-        <Form className="shadow p-4 bg-white rounded" onSubmit={handleSubmit}>
+        <Form
+          className="shadow p-4 bg-white rounded"
+          style={{ marginLeft: "-15px", marginRight: "-15px" }}
+          onSubmit={handleSubmit}
+        >
           <div className="h4 mt-2 text-center mb-4">Sign In</div>
           <Form.Group className="mb-4" controlId="userFullName">
             <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-                className="rounded-0 mx-0"
+                className="rounded-0 mx-0 inputBox"
                 type="text"
                 value={inputUserFullName}
                 placeholder="Full Name *"
@@ -70,23 +74,11 @@ const SignUp = () => {
           </Form.Group>
           <Form.Group className="mb-4" controlId="email">
             <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-                className="rounded-0 mx-0"
+                className="rounded-0 mx-0 inputBox"
                 type="email"
                 value={inputEmail}
                 placeholder="Email Address *"
@@ -98,22 +90,11 @@ const SignUp = () => {
 
           <Form.Group className="mb-4" controlId="phoneNumber">
             <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
                 <FaPhone />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="number"
                 value={inputNumber}
                 placeholder="Phone Number"
@@ -124,22 +105,11 @@ const SignUp = () => {
 
           <Form.Group className="mb-4" controlId="password">
             <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="password"
                 value={inputPassword}
                 placeholder="Password *"
@@ -151,22 +121,11 @@ const SignUp = () => {
 
           <Form.Group className="mb-4" controlId="confirmPassword">
             <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="password"
                 value={inputCPassword}
                 placeholder="Confirm Password *"
