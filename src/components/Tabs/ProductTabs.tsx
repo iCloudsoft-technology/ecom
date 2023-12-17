@@ -1,29 +1,51 @@
-import React, { useState } from "react";
-import { Tab, Tabs } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Row } from "react-bootstrap";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
-const ProductTabs: React.FC = () => {
-  const [key, setKey] = useState<string>("description");
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+}
+interface ProductTabsProps {
+  productData: Product | Product[] | null;
+}
+const ProductTabs: React.FC<ProductTabsProps> = ({ productData }) => {
+  const [data, setData] = useState<Product | {}>(productData || {});
+
+  useEffect(() => {
+    if (productData) {
+      setData(productData);
+    }
+  }, [productData]);
+  const { description } = data as Product;
 
   return (
-    <Tabs
-      id="product-tabs"
-      activeKey={key}
-      onSelect={(k) => setKey(k as string)}
-      className="mb-3"
-    >
-      <Tab eventKey="description" title="Description">
-        {/* Content for the Description tab */}
-        <p>This is the description of the product.</p>
-      </Tab>
-      <Tab eventKey="specification" title="Specification">
-        {/* Content for the Specification tab */}
-        <p>These are the specifications of the product.</p>
-      </Tab>
-      <Tab eventKey="reviews" title="Reviews">
-        {/* Content for the Reviews tab */}
-        <p>Read the reviews about the product here.</p>
-      </Tab>
-    </Tabs>
+    <>
+      <Row className="product-tabs">
+        {data && (
+          <Tabs defaultActiveKey="description" className="mb-3 tabs">
+            <Tab
+              eventKey="description"
+              title="Description"
+              className="p-2 text-left"
+            >
+              {description}
+            </Tab>
+            <Tab eventKey="reviews" title="Reviews" className="p-2 text-left">
+              Tab content for Profile
+            </Tab>
+            <Tab eventKey="comments" title="Comments" className="p-2 text-left">
+              Tab content for Contact
+            </Tab>
+          </Tabs>
+        )}
+      </Row>
+    </>
   );
 };
 

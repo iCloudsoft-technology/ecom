@@ -4,7 +4,8 @@ import "./SignUp.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle, FaPhone } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { signUpUser } from "../../app/slice/authSlice";
-
+import { Navigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
   const [inputUserFullName, setInputUserFullName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -15,6 +16,7 @@ const SignUp = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const dispatch: any = useDispatch();
+  const navigate = useNavigate();
 
   const user: any = useSelector((state) => state);
   console.log("user", user.auth);
@@ -36,6 +38,7 @@ const SignUp = () => {
           password: inputPassword,
         })
       );
+      navigate("/home");
     } else {
       alert("Password and Confirm Password should be same");
     }
