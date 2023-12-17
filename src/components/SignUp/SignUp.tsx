@@ -3,7 +3,7 @@ import { Form, Button, Alert, InputGroup, Col } from "react-bootstrap";
 import "./SignUp.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle, FaPhone } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { signUpUser } from "../../app/slice/authSlice";
+import { getAllUsers, signUpUser } from "../../app/slice/authSlice";
 import { Navigate } from "react-router";
 import { useNavigate } from "react-router-dom";
 const SignUp = (props: any) => {
@@ -37,6 +37,7 @@ const SignUp = (props: any) => {
           password: inputPassword,
         })
       );
+      await dispatch(getAllUsers());
       props.setSignInClicked(!props.signInClicked);
     } else {
       alert("Password and Confirm Password should be same");
