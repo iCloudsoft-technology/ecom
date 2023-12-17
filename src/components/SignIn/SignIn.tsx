@@ -36,7 +36,8 @@ const SignIn = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    const allUsers = user.auth.allUsers.find(
+    const allUsers = user.auth.allUsers.filter(
+      // const allUsers = [{ email: "abc@123", password: "123" }].filter(
       (item: any) => item.email == inputEmail && item.password == inputPassword
     );
     if (!allUsers) {
@@ -48,9 +49,9 @@ const SignIn = () => {
       localStorage.setItem("ecomPassword", inputPassword);
     }
     allUsers && localStorage.setItem("user", JSON.stringify(allUsers));
+    localStorage.setItem("userLog", "true");
     allUsers && navigate("/");
-
-    //await dispatch(loginUser({ inputEmail, inputPassword, allUsers }));
+    await dispatch(loginUser({ inputEmail, inputPassword, allUsers }));
   };
 
   const handlePassword = () => {};

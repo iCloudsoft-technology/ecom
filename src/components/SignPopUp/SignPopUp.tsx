@@ -12,7 +12,7 @@ const SignPopUp = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  React.useEffect(() => {}, [signInClicked]);
   return (
     <Container>
       <Button variant="primary" onClick={handleShow}>
@@ -54,7 +54,10 @@ const SignPopUp = () => {
                   {signInClicked ? (
                     <SignIn />
                   ) : (
-                    <SignUp setSignInClicked={setSignInClicked} />
+                    <SignUp
+                      setSignInClicked={setSignInClicked}
+                      signInClicked={signInClicked}
+                    />
                   )}
                 </Col>
               </Row>

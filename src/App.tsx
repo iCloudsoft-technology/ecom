@@ -7,7 +7,7 @@ import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Singleproductpage from "./components/Singleproductpage/Singleproductpage";
-import Sign from "./components/Sign/Sign";
+
 import Userprofile from "./components/UserProfile/Userprofile";
 import Cart from "./components/Cart/Cart";
 import Category from "./components/Category/Category";
@@ -18,6 +18,7 @@ import Product from "./pages/Product/Product";
 import HeaderNew from "./components/Header-New/HeaderNew";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "./app/slice/authSlice";
+import SignPage from "./components/SignInPage/SignPage";
 
 function App() {
   const dispatch: any = useDispatch();
@@ -27,8 +28,8 @@ function App() {
     dispatch(getAllUsers());
   }, []);
   React.useEffect(() => {
-    setIsUserLog(user.auth.user.email);
-  }, [user.auth]);
+    setIsUserLog(user.auth.isUserLog);
+  }, [user.auth.isUserLog]);
 
   return (
     <div className="App">
@@ -48,6 +49,7 @@ function App() {
               </>
             }
           />
+
           <Route
             path="/home"
             element={
@@ -57,7 +59,7 @@ function App() {
                     <Home />
                   </>
                 ) : (
-                  <Sign />
+                  <SignPage />
                 )}
               </>
             }

@@ -14,6 +14,7 @@ interface AuthState {
   loading: boolean;
   error: string | null;
   allUsers: any;
+  isUserLog: any;
 }
 
 const initialState: AuthState = {
@@ -21,6 +22,7 @@ const initialState: AuthState = {
   loading: false,
   error: null,
   allUsers: null,
+  isUserLog: false,
 };
 
 const initialStateApp = {
@@ -28,6 +30,7 @@ const initialStateApp = {
   loading: false,
   error: null,
   allUsers: null,
+  isUserLog: JSON.parse(localStorage.getItem("userLog") || "false"),
 };
 export const loginUser = createAsyncThunk(
   "SignIn",
@@ -51,6 +54,15 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
+
+export const logOutUser = createAsyncThunk("SignOut", async () => {
+  try {
+    return false;
+    // eslint-disable-next-line no-unreachable
+  } catch (error) {
+    throw error;
+  }
+});
 
 export const signUpUser = createAsyncThunk(
   "signUp",
@@ -90,6 +102,7 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action: any) => {
         state.user = action.payload;
         state.loading = false;
+        state.isUserLog = true;
       })
       .addCase(loginUser.rejected, (state, action: any) => {
         state.loading = false;
@@ -115,6 +128,15 @@ const authSlice = createSlice({
       .addCase(getAllUsers.rejected, (state, action: any) => {
         state.loading = false;
         state.error = action.error.message;
+      })
+      .addCase(logOutUser.pending, (state, action: any) => {
+        state.isUserLog = false;
+      })
+      .addCase(logOutUser.fulfilled, (state, action: any) => {
+        state.isUserLog = false;
+      })
+      .addCase(logOutUser.rejected, (state, action: any) => {
+        state.isUserLog = false;
       });
   },
 });

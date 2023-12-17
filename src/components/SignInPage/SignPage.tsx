@@ -14,7 +14,7 @@ import SignIn from "../SignIn/SignIn";
 
 const SignPage = () => {
   const [signInClicked, setSignInClicked] = React.useState(true);
-
+  React.useEffect(() => {}, [signInClicked]);
   return (
     <div>
       <div className="App">
@@ -50,7 +50,10 @@ const SignPage = () => {
               {signInClicked ? (
                 <SignIn />
               ) : (
-                <SignUp setSignInClicked={setSignInClicked} />
+                <SignUp
+                  setSignInClicked={setSignInClicked}
+                  signInClicked={signInClicked}
+                />
               )}
             </Col>
           </Row>
