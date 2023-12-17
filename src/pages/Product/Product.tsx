@@ -43,14 +43,11 @@ const Product: React.FC = () => {
 
   const handleClick = (product: Product) => {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    console.log(typeof existingCart);
-    if (product.count === undefined) {
-      product.count = 1;
-    } else {
-      product.count = product.count + 1;
-    }
+    product.count = quntity;
+
     var check: Boolean = true;
     for (var prod of existingCart) {
+      console.log("Here in for of");
       if (prod.id === product.id) {
         prod.count = prod.count + 1;
         check = false;
@@ -62,6 +59,7 @@ const Product: React.FC = () => {
     // }
 
     if (check) {
+      console.log("here in product", product);
       const updatedCart = [...existingCart, product];
       localStorage.setItem("cart", JSON.stringify(updatedCart));
     } else {

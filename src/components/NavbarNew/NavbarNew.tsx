@@ -1,81 +1,9 @@
 import React from "react";
 import { NavLink, Navbar } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
+import categories from "./categoriesData";
 import "./Header.css";
 const Header = () => {
-  const categories = [
-    {
-      name: "Electronics",
-      url: "/electronics",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Fashion & Style",
-      url: "/fashionstyle",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Art & Crafts",
-      url: "/artandcrafts",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Cell Phone & Tablets",
-      url: "/cellphones",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Gadgets",
-      url: "/gadgets",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Jewelry & Watches",
-      url: "/jewelry-and-watches",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Health",
-      url: "/health",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Sports & Training",
-      url: "/sports-and-training",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Stationery & Books",
-      url: "/stationery-and-books",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "NGOs & NPOs",
-      url: "/ngos-and-npos",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Home & Outdoors",
-      url: "/home-and-outdoors",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Baby & Toddler",
-      url: "/baby-and-toddler",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Camping & Hiking",
-      url: "/camping-and-hiking",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-    {
-      name: "Liquor",
-      url: "/liquor",
-      img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
-    },
-  ];
-
   return (
     <>
       <section>
