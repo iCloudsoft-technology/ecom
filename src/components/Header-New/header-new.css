@@ -1,0 +1,168 @@
+.header-row {
+    background-color: #041E42;
+    padding: 12px 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.top-navigation {
+    color: #fff;
+}
+
+ol,
+ul {
+    padding-left: 0rem;
+}
+
+.nav-link {
+    padding: 0 !important;
+}
+
+.header_logo {
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items {
+    margin-bottom: 0;
+}
+
+.nav-items li {
+
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 21px;
+    font-family: 'Alegreya', serif;
+}
+
+.nav-items li a {
+    color: #fff;
+    padding: 6px 10px;
+}
+
+.nav-items li a:hover {
+    color: #FFFF00;
+    text-decoration: none;
+}
+
+span#basic-addon1 {
+    border-radius: 25px 0 0 25px;
+}
+
+.search-box {
+    padding: 22px 0 !important;
+}
+
+.search-box:focus-visible {
+    box-shadow: unset;
+    border: 0;
+    margin-left: 0;
+    outline: 0;
+}
+
+.search-box-category-container {
+    position: relative;
+    height: 44px;
+    width: 160px;
+    z-index: 2;
+    top: 0;
+    left: 0px;
+    width: 60px;
+}
+
+.navbar-dropdown {
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    width: 61px;
+    border-radius: 50px 0px 0px 50px;
+    background-color: #F3F3F3;
+    border-color: #F3F3F3;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 12px;
+    line-height: 50px;
+    height: 100%;
+}
+
+select.navbar-dropdown {
+    outline: 0;
+}
+
+.search-form input {
+    height: 44px;
+    width: 100%;
+    border-radius: 0px 50px 50px 0px;
+    border: 0px;
+    background: #fff;
+    padding: 1px 60px 0px 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Alegreya', serif;
+}
+
+.search-form input:focus-visible {
+    outline: 0;
+}
+
+.search-form button {
+    background: #2866bc;
+    height: 44px;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 0 50px 50px 0;
+    width: 50px;
+    position: relative;
+    left: -25px;
+
+}
+
+.navbar-rhs {
+    float: right;
+    font-family: 'Alegreya', serif;
+    color: #fff;
+}
+
+.navbar-rhs ul {
+    margin: 0;
+}
+
+.navbar-rhs ul li {
+
+    display: inline;
+}
+
+.links-container {
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.links-container a {
+    color: #fff;
+}
+
+.links-container a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-currency-sign {
+    color: #fff;
+    font-size: 13px;
+}
+
+.currency-selector {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+
+}
+
+.currency-selector option {
+    color: #000;
+
+}

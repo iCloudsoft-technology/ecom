@@ -15,6 +15,7 @@ import React from "react";
 import Silder from "./components/Silder/Silder";
 import CategoryPage from "./pages/Category/CategoryPage";
 import Product from "./pages/Product/Product";
+import HeaderNew from "./components/Header-New/HeaderNew";
 
 function App() {
   const [isUserLog, setIsUserLog] = React.useState(false);
@@ -25,7 +26,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <header className="sticky-top">
-          <Navbar />
+          {/* <Navbar />
+          <Header /> */}
+          <HeaderNew />
           <Header />
         </header>
         <Routes>
