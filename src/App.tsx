@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header";
+ 
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
@@ -18,6 +18,8 @@ import Product from "./pages/Product/Product";
 import HeaderNew from "./components/Header-New/HeaderNew";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "./app/slice/authSlice";
+import NavbarNew from "./components/NavbarNew/NavbarNew";
+import Header from "./components/Header/Header";
 
 function App() {
   const dispatch: any = useDispatch();
@@ -34,10 +36,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <header className="sticky-top">
-          {/* <Navbar />
-          <Header /> */}
           <HeaderNew />
           <Header />
+          {/* <NavbarNew /> */}
         </header>
         <Routes>
           <Route
