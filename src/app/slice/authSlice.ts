@@ -23,6 +23,12 @@ const initialState: AuthState = {
   allUsers: null,
 };
 
+const initialStateApp = {
+  user: JSON.parse(localStorage.getItem("user") || "{}"),
+  loading: false,
+  error: null,
+  allUsers: null,
+};
 export const loginUser = createAsyncThunk(
   "SignIn",
   async ({
@@ -74,7 +80,7 @@ export const getAllUsers = createAsyncThunk("allUsers", async () => {
 
 const authSlice = createSlice({
   name: "auth",
-  initialState,
+  initialState: { ...initialStateApp },
   reducers: {},
   extraReducers: (builder) => {
     builder

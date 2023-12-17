@@ -16,9 +16,7 @@ const HeaderNew = () => {
   const [isUserLog, setIsUserLog] = useState(false);
   console.log("user pp", user);
   React.useEffect(() => {
-    const pp = JSON.parse(localStorage.getItem("user") || "false");
-    console.log("pppppp", pp);
-    setIsUserLog(pp);
+    setIsUserLog(user.auth.user.email);
   }, [user.auth]);
   const NavItems = [
     {
