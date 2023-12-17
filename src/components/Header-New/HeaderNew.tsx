@@ -8,16 +8,19 @@ import {
   NavLink,
   Row,
 } from "react-bootstrap";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logOutUser, loginUser } from "../../app/slice/authSlice";
 
 const HeaderNew = () => {
+  const dispatch: any = useDispatch();
   const user: any = useSelector((state) => state);
   const [isUserLog, setIsUserLog] = useState(false);
-  console.log("user pp", user);
+  const navigate = useNavigate();
   React.useEffect(() => {
-    setIsUserLog(user.auth.user.email);
+    setIsUserLog(user.auth.isUserLog);
   }, [user.auth]);
+
   const NavItems = [
     {
       name: "Home",
@@ -98,7 +101,16 @@ const HeaderNew = () => {
               <li>
                 <div className="links-container">
                   <span>
-                    <Link aria-current="page" to="/home">
+                    <Link
+                      aria-current="page"
+                      to="/home"
+                      onClick={() => {
+                        isUserLog && localStorage.removeItem("userLog");
+                        isUserLog && localStorage.removeItem("user");
+                        dispatch(logOutUser());
+                        isUserLog && navigate("/home");
+                      }}
+                    >
                       {!isUserLog ? "Sign In " : "Sign Out"}
                     </Link>
                   </span>

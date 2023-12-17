@@ -17,7 +17,7 @@ const Navbar = () => {
   const [cartValue, setCartValue] = useState<any>([]);
   const user: any = useSelector((state) => state);
   React.useEffect(() => {
-    setIsUserLog(user.auth.user.email);
+    setIsUserLog(user.auth.isUserLog);
     const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartValue(cartItems);
   }, [user.auth]);

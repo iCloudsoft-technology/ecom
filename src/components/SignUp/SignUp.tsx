@@ -19,7 +19,6 @@ const SignUp = (props: any) => {
   const navigate = useNavigate();
 
   const user: any = useSelector((state) => state);
-  console.log("user", user.auth);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     console.log(
@@ -38,7 +37,7 @@ const SignUp = (props: any) => {
           password: inputPassword,
         })
       );
-      await props.setSignInClicked(true);
+      props.setSignInClicked(!props.signInClicked);
     } else {
       alert("Password and Confirm Password should be same");
     }
