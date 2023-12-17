@@ -1,4 +1,5 @@
 import React from "react";
+import SignPopUp from "../SignPopUp/SignPopUp";
 
 const About = () => {
   return (

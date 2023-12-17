@@ -38,6 +38,19 @@ input.form-control:focus {
   width: 4rem;
 }
 
+.inputIcon {
+  border-right: none;
+  color: blue;
+  background-color: #f3f8fc;
+}
+.inputBox {
+  border-left: none;
+  color: darkgray;
+  background-color: #f3f8fc;
+  box-shadow: none;
+  height: 100% !important;
+}
+
 @keyframes showSignInForm {
   0%,
   30% {

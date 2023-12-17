@@ -38,13 +38,8 @@ httpClient.interceptors.request.use(
     config.headers["Ocp-Apim-Subscription-Key"] = OcpApimSubscriptionKey;
     config.headers.Authorization = `Bearer ${token}`;
     config.headers["Content-Type"] = "application/json";
-    config.headers["Content-Security-Policy"] = "default-src 'self'";
-    config.headers["X-Frame-Options"] = "DENY";
-    config.headers["Strict-Transport-Security"] =
-      "max-age=31536000; includeSubDomains; preload";
-    config.headers["X-Content-Type-Options"] = "nosniff";
     config.headers["Access-Control-Allow-Origin"] = "*";
-    config.headers["tenantid"] = `${tenantid}`;
+
     return config;
   },
   (error) => {
