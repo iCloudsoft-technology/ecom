@@ -27,9 +27,7 @@ function App() {
     dispatch(getAllUsers());
   }, []);
   React.useEffect(() => {
-    const pp = JSON.parse(localStorage.getItem("user") || "false");
-    console.log("ppppp", pp);
-    setIsUserLog(pp);
+    setIsUserLog(user.auth.user.email);
   }, [user.auth]);
 
   return (

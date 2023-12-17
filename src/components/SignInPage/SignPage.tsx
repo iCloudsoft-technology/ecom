@@ -47,7 +47,11 @@ const SignPage = () => {
               >
                 Sign Up
               </Button>
-              {signInClicked ? <SignIn /> : <SignUp />}
+              {signInClicked ? (
+                <SignIn />
+              ) : (
+                <SignUp setSignInClicked={setSignInClicked} />
+              )}
             </Col>
           </Row>
         </Container>

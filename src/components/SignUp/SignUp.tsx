@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signUpUser } from "../../app/slice/authSlice";
 import { Navigate } from "react-router";
 import { useNavigate } from "react-router-dom";
-const SignUp = () => {
+const SignUp = (props: any) => {
   const [inputUserFullName, setInputUserFullName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -30,7 +30,7 @@ const SignUp = () => {
       rememberPolicy
     );
     if (inputPassword === inputCPassword) {
-      dispatch(
+      await dispatch(
         signUpUser({
           fullName: inputUserFullName,
           email: inputEmail,
@@ -38,7 +38,7 @@ const SignUp = () => {
           password: inputPassword,
         })
       );
-      navigate("/home");
+      await props.setSignInClicked(true);
     } else {
       alert("Password and Confirm Password should be same");
     }
