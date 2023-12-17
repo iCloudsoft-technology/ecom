@@ -8,14 +8,22 @@ import {
   NavLink,
   Row,
 } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const HeaderNew = () => {
+  const user: any = useSelector((state) => state);
   const [isUserLog, setIsUserLog] = useState(false);
+  console.log("user pp", user);
+  React.useEffect(() => {
+    const pp = JSON.parse(localStorage.getItem("user") || "false");
+    console.log("pppppp", pp);
+    setIsUserLog(pp);
+  }, [user.auth]);
   const NavItems = [
     {
       name: "Home",
-      url: "/",
+      url: "/home",
     },
     {
       name: "About Us",
@@ -96,12 +104,13 @@ const HeaderNew = () => {
                       {!isUserLog ? "Sign In " : "Sign Out"}
                     </Link>
                   </span>
-                  <span>| </span>
-                  <span>
-                    <Link aria-current="page" to="/home">
-                      Sign Up
-                    </Link>
-                  </span>
+                  {!isUserLog && (
+                    <span>
+                      <Link aria-current="page" to="/home">
+                        | Sign Up
+                      </Link>
+                    </span>
+                  )}
                 </div>
               </li>
             </ul>

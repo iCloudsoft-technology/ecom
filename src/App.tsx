@@ -16,12 +16,22 @@ import Silder from "./components/Silder/Silder";
 import CategoryPage from "./pages/Category/CategoryPage";
 import Product from "./pages/Product/Product";
 import HeaderNew from "./components/Header-New/HeaderNew";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllUsers } from "./app/slice/authSlice";
 
 function App() {
-  const [isUserLog, setIsUserLog] = React.useState(false);
+  const dispatch: any = useDispatch();
+  const [isUserLog, setIsUserLog] = React.useState();
+  const user: any = useSelector((state) => state);
   React.useEffect(() => {
-    setIsUserLog(!!localStorage.getItem("isUserLog"));
+    dispatch(getAllUsers());
   }, []);
+  React.useEffect(() => {
+    const pp = JSON.parse(localStorage.getItem("user") || "false");
+    console.log("ppppp", pp);
+    setIsUserLog(pp);
+  }, [user.auth]);
+
   return (
     <div className="App">
       <BrowserRouter>

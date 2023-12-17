@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div
       style={{
+        paddingTop: "30px",
         textAlign: "left",
         margin: "30px",
       }}

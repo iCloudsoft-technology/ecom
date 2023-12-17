@@ -39,7 +39,7 @@ httpClient.interceptors.request.use(
     config.headers.Authorization = `Bearer ${token}`;
     config.headers["Content-Type"] = "application/json";
     config.headers["Access-Control-Allow-Origin"] = "*";
-
+    config.headers["ngrok-skip-browser-warning"] = "true";
     return config;
   },
   (error) => {

@@ -15,8 +15,7 @@ const userLogin = async (user: { username: string; password: string }) => {
 };
 
 const userSignUp = async (user: {
-  firstname?: string;
-  lastname?: string;
+  fullName?: string;
   email?: string;
   phonenumber?: string;
   password?: string;
@@ -24,6 +23,12 @@ const userSignUp = async (user: {
   return await httpCommonClients.httpClient.post<any>(
     process.env.REACT_APP_API + environment.signup,
     user
+  );
+};
+
+const allUsers = async () => {
+  return await httpCommonClients.httpClient.get<any>(
+    process.env.REACT_APP_API + environment.allUsers
   );
 };
 
@@ -39,6 +44,7 @@ const EcomDataService = {
   getUserData,
   userLogin,
   userSignUp,
+  allUsers,
 };
 
 export default EcomDataService;

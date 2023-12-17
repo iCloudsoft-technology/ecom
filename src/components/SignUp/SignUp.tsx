@@ -20,7 +20,6 @@ const SignUp = () => {
   console.log("user", user.auth);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    setLoading(true);
     console.log(
       `Username :${inputUserFullName}, Password :${inputPassword}`,
       inputEmail,
@@ -31,8 +30,7 @@ const SignUp = () => {
     if (inputPassword === inputCPassword) {
       dispatch(
         signUpUser({
-          firstname: inputUserFullName,
-          lastname: inputUserFullName,
+          fullName: inputUserFullName,
           email: inputEmail,
           phonenumber: inputNumber,
           password: inputPassword,
@@ -51,15 +49,11 @@ const SignUp = () => {
   return (
     <>
       <Col>
-        <Form
-          className="shadow p-4 bg-white rounded"
-          style={{ marginLeft: "-15px", marginRight: "-15px" }}
-          onSubmit={handleSubmit}
-        >
-          <div className="h4 mt-2 text-center mb-4">Sign In</div>
+        <Form className="logInAreaSP" onSubmit={handleSubmit}>
+          <div className="h4 header-area">Sign up Now</div>
           <Form.Group className="mb-4" controlId="userFullName">
-            <InputGroup>
-              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
@@ -73,8 +67,8 @@ const SignUp = () => {
             </InputGroup>
           </Form.Group>
           <Form.Group className="mb-4" controlId="email">
-            <InputGroup>
-              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
@@ -89,8 +83,8 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="phoneNumber">
-            <InputGroup>
-              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaPhone />
               </InputGroup.Text>
               <Form.Control
@@ -104,8 +98,8 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="password">
-            <InputGroup>
-              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
@@ -120,8 +114,8 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="confirmPassword">
-            <InputGroup>
-              <InputGroup.Text className="rounded-0 mx-0 inputIcon">
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
@@ -142,18 +136,46 @@ const SignUp = () => {
                 label="Accept our Terms and Conditions & Privacy Policy"
                 checked={rememberPolicy}
                 onChange={handleRememberPolicyChange}
+                className="policy"
               />
             </div>
           </Form.Group>
 
           <Button
-            className="w-100 rounded-0 mb-4 mt-4"
+            className="rounded-0 signUpBtn"
             variant="primary"
             type="submit"
-            disabled={!rememberPolicy}
           >
             Register
           </Button>
+          <div className="text-center">
+            <span className="spanBefore">--</span>
+            <span className="or">OR</span>
+            <span className="spanAfter">--</span>
+          </div>
+          <div className="socialArea">Sign in with social media</div>
+          <div className="d-flex justify-content-center">
+            <Button
+              variant="primary"
+              onClick={() => {
+                window.location.href =
+                  "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/facebook/";
+              }}
+              className="mediaIconS"
+            >
+              <FaFacebook />{" "}
+            </Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                window.location.href =
+                  "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/google";
+              }}
+              className="mediaIconS"
+            >
+              <FaGoogle />
+            </Button>
+          </div>
         </Form>
       </Col>
     </>

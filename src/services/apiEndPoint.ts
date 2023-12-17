@@ -1,4 +1,5 @@
 export const environment = {
   login: "auth/login",
-  signup: "auth/signup",
+  signup: "user",
+  allUsers: "user/all",
 };

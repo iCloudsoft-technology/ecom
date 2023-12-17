@@ -3,8 +3,7 @@ import axios from "axios";
 import EcomDataService from "../../services/api.service";
 
 interface User {
-  firstname?: string;
-  lastname?: string;
+  fullName?: string;
   email?: string;
   phonenumber?: string;
   password?: string;
@@ -14,12 +13,14 @@ interface AuthState {
   user: User | null;
   loading: boolean;
   error: string | null;
+  allUsers: any;
 }
 
 const initialState: AuthState = {
   user: null,
   loading: false,
   error: null,
+  allUsers: null,
 };
 
 export const loginUser = createAsyncThunk(
@@ -27,16 +28,18 @@ export const loginUser = createAsyncThunk(
   async ({
     inputEmail,
     inputPassword,
+    allUsers,
   }: {
     inputEmail: string;
     inputPassword: string;
+    allUsers: any;
   }) => {
     try {
-      const response = EcomDataService.userLogin({
-        username: inputEmail,
-        password: inputPassword,
-      });
-      return response;
+      // const response = EcomDataService.userLogin({
+      //   username: inputEmail,
+      //   password: inputPassword,
+      // });
+      return allUsers;
     } catch (error) {
       throw (error as any).response;
     }
@@ -45,11 +48,10 @@ export const loginUser = createAsyncThunk(
 
 export const signUpUser = createAsyncThunk(
   "signUp",
-  async ({ firstname, lastname, email, phonenumber, password }: User) => {
+  async ({ fullName, email, phonenumber, password }: User) => {
     try {
       const response = EcomDataService.userSignUp({
-        firstname,
-        lastname,
+        fullName,
         email,
         phonenumber,
         password,
@@ -60,6 +62,15 @@ export const signUpUser = createAsyncThunk(
     }
   }
 );
+
+export const getAllUsers = createAsyncThunk("allUsers", async () => {
+  try {
+    const response: any = EcomDataService.allUsers();
+    return response;
+  } catch (error) {
+    throw (error as any).response.data;
+  }
+});
 
 const authSlice = createSlice({
   name: "auth",
@@ -73,7 +84,6 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action: any) => {
         state.user = action.payload;
         state.loading = false;
-        state.error = null;
       })
       .addCase(loginUser.rejected, (state, action: any) => {
         state.loading = false;
@@ -86,6 +96,17 @@ const authSlice = createSlice({
         state.loading = false;
       })
       .addCase(signUpUser.rejected, (state, action: any) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(getAllUsers.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getAllUsers.fulfilled, (state, action: any) => {
+        state.allUsers = action.payload.data;
+        state.loading = false;
+      })
+      .addCase(getAllUsers.rejected, (state, action: any) => {
         state.loading = false;
         state.error = action.error.message;
       });

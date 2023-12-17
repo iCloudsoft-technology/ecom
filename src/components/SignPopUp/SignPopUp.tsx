@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import { FaTimes } from "react-icons/fa";
 import "./SignPopUp.css";
-import SignIn from "../SignInPage/SignIn";
+
 import SignUp from "../SignUp/SignUp";
+import SignIn from "../SignIn/SignIn";
 
 const SignPopUp = () => {
   const [signInClicked, setSignInClicked] = React.useState(true);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
