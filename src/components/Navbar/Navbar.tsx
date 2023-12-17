@@ -5,6 +5,7 @@ import { Dropdown, FormControl, InputGroup } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
 import { FaFontAwesome } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("All");
@@ -14,11 +15,12 @@ const Navbar = () => {
   const [selectedOption, setSelectedOption] = React.useState("Please Select");
   const [isUserLog, setIsUserLog] = React.useState(false);
   const [cartValue, setCartValue] = useState<any>([]);
+  const user: any = useSelector((state) => state);
   React.useEffect(() => {
-    setIsUserLog(!!localStorage.getItem("isUserLog"));
+    setIsUserLog(user.auth.user.email);
     const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartValue(cartItems);
-  }, []);
+  }, [user.auth]);
 
   const handleSelect = (item: any) => {
     setSelectedItem(item);
@@ -146,6 +148,9 @@ const Navbar = () => {
                       className="navigation_hover px-2 "
                       aria-current="page"
                       href="/home"
+                      onClick={() => {
+                        isUserLog && localStorage.removeItem("user");
+                      }}
                     >
                       {!isUserLog ? "Sign In " : "Sign Out"}
                     </NavLink>

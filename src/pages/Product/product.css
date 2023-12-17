@@ -16,3 +16,56 @@
     margin: 0 40px;
     text-align: left;
 }
+.product-price-title {
+    font-size: 18px;
+    font-family: 'Alegreya', serif;
+}
+
+.product-price-price {
+    font-size: 28px;
+    color: #558ED5;
+    font-family: 'Alegreya', serif;
+}
+
+.quantity-container button,
+.quantity-container input {
+    width: 40px;
+    border: 1px solid #d9d9d9;
+    outline: 0;
+    background-color: #fff;
+    height: 30px;
+    font-family: 'Alegreya', serif;
+}
+
+.quantity-container button {
+    font-size: 18px;
+}
+
+.quantity-container input {
+    /* padding: 0 10px; */
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    border-left: 0;
+    border-right: 0;
+}
+
+.add-to-cart {
+    background-color: #2866BC;
+    padding: 5px 20px;
+    color: #fff;
+    border-radius: 5px;
+    border: solid 2px #2866BC;
+}
+
+.add-to-cart:hover {
+    background-color: #fff;
+    border: solid 2px #2866BC;
+    color: #2866BC;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.product-sku {
+    margin-top: 10px;
+    font-family: 'Alegreya', serif;
+}

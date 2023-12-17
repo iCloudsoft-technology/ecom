@@ -7,10 +7,28 @@ const getUserData = async () => {
   return await httpCommonClients.httpClient.get<any>(apiUrl);
 };
 
-const userLogin = async (user: any) => {
+const userLogin = async (user: { username: string; password: string }) => {
   return await httpCommonClients.httpClient.post<any>(
     process.env.REACT_APP_API + environment.login,
     user
+  );
+};
+
+const userSignUp = async (user: {
+  fullName?: string;
+  email?: string;
+  phonenumber?: string;
+  password?: string;
+}) => {
+  return await httpCommonClients.httpClient.post<any>(
+    process.env.REACT_APP_API + environment.signup,
+    user
+  );
+};
+
+const allUsers = async () => {
+  return await httpCommonClients.httpClient.get<any>(
+    process.env.REACT_APP_API + environment.allUsers
   );
 };
 
@@ -25,6 +43,8 @@ const userLogin = async (user: any) => {
 const EcomDataService = {
   getUserData,
   userLogin,
+  userSignUp,
+  allUsers,
 };
 
 export default EcomDataService;

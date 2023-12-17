@@ -1,0 +1,29 @@
+.nav-link {
+    padding: 10px 20px !important;
+}
+
+.product-tabs {
+    border: 1px solid #c3c3c3;
+    padding: 10px;
+    margin: 10px;
+}
+
+.tabs {
+    justify-content: center;
+}
+
+.nav-tabs {
+    border: 0;
+}
+
+button.nav-link {
+    border: 0 !important;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #558ED5 !important;
+}
+
+.tab-content {
+    justify-content: flex-start !important;
+}

@@ -1,0 +1,29 @@
+.icon {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    display: inline-block;
+    text-align: center;
+}
+
+.twitter {
+    background-color: #000;
+}
+
+.facebook {
+    background-color: #3B5999;
+}
+
+.linkedIn {
+    background-color: #0077B5;
+}
+
+.pinterest {
+    background-color: #BD081C;
+}
+
+a:hover {
+    color: #fff !important;
+}

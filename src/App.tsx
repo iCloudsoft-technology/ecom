@@ -1,5 +1,5 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
@@ -16,17 +16,28 @@ import Silder from "./components/Silder/Silder";
 import CategoryPage from "./pages/Category/CategoryPage";
 import Product from "./pages/Product/Product";
 import Errorpage from "./components/Errorpage";
+import HeaderNew from "./components/Header-New/HeaderNew";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllUsers } from "./app/slice/authSlice";
 
 function App() {
-  const [isUserLog, setIsUserLog] = React.useState(false);
+  const dispatch: any = useDispatch();
+  const [isUserLog, setIsUserLog] = React.useState();
+  const user: any = useSelector((state) => state);
   React.useEffect(() => {
-    setIsUserLog(!!localStorage.getItem("isUserLog"));
+    dispatch(getAllUsers());
   }, []);
+  React.useEffect(() => {
+    setIsUserLog(user.auth.user.email);
+  }, [user.auth]);
+
   return (
     <div className="App">
       <BrowserRouter>
         <header className="sticky-top">
-          <Navbar />
+          {/* <Navbar />
+          <Header /> */}
+          <HeaderNew />
           <Header />
         </header>
         <Routes>

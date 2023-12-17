@@ -1,0 +1,11 @@
+.aboutUs {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: limegreen;
+  text-align: left !important;
+}
+
+.aboutCon {
+  padding: 30px 0px 30px;
+}
