@@ -36,10 +36,11 @@ const SignIn = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    const allUsers = user.auth.allUsers.filter(
+    const allUsers = user.auth.allUsers.find(
       // const allUsers = [{ email: "abc@123", password: "123" }].filter(
       (item: any) => item.email == inputEmail && item.password == inputPassword
     );
+    console.log("allUser", allUsers);
     if (!allUsers) {
       alert("Please enter valied email and password");
       return;
