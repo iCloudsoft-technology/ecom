@@ -32,6 +32,23 @@ const allUsers = async () => {
   );
 };
 
+
+const cartPost = async (total:number ) => {
+
+  const payload = {
+    price: total,
+    currency: "USD",
+    method: "PayPal",
+    intent: "SALE",
+    description: "Test"
+  };
+  return await httpCommonClients.httpClient.post<any>(
+    process.env.REACT_APP_API + environment.checkoutPay,
+    payload
+  );
+};
+
+
 // const updateBookingRequest = async (updateBooking: IUpdateBooking) => {
 //   return await httpCommonClients.httpClient.put<IUpdateBooking>(
 //     process.env.REACT_APP_APIURLBooking +
@@ -45,6 +62,7 @@ const EcomDataService = {
   userLogin,
   userSignUp,
   allUsers,
+  cartPost,
 };
 
 export default EcomDataService;
