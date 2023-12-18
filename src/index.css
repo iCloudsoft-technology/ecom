@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('./components/Header/Header.css');
+@import url('./components/Navbar/Navbar.css');
+@import url('./components/Hero/Hero.css');
+@import url('./components/Footer/Footer.css');
+@import url('./components/Caraousal/productCarousel.css');
+@import url('./pages/Product/product.css');
+@import url('./components/Header-New/header-new.css');
+@import url('./components/SocialMedia/SocialMedia.css');
+@import url('./components/Tabs/ProductTabs.css');
+@import url('./components/NavbarNew/NavbarNew.css');

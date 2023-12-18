@@ -2,21 +2,25 @@ import React, { useState } from "react";
 import { Form, Button, Alert, InputGroup, Col } from "react-bootstrap";
 import "./SignUp.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle, FaPhone } from "react-icons/fa";
-
-const SignUp = () => {
+import { useDispatch, useSelector } from "react-redux";
+import { getAllUsers, signUpUser } from "../../app/slice/authSlice";
+import { Navigate } from "react-router";
+import { useNavigate } from "react-router-dom";
+const SignUp = (props: any) => {
   const [inputUserFullName, setInputUserFullName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputNumber, setInputNumber] = useState("");
   const [inputCPassword, setInputCPassword] = useState("");
   const [rememberPolicy, setRememberPolicy] = useState(false);
-
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const dispatch: any = useDispatch();
+  const navigate = useNavigate();
 
+  const user: any = useSelector((state) => state);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    setLoading(true);
     console.log(
       `Username :${inputUserFullName}, Password :${inputPassword}`,
       inputEmail,
@@ -25,7 +29,16 @@ const SignUp = () => {
       rememberPolicy
     );
     if (inputPassword === inputCPassword) {
-      // write API call for user Register
+      await dispatch(
+        signUpUser({
+          fullName: inputUserFullName,
+          email: inputEmail,
+          phonenumber: inputNumber,
+          password: inputPassword,
+        })
+      );
+      await dispatch(getAllUsers());
+      props.setSignInClicked(!props.signInClicked);
     } else {
       alert("Password and Confirm Password should be same");
     }
@@ -39,27 +52,15 @@ const SignUp = () => {
   return (
     <>
       <Col>
-        <Form className="shadow p-4 bg-white rounded" onSubmit={handleSubmit}>
-          <div className="h4 mt-2 text-center mb-4">Sign In</div>
+        <Form className="logInAreaSP" onSubmit={handleSubmit}>
+          <div className="h4 header-area">Sign up Now</div>
           <Form.Group className="mb-4" controlId="userFullName">
-            <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-                className="rounded-0 mx-0"
+                className="rounded-0 mx-0 inputBox"
                 type="text"
                 value={inputUserFullName}
                 placeholder="Full Name *"
@@ -69,24 +70,12 @@ const SignUp = () => {
             </InputGroup>
           </Form.Group>
           <Form.Group className="mb-4" controlId="email">
-            <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaUser />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-                className="rounded-0 mx-0"
+                className="rounded-0 mx-0 inputBox"
                 type="email"
                 value={inputEmail}
                 placeholder="Email Address *"
@@ -97,23 +86,12 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="phoneNumber">
-            <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaPhone />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="number"
                 value={inputNumber}
                 placeholder="Phone Number"
@@ -123,23 +101,12 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="password">
-            <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="password"
                 value={inputPassword}
                 placeholder="Password *"
@@ -150,23 +117,12 @@ const SignUp = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="confirmPassword">
-            <InputGroup>
-              <InputGroup.Text
-                className="rounded-0 mx-0"
-                style={{
-                  borderRight: "none", // Remove right border
-                  color: "blue", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
-              >
+            <InputGroup className="inputGroup">
+              <InputGroup.Text className="rounded-0 mx-0 inputIconS">
                 <FaKey />
               </InputGroup.Text>
               <Form.Control
-                style={{
-                  borderLeft: "none", // Remove right border
-                  color: "darkgray", // Text color
-                  backgroundColor: "#f3f8fc",
-                }}
+                className="rounded-0 mx-0 inputBox"
                 type="password"
                 value={inputCPassword}
                 placeholder="Confirm Password *"
@@ -183,18 +139,46 @@ const SignUp = () => {
                 label="Accept our Terms and Conditions & Privacy Policy"
                 checked={rememberPolicy}
                 onChange={handleRememberPolicyChange}
+                className="policy"
               />
             </div>
           </Form.Group>
 
           <Button
-            className="w-100 rounded-0 mb-4 mt-4"
+            className="rounded-0 signUpBtn"
             variant="primary"
             type="submit"
-            disabled={!rememberPolicy}
           >
             Register
           </Button>
+          <div className="text-center">
+            <span className="spanBefore">--</span>
+            <span className="or">OR</span>
+            <span className="spanAfter">--</span>
+          </div>
+          <div className="socialArea">Sign in with social media</div>
+          <div className="d-flex justify-content-center">
+            <Button
+              variant="primary"
+              onClick={() => {
+                window.location.href =
+                  "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/facebook/";
+              }}
+              className="mediaIconS"
+            >
+              <FaFacebook />{" "}
+            </Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                window.location.href =
+                  "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/google";
+              }}
+              className="mediaIconS"
+            >
+              <FaGoogle />
+            </Button>
+          </div>
         </Form>
       </Col>
     </>

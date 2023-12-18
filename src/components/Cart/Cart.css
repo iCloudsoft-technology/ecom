@@ -1,63 +1,6 @@
-.FONTFamily1 {
-    font-family: 'Roboto', sans-serif;
+.cart-container {
+    height: 55vh;
 }
-
-.FONTFamily {
-    font-family: 'Alegreya', serif;
-    font-weight: 400;
-}
-
-.SHOPTODAY {
-    color: #007185;
-    font-size: 16px;
-    font-weight: 200;
-    cursor: pointer;
-}
-
-.SHOPTODAY:hover {
-    color: rgb(223, 68, 68);
-    text-decoration: underline;
-}
-
-.CARTButtonHOVERSIGNIN {
-    background-color: #FFD814;
-    border: 1px solid #FFD814;
-    color: #222;
-    font-weight: 400;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.CARTButtonHOVERSIGNIN:hover {
-    background-color: #FFD114;
-}
-
-
-.CARTButtonHOVERSIGNUP {
-    background-color: white;
-    border-radius: 10px 10px 10px 10px;
-    border: 1px solid #e7e7e7;
-}
-
-.CARTButtonHOVERSIGNUP:hover {
-    color: black;
-    background-color: rgb(250, 250, 250);
-}
-
-
-.CARTLASTSECTIONButtonHOVERSIGNIN {
-    background-color: #FFD814;
-    border: 1px solid #FFD814;
-    color: #222;
-    width: 300px;
-    font-weight: 400;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.STARTHERE {
-    color: #007185;
-    cursor: pointer;
-}
-
-.STARTHERE:hover {
-    color: rgb(223, 68, 68);
+.total-container {
+    float: right;
 }

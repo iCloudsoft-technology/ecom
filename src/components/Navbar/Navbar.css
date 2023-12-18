@@ -1,40 +1,44 @@
 
+.Company_logo{
+    margin-left: 30px;
+    padding-left: 30px;
+}
 
+.Company_logo{
+    height: 3rem;
+}
 
-.FONT{
+.search_input_bar{
+    width: 43%;
     font-family: 'Alegreya', serif;
 }
 
-.SEARCHWIDTH{
-    width: 43%;
+.input-group{
+    border-radius: 50px;
+    height: 46px;
 }
 
-.BORDERhoVer{
+.navigation_hover{
+    font-size: 21px;
+    font-weight: 500;
+    text-decoration: none;
     color: #fff;
     border: 1px solid #041E42;
+    font-family: 'Alegreya', serif;
 }
 
-.BORDERhoVer:hover{
+.navigation_hover:hover{
     color: #fff;
     border: 1px solid white;
     border-radius: 5px 5px 5px 5px;
+    font-family: 'Alegreya', serif;
 }
-
-
-.ALLWidtH{
-    width: 12%;
-}
-
 
 
 @media only screen and (max-width: 980px) {
 
-    .SEARCHWIDTH{
+    .search_input_bar{
         width: 100%;
-    }
-
-    .ALLWidtH{
-        width: 15%;
     }
 
 }

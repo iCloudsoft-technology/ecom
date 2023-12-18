@@ -1,0 +1,17 @@
+.cross {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  margin-left: -30px;
+  margin-right: -30px;
+}

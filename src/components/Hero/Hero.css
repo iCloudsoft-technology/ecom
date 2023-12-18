@@ -6,5 +6,20 @@
     background-repeat: "no-repeat";
     background-size: "cover";
     background-position: "center center ";
-    height: "47vh";
+    height: "50vh";
+}
+
+.hero_button {
+    background-color: #2866bc;
+    color: #fff;
+    border: 1px solid #2866bc;
+    font-family: "Alegreya", serif;
+    margin-right: 50px;
+}
+
+.hero_button:hover {
+    color: #2866bc;
+    background-color: #fff;
+    border: 1px solid #fff;
+    font-family: "Alegreya", serif;
 }

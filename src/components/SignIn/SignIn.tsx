@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Button, Alert, InputGroup } from "react-bootstrap";
 import "./SignIn.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle } from "react-icons/fa";
 import EcomDataService from "../../services/api.service";
+import { useNavigate } from "react-router-dom";
+import { getAllUsers, loginUser } from "../../app/slice/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { createKeywordTypeNode } from "typescript";
 
 const SignIn = () => {
   const [inputEmail, setInputEmail] = useState("");
@@ -10,12 +14,10 @@ const SignIn = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [rememberPassword, setRememberPassword] = useState(false);
-
-  React.useEffect(() => {
-    EcomDataService.getUserData().then((res: any) =>
-      console.log("fake resp to check axios setup", res)
-    );
-  }, []);
+  const navigate = useNavigate();
+  const dispatch: any = useDispatch();
+  const user: any = useSelector((state) => state);
+  console.log("user", user.auth);
 
   React.useEffect(() => {
     // for getting user from local storage if user remembered
@@ -34,45 +36,39 @@ const SignIn = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log("user", inputEmail, inputPassword, rememberPassword);
-    setLoading(true);
-    // write API call for user auth with inputEmail and inputPassword
-    // in . then
-    if (rememberPassword) {
+    const allUsers = user.auth.allUsers.find(
+      // const allUsers = [{ email: "abc@123", password: "123" }].filter(
+      (item: any) => item.email == inputEmail && item.password == inputPassword
+    );
+    console.log("allUser", allUsers);
+    if (!allUsers) {
+      alert("Please enter valied email and password");
+      return;
+    }
+    if ((allUsers.length > 0 && rememberPassword, allUsers)) {
       localStorage.setItem("ecomEmail", inputEmail);
       localStorage.setItem("ecomPassword", inputPassword);
     }
-
-    setLoading(false);
+    allUsers && localStorage.setItem("user", JSON.stringify(allUsers));
+    localStorage.setItem("userLog", "true");
+    allUsers && navigate("/");
+    await dispatch(loginUser({ inputEmail, inputPassword, allUsers }));
   };
 
   const handlePassword = () => {};
 
   return (
     <div>
-      <Form className="shadow p-4 bg-white rounded" onSubmit={handleSubmit}>
-        <div className="h4 mt-2 text-center mb-4">Sign In</div>
+      <Form className="logInArea" onSubmit={handleSubmit}>
+        <div className="h4 header-area">Sign in Now</div>
         <Form.Group className="mb-4" controlId="email">
-          <InputGroup>
-            <InputGroup.Text
-              className="rounded-0 mx-0"
-              style={{
-                borderRight: "none", // Remove right border
-                color: "blue", // Text color
-                backgroundColor: "#f3f8fc",
-              }}
-            >
+          <InputGroup className="inputGroup">
+            <InputGroup.Text className="rounded-0 mx-0 inputIconS">
               <FaUser />
             </InputGroup.Text>
             <Form.Control
-              style={{
-                borderLeft: "none", // Remove right border
-                color: "darkgray", // Text color
-                backgroundColor: "#f3f8fc",
-                boxShadow: "none",
-              }}
-              className="rounded-0 mx-0 "
-              type="email"
+              className="rounded-0 mx-0 inputBox"
+              type="text"
               value={inputEmail}
               placeholder="Type Email Address *"
               onChange={(e) => setInputEmail(e.target.value)}
@@ -81,29 +77,17 @@ const SignIn = () => {
           </InputGroup>
         </Form.Group>
         <Form.Group className="mb-4" controlId="password">
-          <InputGroup>
-            <InputGroup.Text
-              className="rounded-0 mx-0"
-              style={{
-                borderRight: "none", // Remove right border
-                color: "blue", // Text color
-                backgroundColor: "#f3f8fc",
-              }}
-            >
+          <InputGroup className="inputGroup">
+            <InputGroup.Text className="rounded-0 mx-0 inputIconS">
               <FaKey />
             </InputGroup.Text>
             <Form.Control
-              style={{
-                borderLeft: "none", // Remove right border
-                color: "darkgray", // Text color
-                backgroundColor: "#f3f8fc",
-              }}
               type="password"
               value={inputPassword}
               placeholder="Type Password *"
               onChange={(e) => setInputPassword(e.target.value)}
               required
-              className="rounded-0 mx-0 "
+              className="rounded-0 mx-0 inputBox"
             />
           </InputGroup>
         </Form.Group>
@@ -114,9 +98,10 @@ const SignIn = () => {
               label="Remember Password"
               checked={rememberPassword}
               onChange={handleRememberPasswordChange}
+              className="rememberPass"
             />
             <Button
-              className="text-muted px-0"
+              className="text-muted px-0 forgotPass"
               variant="link"
               onClick={handlePassword}
             >
@@ -124,30 +109,33 @@ const SignIn = () => {
             </Button>
           </div>
         </Form.Group>
-        <Button
-          className="w-100 rounded-0 mb-4 mt-4"
-          variant="primary"
-          type="submit"
-        >
+        <Button className="rounded-0 signInBtn" variant="primary" type="submit">
           Sign In
         </Button>
-        <div className="h4 mt-2 text-center mb-4">--OR--</div>
-        <div className="h6 mt-2 text-center mb-4">
-          Sign in with social media
+        <div className="text-center">
+          <span className="spanBefore">--</span>
+          <span className="or">OR</span>
+          <span className="spanAfter">--</span>
         </div>
+        <div className="socialArea">Sign in with social media</div>
         <div className="d-flex justify-content-center">
           <Button
             variant="primary"
-            className="mr-2"
-            onClick={() => {}}
-            style={{ borderRadius: "500%", margin: "10px" }}
+            onClick={() => {
+              window.location.href =
+                "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/facebook/";
+            }}
+            className="mediaIconS"
           >
-            <FaFacebook />
+            <FaFacebook />{" "}
           </Button>
           <Button
             variant="danger"
-            onClick={() => {}}
-            style={{ borderRadius: "500%", margin: "10px" }}
+            onClick={() => {
+              window.location.href =
+                "https://phpstack-1183211-4155182.cloudwaysapps.com/auth/google";
+            }}
+            className="mediaIconS"
           >
             <FaGoogle />
           </Button>

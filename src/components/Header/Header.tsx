@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Navbar } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 import "./Header.css";
+import { right } from "@popperjs/core";
 const Header = () => {
   return (
     <>
@@ -2458,7 +2459,7 @@ const Header = () => {
                       </li>
 
                       <li className="nav-item dropend">
-                        <NavLink className="nav-link  HEADERhoVER text-decoration-none   align-items-center">
+                        <NavLink className="nav-link">
                           <img
                             className=""
                             style={{ height: "15px" }}
@@ -2466,14 +2467,17 @@ const Header = () => {
                             alt=""
                           />
                           <span
-                            className="ms-3 text-start "
+                            className="ms-3 text-start"
                             style={{ fontSize: "16px" }}
                           >
-                            Jewelry & Watches
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to={"/category"}>Jewelry & Watches</Link>
+
                             <i
                               className="fa-solid fa-angle-right "
-                              style={{ fontSize: "14px" }}
+                              style={{
+                                fontSize: "14px",
+                                justifyContent: "end",
+                              }}
                             ></i>
                           </span>
                         </NavLink>
@@ -3659,7 +3663,7 @@ const Header = () => {
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          {" "}
+
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jewelry & Watches
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         </a>
@@ -3790,7 +3794,9 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      Jewelry & Watches
+                      <Link to={"/category"} className="navmenu">
+                        Jewelry & Watches
+                      </Link>
                     </a>
                     <ul
                       className="dropdown-menu HEADERhoVER shadow-lg"

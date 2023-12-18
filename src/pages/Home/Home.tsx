@@ -6,6 +6,8 @@ import "./Home.css";
 
 import Hero from "../../components/Hero/Hero";
 import ProductCarousel from "../../components/Caraousal/ProductCarousel";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
+import Silder from "../../components/Silder/Silder";
 
 interface Product {
   id: number;
@@ -24,11 +26,13 @@ const Home: React.FC = () => {
       .then((res) => res.json())
       .then((json) => setProductData(json));
   }, []);
-  console.log(productData);
+
   return (
     <>
       <Hero />
       <ProductCarousel productData={productData} />
+      <Silder />
+      <ProductGrid productData={productData} />
     </>
   );
 };

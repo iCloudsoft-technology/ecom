@@ -1,8 +1,39 @@
-import React from "react";
-import { NavLink } from "react-bootstrap";
+import { Col, Form, Nav, NavLink, Row } from "react-bootstrap";
 import "./Navbar.css";
+import React, { useState } from "react";
+import { Dropdown, FormControl, InputGroup } from "react-bootstrap";
+import { BsSearch } from "react-icons/bs";
+import { FaFontAwesome } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const [selectedItem, setSelectedItem] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+  const items = ["Item 2", "Item 3", "Item 4", "Item 5"];
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = React.useState("Please Select");
+  const [isUserLog, setIsUserLog] = React.useState(false);
+  const [cartValue, setCartValue] = useState<any>([]);
+  const user: any = useSelector((state) => state);
+  React.useEffect(() => {
+    setIsUserLog(user.auth.isUserLog);
+    const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
+    setCartValue(cartItems);
+  }, [user.auth]);
+
+  const handleSelect = (item: any) => {
+    setSelectedItem(item);
+    setIsDropdownOpen(false);
+  };
+
+  const handleDropdownToggle = (isOpen: any) => {
+    setIsDropdownOpen(isOpen);
+  };
+
+  const filteredItems = items.filter((item) =>
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <>
       <nav
@@ -10,11 +41,10 @@ const Navbar = () => {
         style={{ backgroundColor: "#041E42" }}
       >
         <div className="container-fluid p-0 ">
-          <div className="ms-lg-5 ps-lg-3 col-lg-2">
+          <div className="col-lg-2 Company_logo_main">
             <NavLink href="/">
               <img
-                className=""
-                style={{ height: "3rem" }}
+                className="Company_logo"
                 src={require("../../Img/Logo.png")}
                 alt="icloudsoft_logo"
               />
@@ -38,75 +68,64 @@ const Navbar = () => {
                 className="collapse navbar-collapse  col-lg-3 "
                 id="navbarNav"
               >
-                <div className="d-flex justify-content-lg-start align-items-center FONT">
+                <div className="d-flex justify-content-lg-start align-items-center ">
                   <ul className="navbar-nav text-white  ">
-                    <li className="nav-item pe-lg-3">
+                    <li className="nav-item">
                       <NavLink
-                        className="  BORDERhoVer p-2 "
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
+                        className="navigation_hover"
                         aria-current="page"
                         href="/home"
                       >
                         Home
                       </NavLink>
                     </li>
-                    <li className="nav-item pe-lg-3">
-                      <NavLink
-                        className="   BORDERhoVer p-2"
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        href="/about"
-                      >
+                    <li className="nav-item">
+                      <NavLink className="navigation_hover" href="/about">
                         About us
                       </NavLink>
                     </li>
-                    <li className="nav-item pe-lg-3">
-                      <NavLink
-                        className="   BORDERhoVer p-2"
-                        style={{
-                          fontSize: "21px",
-                          fontWeight: "500",
-                          textDecoration: "none",
-                        }}
-                        href="/contact"
-                      >
+                    <li className="nav-item ">
+                      <NavLink className="navigation_hover" href="/contact">
                         Support
                       </NavLink>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-5 SEARCHWIDTH FONT">
+              <div className="col-lg-5 search_input_bar">
                 <form className="p-3 d-flex justify-content-lg-start align-items-lg-center mt-1">
-                  <div
-                    className="input-group "
-                    style={{ borderRadius: "50px", height: "46px" }}
-                  >
-                    <span
-                      className="input-group-text text-center "
-                      style={{
-                        borderRadius: "50px 0px 0px 50px",
-                        width: "12%",
-                      }}
-                      id="basic-addon1"
-                    >
-                      {" "}
-                      &nbsp;All
-                    </span>
-                    <input
-                      type="text "
-                      className="form-control FontFamilyMontSerret text-center"
-                      placeholder="Search for what you are looking for"
-                      aria-label="Username"
-                      aria-describedby="basic-addon1"
-                    />
+                  <div className="input-group">
+                    <Form.Group>
+                      <Form.Select
+                        style={{
+                          backgroundColor: "rgb(40, 102, 188)",
+                          borderRadius: "50px 0px 0px 50px",
+                          height: "46px",
+                          width: "70px",
+                        }}
+                        value={selectedOption}
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                      >
+                        <option value="All"> All</option>
+                        <option value="item1">item1</option>
+                        <option value="item2">item1</option>
+                        <option value="item3">item1</option>
+                        <option value="item4">item4</option>
+                      </Form.Select>
+                    </Form.Group>
+                    <Form onSubmit={() => {}} style={{ width: "60%" }}>
+                      <Form.Group controlId="username">
+                        <Form.Control
+                          style={{ height: "46px" }}
+                          className="rounded-0 mx-0"
+                          type="text"
+                          value={""}
+                          placeholder="Search for what you are looking for"
+                          onChange={(e) => {}}
+                          required
+                        />
+                      </Form.Group>
+                    </Form>
                     <span
                       className="input-group-text"
                       style={{
@@ -116,32 +135,42 @@ const Navbar = () => {
                       }}
                       id="basic-addon1"
                     >
-                      <i className="fa-solid fa-magnifying-glass text-white"></i>
+                      <BsSearch onClick={() => {}} />
                     </span>
                   </div>
                 </form>
               </div>
 
-              <div className=" col-lg-3 ">
-                <div className="text-white mt-1 d-flex justify-content-lg-end pe-lg-3 align-items-lg-center ">
-                  <ul className="d-flex justify-content-lg-start align-items-lg-center FONT">
-                    <li className="d-flex justify-content-lg-start align-items-lg-center mt-4">
-                      <span
-                        className=""
-                        style={{ fontSize: "19px", fontWeight: "500" }}
+              <div className="col-lg-3 ">
+                <ul className="text-white">
+                  <li className="d-flex justify-content-lg-start align-items-lg-center mt-4">
+                    <NavLink
+                      className="navigation_hover px-2 "
+                      aria-current="page"
+                      href="/home"
+                      onClick={() => {
+                        isUserLog && localStorage.removeItem("user");
+                      }}
+                    >
+                      {!isUserLog ? "Sign In " : "Sign Out"}
+                    </NavLink>
+
+                    {!isUserLog && (
+                      <NavLink
+                        className="navigation_hover  px-2 "
+                        aria-current="page"
+                        href="/home"
                       >
-                        Sign in
-                      </span>
-                      &nbsp; | &nbsp;
-                      <span
-                        className=""
-                        style={{ fontSize: "19px", fontWeight: "500" }}
-                      >
-                        Sign up
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+                        &nbsp; | &nbsp; Sign Up
+                      </NavLink>
+                    )}
+                  </li>
+                  <li>
+                    <Link to="/cart">
+                      <i className="fa-solid fa-cart-shopping"></i>
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

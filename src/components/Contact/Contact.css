@@ -19,6 +19,138 @@ input.form-control:focus {
   border-color: rgb(230, 228, 228) !important;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  background-color: #f3f8fc;
+}
+
+input:focus,
+input.form-check-input:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  border-color: rgb(230, 228, 228) !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.inputGroupContact {
+  height: 60px !important;
+}
+.inputIcon {
+  border-right: none !important;
+  color: blue;
+  background-color: #f3f8fc;
+  height: 60px;
+}
+.inputBox {
+  border-left: none !important;
+  color: darkgray;
+  background-color: #f3f8fc;
+  box-shadow: none;
+  height: 60px !important;
+}
+.dropDown {
+  border-left: none !important;
+  color: black;
+  background-color: #f3f8fc;
+  box-shadow: none;
+  height: 60px !important;
+}
+.textArea {
+  color: "darkgray";
+  background-color: "#f3f8fc" !important;
+}
+
+input:focus,
+input.form-select:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  border-color: rgb(230, 228, 228) !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.dropDown:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  border-color: rgb(230, 228, 228) !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.title {
+  margin-bottom: 6px;
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+}
+.title2 {
+  color: rgb(119, 119, 119);
+  vertical-align: baseline;
+  margin-bottom: 12px;
+  font-weight: 100 !important;
+  font-size: 16px;
+}
+.sendM {
+  border: 1px solid #2866bc;
+  width: 213px;
+  height: 50px;
+
+  color: #fff;
+  font-size: 16px;
+
+  text-align: center;
+
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.ContactI {
+  background: #558ed5 !important;
+  display: block;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 5px 0px rgba(14, 35, 107, 0.15);
+  padding: 30px 30px;
+  transition: all 0.3s ease-in;
+  margin: 0;
+  background-color: "#558ed5";
+}
+
+.email {
+  font-size: 22px !important;
+  color: #fefe02 !important;
+  float: left;
+}
+.emailId {
+  font-size: 22px !important;
+  color: #fefe02 !important;
+  float: left;
+  font-weight: 100 !important;
+}
+.emailIcon {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.ContactFindUs {
+  font-size: 18px !important;
+  line-height: 28px !important;
+  font-weight: 600 !important;
+  color: #143250;
+  padding: 15px;
+}
+
+.mediaIcon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
 
 .sign-in__backdrop {
