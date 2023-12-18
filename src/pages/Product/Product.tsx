@@ -115,7 +115,9 @@ const Product: React.FC = () => {
 
                 {addedToCart && (
                   <span className="ml-2">
-                    <Link to="/cart">View Cart</Link>
+                    <Link to="/cart" className="view-cart">
+                      View Cart
+                    </Link>
                   </span>
                 )}
                 <span>

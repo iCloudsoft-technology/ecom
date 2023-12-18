@@ -69,3 +69,6 @@
     margin-top: 10px;
     font-family: 'Alegreya', serif;
 }
+.view-cart:hover {
+    color: #000!important;
+}

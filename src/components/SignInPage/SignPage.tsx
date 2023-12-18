@@ -18,7 +18,7 @@ const SignPage = () => {
   return (
     <div>
       <div className="App">
-        <Container className="py-0">
+        <Container className="py-0 p-5">
           <Row className="justify-content-center main">
             <Col className="col-6">
               <Button
