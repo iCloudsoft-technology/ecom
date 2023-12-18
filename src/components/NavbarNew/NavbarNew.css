@@ -1,309 +1,65 @@
-/* ///////////////  Header Css Start //////////////// */
-.navmenu {
-    color: #f9fb08
+.navbar-container {
+  background-color: #558ed5;
+  padding: 0 10px;
+}
+.categories-menu-wrapper {
+  width: 15%;
+}
+.categories-title {
+  padding: 10px;
+  background-color: #2866bc;
+}
+.categories-title h2 {
+  font-size: 15px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
 }
 
-.category-navbar {
-    background-color: #558ED5;
+.arrow-down {
+  float: right;
 }
 
-.navbar-title {
-    color: #fff;
+.category-menu-inner {
+  background-color: #fff;
+  height: 609px;
+  position: absolute;
+  display: block;
+  width: 258px;
+  transition: opacity 0.3s ease;
+   
+}
+
+.category-menu-inner ul li {
+  text-align: left;
+  padding: 10px;
+}
+.category-menu-inner ul li a{
+    width: 100%;
+    color: #000;
+    text-decoration: none;
+}
+.category-menu-inner ul li a:hover {
+    color: #FFFF00!important;
+    padding-left: 10px;
+    transition: all 0.5s ease;
+}
+/* .category-menu-inner li:hover{
     background-color: #2866bc;
-    cursor: "pointer";
-    font-size: "15px";
-    padding: 10px 15px;
-    width: 14%;
-}
+} */
 
-.navbar-title a {
-    color: #fff !important;
-}
-
-.title-icon {
-    font-size: 14px;
+.arrow-right{
     margin-left: auto;
-    padding-right: 10px;
 }
 
-.dropdown-menu {
-    width: 100%;
-    position: relative;
-    top: 40px;
-    margin: 0;
-}
-
-.category-nav-list {
-    padding: 20px;
-
-}
-
-.category-nav-list:hover {
-    color: #FFFF00 !important;
-    padding-left: 20px;
-    background-color: #558ED5;
-    margin: 0;
-    transition: all 0.3s linear;
-}
-
-.category-nav-list a:hover {
-    color: #FFFF00 !important;
-}
-
-a.category-nav-item,
-a.dropdown-item {
-    width: 100%;
-    color: #000 !important;
-    font-size: 14px;
-
-}
-
-.category_main_dropdownn {
-    width: 270px;
-    border: 1px solid #fff;
+.categories-mega-menu {
+    width: 480px;
+    position: absolute;
+    left: 100%;
     background-color: #fff;
-}
-
-.category_main_dropdownn_hover {
-    background-color: white;
-    color: black;
-}
-
-.category_main_dropdownn_hover:hover {
-    background-color: #558ed5;
-    color: yellow;
-}
-
-.category_main_dropdownn_image {
-    height: 1rem;
-}
-
-.enginaring_product_main_dropdownn_icon {
-    margin-left: 120px;
-}
-
-.fashion_style_product_main_dropdownn_icon {
-    margin-left: 95px;
-}
-
-.art_carft_product_main_dropdownn_icon {
-    margin-left: 118px;
-}
-
-.cell_phones_product_main_dropdownn_icon {
-    margin-left: 55px;
-}
-
-.gadgets_product_main_dropdownn_icon {
-    margin-left: 143px;
-}
-
-.jewelry_product_main_dropdownn_icon {
-    margin-left: 75px;
-}
-
-.health_product_main_dropdownn_icon {
-    margin-left: 153px;
-}
-
-.sports_product_main_dropdownn_icon {
-    margin-left: 80px;
-}
-
-.enginaring_dropdown {
-    width: 550px;
-    height: 670px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.fashion_style_dropdown {
-    width: 550px;
-    height: 670px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.product_dropdownn_size {
-    font-size: 14px;
-    line-height: 10px;
-    color: #646464;
-    text-decoration: none;
-    font-family: "Alegreya", serif;
-}
-
-.art_carf_dropdown {
-    width: 280px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.dropdownn_common_product_size {
-    font-size: 18px;
-    line-height: 10px;
-    color: #646464;
-    text-decoration: none;
-    font-family: "Alegreya", serif;
-}
-
-.call_phones_dropdown {
-    width: 280px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.dropdownn_common_product_size {
-    font-size: 18px;
-    line-height: 10px;
-    color: #646464;
-    text-decoration: none;
-    font-family: "Alegreya", serif;
-}
-
-.gadgets_dropdown {
-    width: 280px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.dropdownn_common_product_size {
-    font-size: 18px;
-    line-height: 10px;
-    color: #646464;
-    text-decoration: none;
-    font-family: "Alegreya", serif;
-}
-
-.Jewelry_dropdown {
-    width: 550px;
-    height: 470px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.health_dropdown {
-    width: 280px;
-    height: 390px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-.dropdownn_common_product_size {
-    font-size: 18px;
-    line-height: 10px;
-    color: #646464;
-    text-decoration: none;
-    font-family: "Alegreya", serif;
-}
-
-.sports_training_dropdown {
-    width: 570px;
-    height: 370px;
-    border: 1px solid #fff;
-    background-color: white;
-    overflow: auto;
-    font-family: "Alegreya", serif;
-}
-
-
-.navbar-nav {
+    top: 0;
+    transition: 0.4s ease;
     display: flex;
-    width: 100%;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: black;
-}
-
-.dropend .dropdown-toggle {
-    color: black;
-    font-weight: 400;
-}
-
-.dropdown-menu li {
-    padding: 5px;
-    margin-left: 5px;
-}
-
-.dropdown-menu li a {
-    color: #646464 !important;
-    transition: all 0.3s linear;
-}
-
-.navbar-toggler:focus {
-    text-decoration: none;
-    box-shadow: none;
-}
-
-.dropdown-item {
-    color: #333;
-    padding: 18px;
-    font-size: 15px;
-}
-
-.dropdown-item:hover {
-    background-color: #558ed5;
-    color: yellow;
-}
-
-.dropdown .dropdown-menu {
-    display: none;
-}
-
-.dropdown:hover>.dropdown-menu,
-.dropend:hover>.dropdown-menu {
-    display: block;
-    padding: 0px;
-    font-size: 1rem;
-    background-color: white;
-    color: black;
-    border-radius: 0px;
-}
-
-@media screen and (min-width: 1200px) {
-    .dropend:hover>.dropdown-menu {
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
-
-    .dropend .dropdown-toggle {
-        margin-left: 0.5em;
-    }
-
-    .FORMWIDTH {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .dropend:hover>.dropdown-menu {
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
-
-    .dropend .dropdown-toggle {
-        margin-left: 0.5em;
-    }
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
