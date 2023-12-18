@@ -9,6 +9,7 @@
   padding: 10px;
   background-color: #2866bc;
 }
+ 
 .categories-title h2 {
   font-size: 15px;
   text-align: left;
@@ -62,4 +63,18 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.categories-mega-menu li{
+  font-size: 13px;
+  transition: 0.4s ease;
+
+}
+.categories-mega-menu li ul li:hover{
+  background-color: #2866bc;
+  transition: 0.4s ease;
+}
+.navmenu-title{
+  color: #FFFF00
 }

@@ -6,25 +6,27 @@ import { Link } from "react-router-dom";
 const NavbarNew = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isSubHovered, setIsSubHovered] = useState(false);
-  console.log(categories);
+  const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-  const handleMouseEnterSub = () => {
-    setIsSubHovered(true);
+  const handleMouseEnterSub = (index: number) => {
+    setHoveredCategory(index);
+    console.log(isSubHovered);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
   const handleMouseLeaveSub = () => {
-    setIsSubHovered(false);
+    setHoveredCategory(null);
   };
   return (
     <>
       <div className="navbar-container">
-        <div className="container-fluid">
-          <div className="row">
+        <div className="container-fluid ">
+          <div className=" d-flex flex-row align-items-center">
             <div className="categories-menu-wrapper">
               <div
                 className="categories-menu"
@@ -40,10 +42,10 @@ const NavbarNew = () => {
                 {isHovered && (
                   <div className="category-menu-inner">
                     <ul>
-                      {categories.map((item) => (
+                      {categories.map((item, index) => (
                         <>
                           <li
-                            onMouseEnter={handleMouseEnterSub}
+                            onMouseEnter={() => handleMouseEnterSub(index)}
                             onMouseLeave={handleMouseLeaveSub}
                           >
                             <Link
@@ -62,8 +64,8 @@ const NavbarNew = () => {
                               </span>
                               <i className="fa fa-angle-right arrow-right"></i>
                             </Link>
-                            {isSubHovered && (
-                              <ul className="categories-mega-menu">
+                            {hoveredCategory === index && (
+                              <div className="categories-mega-menu">
                                 {item.subcategory.map((item) => (
                                   <li>
                                     <h6>{item.heading}</h6>
@@ -76,7 +78,7 @@ const NavbarNew = () => {
                                     </ul>
                                   </li>
                                 ))}
-                              </ul>
+                              </div>
                             )}
                           </li>
                         </>
@@ -85,6 +87,11 @@ const NavbarNew = () => {
                   </div>
                 )}
               </div>
+            </div>
+            <div>
+              {categories.map((item) => (
+                <span className="ms-4 navmenu-title">{item.name}</span>
+              ))}
             </div>
           </div>
         </div>

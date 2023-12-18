@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "./app/slice/authSlice";
 import SignPage from "./components/SignInPage/SignPage";
 import Header from "./components/Header/Header";
+import NavbarNew from "./components/NavbarNew/NavbarNew";
 
 function App() {
   const dispatch: any = useDispatch();
@@ -37,8 +38,8 @@ function App() {
       <BrowserRouter>
         <header className="sticky-top">
           <HeaderNew />
-          <Header />
-          {/* <NavbarNew /> */}
+          {/* <Header /> */}
+          <NavbarNew />
         </header>
         <Routes>
           <Route

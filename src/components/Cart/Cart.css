@@ -1,5 +1,6 @@
 .cart-container {
-    height: 55vh;
+    height: auto;
+    overflow-y:auto ;
 }
 .total-container {
     float: right;
