@@ -56,7 +56,7 @@ const HeaderNew = () => {
             <ul className="nav-items">
               {NavItems.map((item) => (
                 <>
-                  <li>
+                  <li className="navbaranimation">
                     <Link to={item.url}>{item.name}</Link>
                   </li>
                 </>
@@ -82,7 +82,7 @@ const HeaderNew = () => {
           </Col>
           <Col lg={3} className="navbar-rhs">
             <ul className="d-flex justify-content-end align-items-center">
-              <li>
+              <li className="bg-transparent navbaranimation">
                 <span className="navbar-currency-sign">R</span>
                 <span>
                   <select name="currency" className="currency-selector">
@@ -98,9 +98,9 @@ const HeaderNew = () => {
                   </select>
                 </span>
               </li>
-              <li>
-                <div className="links-container">
-                  <span>
+              <li className="bg-transparent"  >
+                <div className="links-container ">
+                  <span className="navbaranimation">
                     <Link
                       aria-current="page"
                       to="/home"
@@ -115,7 +115,7 @@ const HeaderNew = () => {
                     </Link>
                   </span>
                   {!isUserLog && (
-                    <span>
+                    <span className="navbaranimation">
                       <Link aria-current="page" to="/home">
                         | Sign Up
                       </Link>
