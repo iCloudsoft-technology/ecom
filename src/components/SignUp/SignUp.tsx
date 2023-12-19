@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers, signUpUser } from "../../app/slice/authSlice";
 import { Navigate } from "react-router";
 import { useNavigate } from "react-router-dom";
+import AlertPopUp from "../AlertPopUp/AlertPopUp";
 const SignUp = (props: any) => {
   const [inputUserFullName, setInputUserFullName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -13,12 +14,14 @@ const SignUp = (props: any) => {
   const [inputNumber, setInputNumber] = useState("");
   const [inputCPassword, setInputCPassword] = useState("");
   const [rememberPolicy, setRememberPolicy] = useState(false);
-  const [show, setShow] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showErroAlert, setShowErrorAlert] = useState(false);
   const [loading, setLoading] = useState(false);
   const dispatch: any = useDispatch();
   const navigate = useNavigate();
 
   const user: any = useSelector((state) => state);
+  console.log("userrr", user.auth.loading);
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     console.log(
@@ -28,7 +31,25 @@ const SignUp = (props: any) => {
       inputCPassword,
       rememberPolicy
     );
-    if (inputPassword === inputCPassword) {
+    if (!rememberPolicy) {
+      setErrorMessage(
+        "Please accept our Terms and Conditions & Privacy Policy."
+      );
+      setShowErrorAlert(true);
+      return;
+    } else if (inputUserFullName.length < 3) {
+      setErrorMessage("The name must be at least 3 characters.");
+      setShowErrorAlert(true);
+      return;
+    } else if (inputPassword.length < 6) {
+      setErrorMessage("The password must be at least 6 characters.");
+      setShowErrorAlert(true);
+      return;
+    } else if (inputPassword !== inputCPassword) {
+      setErrorMessage("The password confirmation does not match.");
+      setShowErrorAlert(true);
+      return;
+    } else {
       await dispatch(
         signUpUser({
           fullName: inputUserFullName,
@@ -39,8 +60,6 @@ const SignUp = (props: any) => {
       );
       await dispatch(getAllUsers());
       props.setSignInClicked(!props.signInClicked);
-    } else {
-      alert("Password and Confirm Password should be same");
     }
     setLoading(false);
   };
@@ -54,6 +73,22 @@ const SignUp = (props: any) => {
       <Col>
         <Form className="logInAreaSP" onSubmit={handleSubmit}>
           <div className="h4 header-area">Sign up Now</div>
+          {user.auth.loading && (
+            <AlertPopUp
+              showAlert={true}
+              setShowAlert={() => {}}
+              variant="primary"
+              message="Authenticating..."
+              dismissible={false}
+            />
+          )}
+          <AlertPopUp
+            showAlert={showErroAlert}
+            setShowAlert={setShowErrorAlert}
+            variant="danger"
+            message={errorMessage}
+            dismissible={true}
+          />
           <Form.Group className="mb-4" controlId="userFullName">
             <InputGroup className="inputGroup">
               <InputGroup.Text className="rounded-0 mx-0 inputIconS">

@@ -13,7 +13,7 @@ import Cart from "./components/Cart/Cart";
 import Category from "./components/Category/Category";
 import React from "react";
 import Silder from "./components/Silder/Silder";
-import CategoryPage from "./pages/Category/CategoryPage";
+
 import Product from "./pages/Product/Product";
 import HeaderNew from "./components/Header-New/HeaderNew";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,6 +21,8 @@ import { getAllUsers } from "./app/slice/authSlice";
 import SignPage from "./components/SignInPage/SignPage";
 import Header from "./components/Header/Header";
 import NavbarNew from "./components/NavbarNew/NavbarNew";
+import PageLoader from "./components/PageLoader/PageLoader";
+import CategoryPage from "./pages/Category/CategoryPage";
 
 function App() {
   const dispatch: any = useDispatch();

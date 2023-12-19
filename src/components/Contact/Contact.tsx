@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Button, Alert, InputGroup, Row, Col } from "react-bootstrap";
 import "./Contact.css";
 import {
@@ -13,6 +13,7 @@ import {
   FaVoicemail,
   FaMailchimp,
 } from "react-icons/fa";
+import PageLoader from "../PageLoader/PageLoader";
 
 const Contact = () => {
   const [inputName, setInputName] = useState("");
@@ -20,6 +21,13 @@ const Contact = () => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputNumber, setInputNumber] = useState("");
   const [selectedOption, setSelectedOption] = React.useState("Please Select");
+  const [showLoader, setShowLoader] = React.useState(false);
+  useEffect(() => {
+    setShowLoader((state) => true);
+    setTimeout(() => {
+      setShowLoader((state) => false);
+    }, 500);
+  }, []);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -36,6 +44,7 @@ const Contact = () => {
 
   return (
     <div>
+      <PageLoader show={showLoader} />
       <Row style={{ width: "90%", margin: "auto", textAlign: "left" }}>
         <h1 className="title">We'd love to hear from you</h1>
         <div className="title2">
