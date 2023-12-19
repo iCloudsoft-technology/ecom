@@ -45,9 +45,9 @@
     padding-left: 10px;
     transition: all 0.5s ease;
 }
-/* .category-menu-inner li:hover{
+.category-menu-inner li:hover{
     background-color: #2866bc;
-} */
+}
 
 .arrow-right{
     margin-left: auto;
@@ -68,6 +68,21 @@
 }
 .categories-mega-menu li{
   font-size: 13px;
+  transition: 0.4s ease;
+
+}
+.categories-mega-menu li h6{
+color: #000;
+border-bottom: 1px solid #f3f3f3;
+padding-left: 10px;
+
+}
+.category-menu-inner ul,
+.categories-mega-menu li ul{
+  padding-left: 0;
+}
+.categories-mega-menu li:hover{
+  background-color: #fff;
   transition: 0.4s ease;
 
 }
