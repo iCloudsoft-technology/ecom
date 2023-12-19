@@ -30,7 +30,7 @@ const SignPage = () => {
       <div className="App">
         <Container className="py-0 p-5">
           <Row className="justify-content-center main">
-            <Col style={{ width: "550px" }}>
+            <Col className="col-8">
               <Button
                 variant="primary"
                 className="rounded-0 mx-0"
