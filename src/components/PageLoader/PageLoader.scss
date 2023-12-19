@@ -4,160 +4,166 @@ $green: #4ecdc4;
 $blue: #312d45;
 $red: #e84855;
 $white: #f3f5f8;
-
-.full-screen-modal {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  left: 0;
-  border: none !important;
-}
-
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: none !important;
-  border-radius: 0.3rem;
-  outline: 0;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 90%;
-  max-width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-
-  // Helper for clip-path, use perc to calculate the clip area
-  @mixin clipPathForCircle($perc) {
-    $path: polygon(
-      50% 50%,
-      percentage(0.5 + $perc) 0,
-      110% 0,
-      110% 110%,
-      0 110%,
-      0 0,
-      percentage(0.5 - $perc) 0
-    );
-    -webkit-clip-path: $path;
-    clip-path: $path;
-  }
-
-  // Helper for clip-path "triangle" shape
-  @mixin clipPathForTriangle($perc) {
-    $path: polygon(percentage(1-$perc) 0, percentage($perc) 0, 50% 50%);
-    -webkit-clip-path: $path;
-    clip-path: $path;
-  }
-
-  // Helper for center element
-  @mixin centerChildren() {
+.page-loader {
+  .full-screen-modal {
+    position: fixed;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    left: 0;
+    border: none !important;
+  }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none !important;
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+
+  .container {
+    display: flex;
     align-items: center;
-  }
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
 
-  @mixin rotateAnimation($starting, $label) {
-    $endDeg: 360 + $starting;
-    @keyframes rotate#{$label} {
-      to {
-        transform: rotate($endDeg + deg);
+    // Helper for clip-path, use perc to calculate the clip area
+    @mixin clipPathForCircle($perc) {
+      $path: polygon(50% 50%,
+          percentage(0.5 + $perc) 0,
+          110% 0,
+          110% 110%,
+          0 110%,
+          0 0,
+          percentage(0.5 - $perc) 0);
+      -webkit-clip-path: $path;
+      clip-path: $path;
+    }
+
+    // Helper for clip-path "triangle" shape
+    @mixin clipPathForTriangle($perc) {
+      $path: polygon(percentage(1-$perc) 0, percentage($perc) 0, 50% 50%);
+      -webkit-clip-path: $path;
+      clip-path: $path;
+    }
+
+    // Helper for center element
+    @mixin centerChildren() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @mixin rotateAnimation($starting, $label) {
+      $endDeg: 360 + $starting;
+
+      @keyframes rotate#{$label} {
+        to {
+          transform: rotate($endDeg + deg);
+        }
       }
     }
-  }
 
-  .type7 {
-    min-width: 33%;
-    @include centerChildren();
-
-    .wrapper {
-      $size: 200px;
-      $ballSize: $size/5;
-      width: $size;
-      height: $size;
+    .type7 {
+      min-width: 33%;
       @include centerChildren();
-      position: relative;
 
-      * {
-        position: absolute;
-        border-radius: 50%;
-        width: $ballSize;
-        height: $ballSize;
-      }
+      .wrapper {
+        $size: 200px;
+        $ballSize: $size/5;
+        width: $size;
+        height: $size;
+        @include centerChildren();
+        position: relative;
 
-      $animation-speed: 1.6;
-      $interval: $animation-speed/4;
+        * {
+          position: absolute;
+          border-radius: 50%;
+          width: $ballSize;
+          height: $ballSize;
+        }
 
-      .ball1 {
-        background-color: #87ceeb;
-        animation: movement $animation-speed + s $interval * 0 + s linear
-          infinite;
-      }
-      .ball2 {
-        background-color: yellow;
-        animation: movement $animation-speed + s $interval * -1 + s linear
-          infinite;
-      }
-      .ball3 {
-        background-color: #87ceeb;
-        animation: movement $animation-speed + s $interval * -2 + s linear
-          infinite;
-      }
-      .ball4 {
-        background-color: yellow;
-        animation: movement $animation-speed + s $interval * -3 + s linear
-          infinite;
-      }
+        $animation-speed: 1.6;
+        $interval: $animation-speed/4;
 
-      @keyframes movement {
-        from {
-          transform: scale(0);
-          left: 0%;
-          z-index: -1;
+        .ball1 {
+          background-color: #87ceeb;
+          animation: movement $animation-speed + s $interval * 0 + s linear infinite;
         }
-        25% {
-          transform: scale(1);
-          left: 0%;
+
+        .ball2 {
+          background-color: yellow;
+          animation: movement $animation-speed + s $interval * -1 + s linear infinite;
         }
-        30% {
-          transform: scale(1);
-          left: 0%;
+
+        .ball3 {
+          background-color: #87ceeb;
+          animation: movement $animation-speed + s $interval * -2 + s linear infinite;
         }
-        50% {
-          transform: scale(1);
-          left: 35%; // Adjusted gap to 10%
+
+        .ball4 {
+          background-color: yellow;
+          animation: movement $animation-speed + s $interval * -3 + s linear infinite;
         }
-        55% {
-          transform: scale(1);
-          left: 35%;
-        }
-        75% {
-          transform: scale(1);
-          left: 70%; // Adjusted gap to 10%
-        }
-        80% {
-          transform: scale(1);
-          left: 70%;
-        }
-        100% {
-          transform: scale(0);
-          left: 100%; // Adjusted gap to 30%
-          z-index: 9;
+
+        @keyframes movement {
+          from {
+            transform: scale(0);
+            left: 0%;
+            z-index: -1;
+          }
+
+          25% {
+            transform: scale(1);
+            left: 0%;
+          }
+
+          30% {
+            transform: scale(1);
+            left: 0%;
+          }
+
+          50% {
+            transform: scale(1);
+            left: 35%; // Adjusted gap to 10%
+          }
+
+          55% {
+            transform: scale(1);
+            left: 35%;
+          }
+
+          75% {
+            transform: scale(1);
+            left: 70%; // Adjusted gap to 10%
+          }
+
+          80% {
+            transform: scale(1);
+            left: 70%;
+          }
+
+          100% {
+            transform: scale(0);
+            left: 100%; // Adjusted gap to 30%
+            z-index: 9;
+          }
         }
       }
     }
-  }
+    }
 }

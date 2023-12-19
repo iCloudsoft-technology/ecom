@@ -63,7 +63,7 @@ const HeaderNew: React.FC = () => {
       </div>
 
       <div className="additional-items">
-        {isUserLog ? (
+        {!isUserLog ? (
           <>
             <div className="login-links">
               <span className="currency-selector">
