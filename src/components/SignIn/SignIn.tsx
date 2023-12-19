@@ -39,7 +39,7 @@ const SignIn = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
-    const allUsers = user.auth.allUsers.find(
+    const allUsers = user.auth.allUsers?.find(
       // const allUsers = [{ email: "abc@123", password: "123" }].filter(
       (item: any) => item.email == inputEmail && item.password == inputPassword
     );
