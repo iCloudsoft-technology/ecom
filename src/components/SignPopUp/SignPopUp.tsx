@@ -15,10 +15,6 @@ const SignPopUp = () => {
   React.useEffect(() => {}, [signInClicked]);
   return (
     <Container>
-      <Button variant="primary" onClick={handleShow}>
-        Open Popup
-      </Button>
-
       <Modal show={show} onHide={handleClose} backdrop="static" centered>
         <Modal.Body>
           <div className="App">

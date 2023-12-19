@@ -8,6 +8,7 @@ import Hero from "../../components/Hero/Hero";
 import ProductCarousel from "../../components/Caraousal/ProductCarousel";
 import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import Silder from "../../components/Silder/Silder";
+import PageLoader from "../../components/PageLoader/PageLoader";
 
 interface Product {
   id: number;
@@ -20,6 +21,13 @@ interface Product {
 
 const Home: React.FC = () => {
   const [productData, setProductData] = useState<Product[]>([]);
+  const [showLoader, setShowLoader] = React.useState(false);
+  useEffect(() => {
+    setShowLoader((state) => true);
+    setTimeout(() => {
+      setShowLoader((state) => false);
+    }, 500);
+  }, []);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -29,6 +37,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <PageLoader show={showLoader} />
       <Hero />
       <ProductCarousel productData={productData} />
       <Silder />
