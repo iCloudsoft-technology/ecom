@@ -78,3 +78,40 @@
 .navmenu-title{
   color: #FFFF00
 }
+.subcategories-megamenu{
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+
+}
+.subcategories-megamenu-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+   
+}
+.subcategories-megamenu-container {
+  text-align: left;
+  width: auto;
+}
+ 
+.subcategories-megamenu-container a{
+  font-weight: 600;
+  padding: 10px 5px;
+  color: #000!important;
+  font-size: 14px;
+ 
+ 
+}
+.subcategories-megamenu-container li{
+  color: grey;
+  padding: 10px 5px;
+  font-size: 13px;
+  
+  
+}
+.subcategories-megamenu-container a:hover,
+li:hover{
+ background-color: #2866bc;
+ color: #FFFF00!important;
+}

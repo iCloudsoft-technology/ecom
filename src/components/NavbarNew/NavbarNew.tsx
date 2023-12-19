@@ -2,18 +2,28 @@ import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import categories from "./categoriesData";
 import { Link } from "react-router-dom";
+import Category from "../Category/Category";
 
 const NavbarNew = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isSubHovered, setIsSubHovered] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
-
+  const [navMenuhovered, setNavMenuhovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
+
+  const handleMouseEnterMainNav = () => {
+    setNavMenuhovered(true);
+  };
+
+  const handleMouseLeaveMainNav = () => {
+    setNavMenuhovered(false);
+  };
+
   const handleMouseEnterSub = (index: number) => {
     setHoveredCategory(index);
-    console.log(isSubHovered);
+    console.log(index);
   };
 
   const handleMouseLeave = () => {
@@ -88,9 +98,43 @@ const NavbarNew = () => {
                 )}
               </div>
             </div>
-            <div>
-              {categories.map((item) => (
-                <span className="ms-4 navmenu-title">{item.name}</span>
+            <div className="d-flex ">
+              {categories.map((item, index) => (
+                <div className="category-megamenu-container">
+                  <Link
+                    to={`/${item.name}`}
+                    onMouseEnter={() => handleMouseEnterSub(index)}
+                  >
+                    <span
+                      className="ms-4 navmenu-title"
+                      onMouseEnter={handleMouseEnterMainNav}
+                    >
+                      {item.name}
+                    </span>
+                  </Link>
+                  {navMenuhovered && (
+                    <div className="subcategories-megamenu">
+                      {item.subcategory.map(
+                        (category) =>
+                          hoveredCategory === index && (
+                            <div
+                              className="subcategories-megamenu-container"
+                              onMouseLeave={handleMouseLeaveMainNav}
+                            >
+                              <Link to={category.heading}>
+                                {category.heading}
+                              </Link>
+                              <p>
+                                {category.items.map((ele) => (
+                                  <li>{ele.name} </li>
+                                ))}
+                              </p>
+                            </div>
+                          )
+                      )}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
