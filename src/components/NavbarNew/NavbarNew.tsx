@@ -113,14 +113,14 @@ const NavbarNew = () => {
                     </span>
                   </Link>
                   {navMenuhovered && (
-                    <div className="subcategories-megamenu">
+                    <div
+                      className="subcategories-megamenu"
+                      onMouseLeave={handleMouseLeaveMainNav}
+                    >
                       {item.subcategory.map(
                         (category) =>
                           hoveredCategory === index && (
-                            <div
-                              className="subcategories-megamenu-container"
-                              onMouseLeave={handleMouseLeaveMainNav}
-                            >
+                            <div className="subcategories-megamenu-container">
                               <Link to={category.heading}>
                                 {category.heading}
                               </Link>

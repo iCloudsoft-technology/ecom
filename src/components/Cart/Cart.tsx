@@ -44,15 +44,11 @@ const Cart = () => {
     const response = EcomDataService.cartPost(cartTotal);
     response
       .then((response) => {
-        console.log(response.data);
-        const data =
-          "redirect:https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-8H03974921699764G";
-        console.log(data.split("redirect:"));
+        console.log("response", response.data);
+        const data = response.data;
         const url = data.substring(9);
         setResponseUrl(url);
-        navigate(url);
-        console.log("Checkout successful");
-        console.log(response);
+        setShowModal(true);
       })
       .catch((err) => {
         console.log(err);
@@ -126,7 +122,12 @@ const Cart = () => {
             <Modal.Title>Checkout Response</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Redirect to: {responseUrl}</p>
+            <iframe
+              title="PayPal Checkout"
+              src={responseUrl}
+              width="100%"
+              height="400px"
+            />
           </Modal.Body>
           <Modal.Footer>
             <button className="btn btn-secondary" onClick={handleCloseModal}>
