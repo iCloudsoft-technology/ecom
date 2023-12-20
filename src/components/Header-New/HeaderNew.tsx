@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from "react";
-import {
-  Col,
-  Container,
-  Dropdown,
-  Form,
-  InputGroup,
-  NavLink,
-  Row,
-} from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { FaSearch } from "react-icons/fa"; // Assuming you have a library for icons, like react-icons
+import "./header-new.css"; // You can create a CSS file for styling
 import { Link, useNavigate } from "react-router-dom";
+import { NavLink } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import { logOutUser, loginUser } from "../../app/slice/authSlice";
 
-const HeaderNew = () => {
+const HeaderNew: React.FC = () => {
   const dispatch: any = useDispatch();
   const user: any = useSelector((state) => state);
   const [isUserLog, setIsUserLog] = useState(false);
   const navigate = useNavigate();
-  React.useEffect(() => {
+
+  useEffect(() => {
     setIsUserLog(user.auth.isUserLog);
   }, [user.auth]);
 
-  const NavItems = [
+  useEffect(() => {
+    setIsUserLog(!!localStorage.getItem("isUserLog"));
+  }, []);
+  const navItems = [
     {
       name: "Home",
       url: "/home",
@@ -36,98 +34,102 @@ const HeaderNew = () => {
     },
   ];
 
-  useEffect(() => {
-    setIsUserLog(!!localStorage.getItem("isUserLog"));
-  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setIsUserLog(false);
+  };
   return (
-    <>
-      <Container fluid>
-        <Row className="header-row">
-          <Col lg={2} className="ps-2 d-flex justify-content-center">
-            <NavLink href="/">
-              <img
-                className="header_logo"
-                src={require("../../Img/Logo.png")}
-                alt="icloudsoft_logo"
-              />
-            </NavLink>
-          </Col>
-          <Col lg={3} className="top-navigation ">
-            <ul className="nav-items">
-              {NavItems.map((item) => (
-                <>
-                  <li className="navbaranimation">
-                    <Link to={item.url}>{item.name}</Link>
-                  </li>
-                </>
-              ))}
-            </ul>
-          </Col>
-          <Col lg={4} className="d-flex w-100">
-            <div className="search-box-category-container">
-              <select className="navbar-dropdown">
-                <option value="all">All</option>
-              </select>
+    <div className="header">
+      <div className="header-logo">
+        <NavLink href="/">
+          <img
+            className="header_logo"
+            src={require("../../Img/Logo.png")}
+            alt="icloudsoft_logo"
+            width="140"
+          />
+        </NavLink>
+      </div>
+
+      <nav className="navigation">
+        {navItems.map((elem) => (
+          <Link to={elem.url}>{elem.name}</Link>
+        ))}
+      </nav>
+
+      <div className="search-bar">
+        <select name="" className="searchbar-select">
+          <option value="all">All</option>
+        </select>
+        <input type="text" placeholder="Search for what you are looking for" />
+        <span className="search-icon">
+          <FaSearch />
+        </span>
+      </div>
+
+      <div className="additional-items">
+        {!isUserLog ? (
+          <>
+            <div className="login-links">
+              <span className="currency-selector">
+                <span>$</span>
+                <select>
+                  <option value="">GBP</option>
+                  <option value="">BDT</option>
+                  <option value="">EUR</option>
+                  <option value="">INR</option>
+                  <option value="">NGN</option>
+                  <option value="" selected>
+                    USD
+                  </option>
+                </select>
+              </span>
+              <span>
+                <Link to="/home">Sign In </Link>
+              </span>
+              <span>
+                <Link to="/home"> | Sign Up</Link>
+              </span>
             </div>
-            <form action="#" className="search-form active d-flex w-100">
-              <input
-                type="text"
-                placeholder="Search for what you are looking for"
-                name="search"
-              />
-              <button type="submit">
-                <i className="fas fa-search text-white"></i>
-              </button>
-            </form>
-          </Col>
-          <Col lg={3} className="navbar-rhs">
-            <ul className="d-flex justify-content-end align-items-center">
-              <li className="bg-transparent navbaranimation">
-                <span className="navbar-currency-sign">R</span>
-                <span>
-                  <select name="currency" className="currency-selector">
-                    <option value="1">GBP</option>
-                    <option value="4">BDT</option>
-                    <option value="6">EUR</option>
-                    <option value="8">INR</option>
-                    <option value="9">NGN</option>
-                    <option value="21">USD</option>
-                    <option value="22" selected>
-                      ZAR
-                    </option>
-                  </select>
-                </span>
-              </li>
-              <li className="bg-transparent"  >
-                <div className="links-container ">
-                  <span className="navbaranimation">
-                    <Link
-                      aria-current="page"
-                      to="/home"
-                      onClick={() => {
-                        isUserLog && localStorage.removeItem("userLog");
-                        isUserLog && localStorage.removeItem("user");
-                        dispatch(logOutUser());
-                        isUserLog && navigate("/home");
-                      }}
-                    >
-                      {!isUserLog ? "Sign In " : "Sign Out"}
-                    </Link>
-                  </span>
-                  {!isUserLog && (
-                    <span className="navbaranimation">
-                      <Link aria-current="page" to="/home">
-                        | Sign Up
-                      </Link>
-                    </span>
-                  )}
-                </div>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-    </>
+          </>
+        ) : (
+          <>
+            <div>
+              <i className="fas fa-street-view"></i>
+              <span className="bubble ">0</span>
+            </div>
+            <div>
+              <span>
+                <i className="fa fa-cogs header-icon"></i>
+              </span>
+              <select name="" id="" className="account-select">
+                <option value="" disabled selected>
+                  Account
+                </option>
+                <option value="">Edit Profile</option>
+                <option value="">Manage Business</option>
+                <option value="">Location Settings</option>
+                <option value="" onClick={handleLogout}>
+                  Logout
+                </option>
+              </select>
+              {/* <span className="account">Account</span>
+              <span>
+                <i className="fas fa-chevron-down header-icon"></i>
+              </span> */}
+            </div>
+            <div>
+              <i className="fa-solid fa-cart-shopping header-icon"></i>
+              <span className="bubble">0</span>
+            </div>
+            <div>
+              <i className="fa-solid fa-heart header-icon"></i>
+              <span className="bubble ">0</span>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 

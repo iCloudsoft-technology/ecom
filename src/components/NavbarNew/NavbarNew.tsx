@@ -77,7 +77,7 @@ const NavbarNew = () => {
                             {hoveredCategory === index && (
                               <div className="categories-mega-menu">
                                 {item.subcategory.map((item) => (
-                                  <li>
+                                  <li className="col-6">
                                     <h6>{item.heading}</h6>
                                     <ul>
                                       {item.items.map((navs) => (

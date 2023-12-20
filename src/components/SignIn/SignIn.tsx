@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Button, Alert, InputGroup } from "react-bootstrap";
+import { Form, Button, Alert, InputGroup, Spinner } from "react-bootstrap";
 import "./SignIn.css";
 import { FaUser, FaKey, FaFacebook, FaGoogle } from "react-icons/fa";
 import EcomDataService from "../../services/api.service";
@@ -7,17 +7,19 @@ import { useNavigate } from "react-router-dom";
 import { getAllUsers, loginUser } from "../../app/slice/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { createKeywordTypeNode } from "typescript";
+import AlertPopUp from "../AlertPopUp/AlertPopUp";
+import PageLoader from "../PageLoader/PageLoader";
 
 const SignIn = () => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const [show, setShow] = useState(false);
+  const [showErroAlert, setShowErrorAlert] = useState(false);
   const [loading, setLoading] = useState(false);
   const [rememberPassword, setRememberPassword] = useState(false);
   const navigate = useNavigate();
   const dispatch: any = useDispatch();
   const user: any = useSelector((state) => state);
-  console.log("user", user.auth);
+  console.log("user", loading);
 
   React.useEffect(() => {
     // for getting user from local storage if user remembered
@@ -36,13 +38,14 @@ const SignIn = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    const allUsers = user.auth.allUsers.find(
+    setLoading(true);
+    const allUsers = user.auth.allUsers?.find(
       // const allUsers = [{ email: "abc@123", password: "123" }].filter(
       (item: any) => item.email == inputEmail && item.password == inputPassword
     );
-    console.log("allUser", allUsers);
     if (!allUsers) {
-      alert("Please enter valied email and password");
+      setShowErrorAlert(true);
+
       return;
     }
     if ((allUsers.length > 0 && rememberPassword, allUsers)) {
@@ -53,6 +56,7 @@ const SignIn = () => {
     localStorage.setItem("userLog", "true");
     allUsers && navigate("/");
     await dispatch(loginUser({ inputEmail, inputPassword, allUsers }));
+    setLoading(false);
   };
 
   const handlePassword = () => {};
@@ -61,6 +65,22 @@ const SignIn = () => {
     <div>
       <Form className="logInArea" onSubmit={handleSubmit}>
         <div className="h4 header-area">Sign in Now</div>
+        {/* {loading && (
+          <AlertPopUp
+            showAlert={true}
+            setShowAlert={() => {}}
+            variant="primary"
+            message="Authenticating..."
+            dismissible={false}
+          />
+        )} */}
+        <AlertPopUp
+          showAlert={showErroAlert}
+          setShowAlert={setShowErrorAlert}
+          variant="danger"
+          message="Credentials do not match !"
+          dismissible={true}
+        />
         <Form.Group className="mb-4" controlId="email">
           <InputGroup className="inputGroup">
             <InputGroup.Text className="rounded-0 mx-0 inputIconS">

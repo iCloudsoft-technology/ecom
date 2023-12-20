@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Form,
   Button,
@@ -11,16 +11,26 @@ import {
 import "./SignPage.css";
 import SignUp from "../SignUp/SignUp";
 import SignIn from "../SignIn/SignIn";
+import SignPopUp from "../SignPopUp/SignPopUp";
+import PageLoader from "../PageLoader/PageLoader";
 
 const SignPage = () => {
   const [signInClicked, setSignInClicked] = React.useState(true);
+  const [showLoader, setShowLoader] = React.useState(false);
+  useEffect(() => {
+    setShowLoader((state) => true);
+    setTimeout(() => {
+      setShowLoader((state) => false);
+    }, 500);
+  }, []);
   React.useEffect(() => {}, [signInClicked]);
   return (
     <div>
+      <PageLoader show={showLoader} />
       <div className="App">
         <Container className="py-0 p-5">
           <Row className="justify-content-center main">
-            <Col className="col-6">
+            <Col className="col-8">
               <Button
                 variant="primary"
                 className="rounded-0 mx-0"
