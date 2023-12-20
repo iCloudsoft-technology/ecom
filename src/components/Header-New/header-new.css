@@ -107,3 +107,14 @@
         margin: 10px 0;
     }
   }
+  .account-select {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 21px;
+    width: 100px;
+  }
+  .account-select option{
+    color: #000;
+    
+  }

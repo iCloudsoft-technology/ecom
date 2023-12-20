@@ -33,6 +33,11 @@ const HeaderNew: React.FC = () => {
       url: "/contact",
     },
   ];
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setIsUserLog(false);
+  };
   return (
     <div className="header">
       <div className="header-logo">
@@ -97,10 +102,21 @@ const HeaderNew: React.FC = () => {
               <span>
                 <i className="fa fa-cogs header-icon"></i>
               </span>
-              <span className="account">Account</span>
+              <select name="" id="" className="account-select">
+                <option value="" disabled selected>
+                  Account
+                </option>
+                <option value="">Edit Profile</option>
+                <option value="">Manage Business</option>
+                <option value="">Location Settings</option>
+                <option value="" onClick={handleLogout}>
+                  Logout
+                </option>
+              </select>
+              {/* <span className="account">Account</span>
               <span>
                 <i className="fas fa-chevron-down header-icon"></i>
-              </span>
+              </span> */}
             </div>
             <div>
               <i className="fa-solid fa-cart-shopping header-icon"></i>
