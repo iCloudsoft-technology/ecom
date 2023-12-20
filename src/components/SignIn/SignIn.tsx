@@ -39,22 +39,20 @@ const SignIn = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
-    const allUsers = user.auth.allUsers?.find(
+    const allUsers = user.auth.allUsers?.filter(
       // const allUsers = [{ email: "abc@123", password: "123" }].filter(
       (item: any) => item.email == inputEmail && item.password == inputPassword
     );
-    if (!allUsers) {
+    if (!allUsers.length) {
       setShowErrorAlert(true);
-
       return;
     }
-    if ((allUsers.length > 0 && rememberPassword, allUsers)) {
+    if (allUsers.length > 0 && rememberPassword) {
       localStorage.setItem("ecomEmail", inputEmail);
       localStorage.setItem("ecomPassword", inputPassword);
     }
     allUsers && localStorage.setItem("user", JSON.stringify(allUsers));
     localStorage.setItem("userLog", "true");
-    allUsers && navigate("/");
     await dispatch(loginUser({ inputEmail, inputPassword, allUsers }));
     setLoading(false);
   };

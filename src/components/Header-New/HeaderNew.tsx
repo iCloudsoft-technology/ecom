@@ -34,9 +34,14 @@ const HeaderNew: React.FC = () => {
     },
   ];
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    setIsUserLog(false);
+  const handleSelectChange = (e: any) => {
+    if (e.target.value == "logout") {
+      localStorage.removeItem("user");
+      localStorage.removeItem("userLog");
+      dispatch(logOutUser());
+      navigate("/home");
+      setIsUserLog(false);
+    }
   };
   return (
     <div className="header">
@@ -102,16 +107,19 @@ const HeaderNew: React.FC = () => {
               <span>
                 <i className="fa fa-cogs header-icon"></i>
               </span>
-              <select name="" id="" className="account-select">
+              <select
+                name=""
+                id=""
+                className="account-select"
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected>
                   Account
                 </option>
-                <option value="">Edit Profile</option>
-                <option value="">Manage Business</option>
-                <option value="">Location Settings</option>
-                <option value="" onClick={handleLogout}>
-                  Logout
-                </option>
+                <option value="editProfile">Edit Profile</option>
+                <option value="manageBusiness">Manage Business</option>
+                <option value="locationSettings">Location Settings</option>
+                <option value="logout">Logout</option>
               </select>
               {/* <span className="account">Account</span>
               <span>

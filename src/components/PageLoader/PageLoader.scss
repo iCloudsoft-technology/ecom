@@ -86,7 +86,7 @@ $white: #f3f5f8;
 
     .wrapper {
       $size: 200px;
-      $ballSize: $size/5;
+      $ballSize: $size/6;
       width: $size;
       height: $size;
       @include centerChildren();

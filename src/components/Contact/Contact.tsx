@@ -83,7 +83,7 @@ const Contact = () => {
                   <FaUser />
                 </InputGroup.Text>
                 <Form.Control
-                  className="rounded-0 mx-0 inputBox"
+                  className="rounded-0 mx-0 inputBoxContact"
                   type="text"
                   value={inputName}
                   placeholder="Name *"
@@ -98,7 +98,7 @@ const Contact = () => {
                   <FaPhone />
                 </InputGroup.Text>
                 <Form.Control
-                  className="rounded-0 mx-0 inputBox"
+                  className="rounded-0 mx-0 inputBoxContact"
                   type="number"
                   value={inputNumber}
                   placeholder="Phone Number *"
@@ -113,7 +113,7 @@ const Contact = () => {
                   <FaUser />
                 </InputGroup.Text>
                 <Form.Control
-                  className="rounded-0 mx-0 inputBox"
+                  className="rounded-0 mx-0 inputBoxContact"
                   type="email"
                   value={inputEmail}
                   placeholder="Email Address *"
@@ -152,7 +152,9 @@ const Contact = () => {
         <Col>
           <Row className="ContactI">
             <div className="d-flex" style={{ height: "90px" }}>
-              <div className="emailIcon">@</div>
+              <div className="emailIcon">
+                <i className="fa-solid fa-envelope text-white fs-3"></i>
+              </div>
               <div>
                 <div>
                   <strong className="email">Email: </strong>
@@ -165,7 +167,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="d-flex" style={{ height: "90px" }}>
-              <div className="emailIcon">@</div>
+              <div className="emailIcon">
+                <i className="fa-solid fa-envelope text-white fs-3"></i>
+              </div>
               <div>
                 <div>
                   <strong className="email">Adverts(For ads inquiries):</strong>
