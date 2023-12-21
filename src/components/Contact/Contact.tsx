@@ -14,6 +14,7 @@ import {
   FaMailchimp,
 } from "react-icons/fa";
 import PageLoader from "../PageLoader/PageLoader";
+import StepForm from "../StepForm/stepForm";
 
 const Contact = () => {
   const [inputName, setInputName] = useState("");

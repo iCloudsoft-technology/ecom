@@ -23,6 +23,7 @@ import Header from "./components/Header/Header";
 import NavbarNew from "./components/NavbarNew/NavbarNew";
 import PageLoader from "./components/PageLoader/PageLoader";
 import CategoryPage from "./pages/Category/CategoryPage";
+import StepForm from "./components/StepForm/stepForm";
 
 function App() {
   const dispatch: any = useDispatch();
@@ -136,6 +137,14 @@ function App() {
             element={
               <>
                 <Silder />
+              </>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <>
+                <StepForm />
               </>
             }
           />
