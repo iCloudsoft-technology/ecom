@@ -144,3 +144,9 @@ li:hover{
  background-color: #2866bc;
  color: #FFFF00!important;
 }
+
+@media screen and (min-width:1366px) {
+  .main-nav-container{
+    width: 75%;
+  }
+}
