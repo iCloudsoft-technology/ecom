@@ -4,7 +4,9 @@ import { Form, Button, Modal } from "react-bootstrap";
 import { FaAddressBook } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import SignPopUp from "../SignPopUp/SignPopUp";
-
+import { Link } from "react-router-dom";
+import "./stepForm.css";
+import EcomDataService from "../../services/api.service";
 interface Product {
   id: number;
   title: string;
@@ -19,11 +21,24 @@ const StepForm = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [step, setStep] = useState(1);
   const user: any = useSelector((state) => state);
-
+  const [cartTotal, setCartTotal] = useState<number>(0);
+  const [responseUrl, setResponseUrl] = useState<string>("");
   useEffect(() => {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartItems(existingCart);
+    calculateTotal(existingCart);
   }, []);
+
+  const calculateTotal = (items: Product[]) => {
+    let total = 0;
+    for (const cartItem of items) {
+      const count = cartItem.count;
+      const price = cartItem.price;
+      total += count * price;
+    }
+    setCartTotal(total);
+  };
+
   const handleCheckboxChange = () => {
     setShipToDifferentAddress(!shipToDifferentAddress);
   };
@@ -31,7 +46,23 @@ const StepForm = () => {
   const handleShowModal = () => {
     setShowModal(!showModal);
   };
-
+  const handleCheckout = async () => {
+    const response = EcomDataService.cartPost(cartTotal);
+    response
+      .then((response) => {
+        console.log("response", response.data);
+        const data = response.data;
+        const url = data.substring(9);
+        setResponseUrl(url);
+        setShowModal(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <>
       {!!user.auth.isUserLog || true ? (
@@ -146,9 +177,7 @@ const StepForm = () => {
                     <div>2</div>
                     <div>Order</div>
                     <div>
-                      <FaAddressBook
-                        style={{ color: "white", fontSize: "1.5em" }}
-                      />
+                      <i className="fas fa-dolly text-white fs-3"></i>
                     </div>
                   </div>
                   <div
@@ -199,9 +228,7 @@ const StepForm = () => {
                     <div>3</div>
                     <div>Payment</div>
                     <div>
-                      <FaAddressBook
-                        style={{ color: "white", fontSize: "1.5em" }}
-                      />
+                      <i className="far fa-credit-card text-white fs-3"></i>
                     </div>
                   </div>
                   <div
@@ -841,6 +868,7 @@ const StepForm = () => {
                   width: "65vw",
                   flex: "none",
                 }}
+                md={9}
               >
                 <div
                   style={{
@@ -1123,7 +1151,7 @@ const StepForm = () => {
                     <Button
                       variant="primary"
                       type="submit"
-                      onClick={() => alert("add checkout API")}
+                      onClick={handleCheckout}
                       style={{
                         backgroundColor: "#558ed5",
                         height: "35px",
@@ -1138,8 +1166,57 @@ const StepForm = () => {
                 </Row>
               </Col>
             )}
-            <Col>22</Col>
+            <Col md={3}>
+              <div className="col-md-12">
+                <div className="order-box">
+                  <h4 className="step-form-price-details">Price Details</h4>
+                  <p className="price-row">
+                    <span>Total Mrp</span>
+                    <span>{cartTotal}</span>
+                  </p>
+                  <p className="price-row">
+                    <span>Discount</span>
+                    <span>0</span>
+                  </p>
+                  <p className="price-row">
+                    <span>Tax</span>
+                    <span>0%</span>
+                  </p>
+                  <hr />
+                  <p className="price-row">
+                    <span>Total</span>
+                    <span>{cartTotal}</span>
+                  </p>
+
+                  <Link
+                    to="/checkout"
+                    className="checkout"
+                    onClick={handleCheckout}
+                  >
+                    Place Order
+                  </Link>
+                </div>
+              </div>
+            </Col>
           </Row>
+          <Modal show={showModal} onHide={handleCloseModal}>
+            <Modal.Header closeButton>
+              <Modal.Title>Checkout Response</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <iframe
+                title="PayPal Checkout"
+                src={responseUrl}
+                width="100%"
+                height="400px"
+              />
+            </Modal.Body>
+            <Modal.Footer>
+              <button className="btn btn-secondary" onClick={handleCloseModal}>
+                Close
+              </button>
+            </Modal.Footer>
+          </Modal>
         </div>
       ) : (
         <SignPopUp />

@@ -24,6 +24,7 @@ import NavbarNew from "./components/NavbarNew/NavbarNew";
 import PageLoader from "./components/PageLoader/PageLoader";
 import CategoryPage from "./pages/Category/CategoryPage";
 import StepForm from "./components/StepForm/stepForm";
+import MultiStepForm from "./components/MultiStepForm/Multistepform";
 
 function App() {
   const dispatch: any = useDispatch();
@@ -145,6 +146,7 @@ function App() {
             element={
               <>
                 <StepForm />
+                {/* <MultiStepForm /> */}
               </>
             }
           />

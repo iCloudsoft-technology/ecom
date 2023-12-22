@@ -6,37 +6,37 @@ import Category from "../Category/Category";
 
 const NavbarNew = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isSubHovered, setIsSubHovered] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
   const [navMenuhovered, setNavMenuhovered] = useState(false);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   const handleMouseEnterMainNav = () => {
     setNavMenuhovered(true);
   };
 
-  const handleMouseLeaveMainNav = () => {
-    setNavMenuhovered(false);
-  };
-
   const handleMouseEnterSub = (index: number) => {
     setHoveredCategory(index);
-    console.log(index);
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   const handleMouseLeaveSub = () => {
+    setNavMenuhovered(false);
     setHoveredCategory(null);
+    console.log("navMenuhovered", navMenuhovered);
   };
+
   return (
     <>
       <div className="navbar-container">
         <div className="container-fluid ">
-          <div className=" d-flex flex-row align-items-center">
+          <div className="navmenu-container">
+            {/* categories menu starts here */}
             <div className="categories-menu-wrapper">
               <div
                 className="categories-menu"
@@ -98,24 +98,26 @@ const NavbarNew = () => {
                 )}
               </div>
             </div>
-            <div className="d-flex ">
+            {/* categories menu ends here */}
+
+            {/* main navigation menu starts here */}
+            <div className="main-nav-container">
               {categories.map((item, index) => (
-                <div className="category-megamenu-container">
+                <div
+                  className="category-megamenu-container"
+                  onMouseEnter={handleMouseEnterMainNav}
+                >
                   <Link
                     to={`/${item.name}`}
                     onMouseEnter={() => handleMouseEnterSub(index)}
                   >
-                    <span
-                      className="ms-4 navmenu-title"
-                      onMouseEnter={handleMouseEnterMainNav}
-                    >
-                      {item.name}
-                    </span>
+                    <span className="ms-4 navmenu-title">{item.name}</span>
+                    <i className="fa-solid fa-caret-down caret-icon"></i>
                   </Link>
                   {navMenuhovered && (
                     <div
                       className="subcategories-megamenu"
-                      onMouseLeave={handleMouseLeaveMainNav}
+                      onMouseLeave={handleMouseLeaveSub}
                     >
                       {item.subcategory.map(
                         (category) =>
@@ -124,11 +126,12 @@ const NavbarNew = () => {
                               <Link to={category.heading}>
                                 {category.heading}
                               </Link>
-                              <p>
+
+                              <>
                                 {category.items.map((ele) => (
                                   <li>{ele.name} </li>
                                 ))}
-                              </p>
+                              </>
                             </div>
                           )
                       )}
@@ -137,6 +140,7 @@ const NavbarNew = () => {
                 </div>
               ))}
             </div>
+            {/* main navigation menu ends here */}
           </div>
         </div>
       </div>

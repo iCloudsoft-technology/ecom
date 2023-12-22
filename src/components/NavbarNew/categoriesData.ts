@@ -304,7 +304,7 @@ const categories = [
     {
         name: "Fashion Style",
         url: "/fashionstyle",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664458008mo-idris-eki4C4t1fnk-unsplash-modified_33_1_501.png",
         subcategory: [
             {
                 heading: "Accessories",
@@ -636,7 +636,7 @@ const categories = [
     {
         name: "Art Crafts",
         url: "/artcrafts",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664457706martino-pietropoli-VSo5d9wlT7s-unsplash-modified_33_2_55.png",
         subcategory: [
             {
                 heading: "Art Crafts",
@@ -686,7 +686,7 @@ const categories = [
     {
         name: "Cell Phones Tablets",
         url: "/cellphonestablets",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456374xiong-yan-lwaw_DL09S4-unsplash-modified_33_20.png",
         subcategory: [
             {
                 heading: "Cell Phones Tablets",
@@ -716,7 +716,7 @@ const categories = [
     {
         name: "Gadgets",
         url: "/gadgets",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456345jason-blackeye-IBLo7-N4z94-unsplash-modified_1_35_20.png",
         subcategory: [
             {
                 heading: "Gadgets",
@@ -750,7 +750,7 @@ const categories = [
     {
         name: "Jewelry & Watches",
         url: "/jewelrywatches",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664457207harper-sunday-O1DhTK0_1iQ-unsplash-modified_1_20_2_40.png",
         subcategory: [
             {
                 heading: "Body Jewelry",
@@ -848,7 +848,7 @@ const categories = [
     {
         name: "Health",
         url: "/health",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456073alex-lvrs-sBDJADrnsbY-unsplash_35_20.png",
         subcategory: [
             {
                 heading: "Health",
@@ -897,7 +897,7 @@ const categories = [
     {
         name: "Sports & Training",
         url: "/sportstraining",
-        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456483ashkan-forouzani-4Zlk5Sgy-_E-unsplash_50_1_20.png",
+        img: "https://phpstack-1183211-4155182.cloudwaysapps.com/assets/images/categories/1664456052justin-ng-322116-modified_33_20.png",
         subcategory: [
             {
                 heading: "Sports & Leisure Items",

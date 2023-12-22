@@ -1,8 +1,10 @@
 import React from "react";
-import { Carousel, Card, Row, Col } from "react-bootstrap";
-import "./productCarousel.css";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./SlickProductSlider.css";
+import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -17,7 +19,9 @@ interface ProductCarouselProps {
   productData: Product[];
 }
 
-const ProductCarousel: React.FC<ProductCarouselProps> = ({ productData }) => {
+const SlickProductSlider: React.FC<ProductCarouselProps> = ({
+  productData,
+}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -27,14 +31,15 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ productData }) => {
     autoplay: true,
     autoplaySpeed: 5000,
     rows: 2,
+    pauseOnHover: true,
   };
 
   return (
-    <Slider {...settings} className="product-carousel">
+    <Slider {...settings}>
       {productData.map((product) => (
-        <Col key={product.id} className="mb-4 product-card-container">
+        <Col key={product.id} className="mb-4 product-card">
           <Link to={`/product/${product.id}`}>
-            <Card className="product-card pt-3">
+            <Card className="carousel-card m-1 pt-3">
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Text className="product-price">
@@ -50,4 +55,4 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ productData }) => {
   );
 };
 
-export default ProductCarousel;
+export default SlickProductSlider;

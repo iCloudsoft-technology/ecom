@@ -2,8 +2,19 @@
   background-color: #558ed5;
   padding: 0 10px;
 }
+.navmenu-container{
+  display: flex;
+  align-items: center;
+ 
+}
+.main-nav-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  flex-basis: auto;
+}
 .categories-menu-wrapper {
-  width: 15%;
+  width: 14%;
 }
 .categories-title {
   padding: 10px;
@@ -52,7 +63,11 @@
 .arrow-right{
     margin-left: auto;
 }
-
+.caret-icon{
+  color: #FFFF00;
+  margin-left: 5px;
+  font-size: 12px;
+}
 .categories-mega-menu {
     width: 480px;
     position: absolute;
@@ -97,22 +112,21 @@ padding-left: 10px;
   position: absolute;
   background-color: #fff;
   display: flex;
+  top: 117px
 
 }
 .subcategories-megamenu-container{
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
-   
-}
-.subcategories-megamenu-container {
   text-align: left;
+  padding: 10px 0;
   width: auto;
+   
 }
  
 .subcategories-megamenu-container a{
   font-weight: 600;
-  padding: 10px 5px;
+  padding: 10px 15px;
   color: #000!important;
   font-size: 14px;
  
@@ -120,9 +134,9 @@ padding-left: 10px;
 }
 .subcategories-megamenu-container li{
   color: grey;
-  padding: 10px 5px;
+  padding: 10px 15px;
   font-size: 13px;
-  
+  border-bottom: 1px solid #f2f2f2;
   
 }
 .subcategories-megamenu-container a:hover,

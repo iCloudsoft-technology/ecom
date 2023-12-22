@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { Col, Container, Modal, Row } from "react-bootstrap";
 import axios from "axios";
-import { NavigationType, redirect } from "react-router-dom";
+import { Link, NavigationType, redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import EcomDataService from "./../../services/api.service";
 
@@ -59,82 +59,79 @@ const Cart = () => {
   };
   return (
     <>
-      <Container className="bg-light mt-5 p-4 cart-container">
-        <h2>Cart</h2>
+      <Container fluid className="mt-5">
+        <div className="row">
+          <div className="col-md-9">
+            <table width="100%">
+              <thead className="table-head">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Details</th>
+                  <th>Unit Price</th>
+                  <th>Coupon</th>
+                  <th>Sub Total </th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems.map((item) => (
+                  <tr className="product-row">
+                    <td className="p-3">
+                      <div className="item">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          width="100"
+                          height="auto"
+                        />
+                        <p>{item.title}</p>
+                      </div>
+                    </td>
+                    <td>Sold By: Riviera@Montecasino</td>
+                    <td>$ {item.price}</td>
+                    <td>
+                      <input type="text" className="coupoun-form" />
+                      <input
+                        type="button"
+                        value="Apply"
+                        className="apply-button"
+                      />
+                    </td>
+                    <td>$ {item.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-        <div className="row d-flex align-items-center mb-2 bg-white">
-          <div className="col-md-2">
-            <h3>Image</h3>
-          </div>
-          <div className="col-md-4">
-            <h3>Title</h3>
-          </div>
-          <div className="col-md-2">
-            <h3>Price</h3>
-          </div>
           <div className="col-md-3">
-            <h3>Quantity</h3>
+            <div className="order-box">
+              <h4 className="text-left">Price Details</h4>
+              <p className="price-row">
+                <span>Total Mrp</span>
+                <span>${Math.round(cartTotal)}</span>
+              </p>
+              <p className="price-row">
+                <span>Discount</span>
+                <span>0</span>
+              </p>
+              <p className="price-row">
+                <span>Tax</span>
+                <span>0%</span>
+              </p>
+              <hr />
+              <p className="price-row">
+                <span>Total</span>
+                <span>${Math.round(cartTotal)}</span>
+              </p>
+
+              <Link to="/checkout" className="checkout">
+                Place Order
+              </Link>
+            </div>
           </div>
         </div>
-        {cartItems.map((product) => (
-          <div className="row d-flex align-items-center mb-2 bg-white">
-            <div className="col-md-2">
-              <h5 className="text-center">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  width="50"
-                  height="50"
-                />
-              </h5>
-            </div>
-            <div className="col-md-4">
-              <h5 className="text-left">{product.title}</h5>
-            </div>
-
-            <div className="col-md-2">
-              <h5 className="text-center">$ {product.price} </h5>
-            </div>
-            <div className="col-md-3 d-flex justify-content-center">
-              <button className="btn btn-primary">-</button>
-              <input
-                type="text"
-                value={product.count}
-                className="form-control text-center w-25 ms-2 me-2"
-              />
-              <button className="btn btn-primary">+</button>
-            </div>
-          </div>
-        ))}
-        <div className="total-container">
-          <h3>Total - ${Math.round(cartTotal)}</h3>
-          <button
-            className="btn btn-success checkout-button"
-            onClick={handleCheckout}
-          >
-            Checkout
-          </button>
-        </div>
-
-        {/* Modal to display the response URL */}
-        <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Checkout Response</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <iframe
-              title="PayPal Checkout"
-              src={responseUrl}
-              width="100%"
-              height="400px"
-            />
-          </Modal.Body>
-          <Modal.Footer>
-            <button className="btn btn-secondary" onClick={handleCloseModal}>
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
       </Container>
     </>
   );

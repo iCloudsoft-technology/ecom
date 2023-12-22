@@ -13,7 +13,7 @@ const Hero = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center center ",
-            height: "47vh",
+            height: "330px",
           }}
         >
           <div className="position-absolute top-50 start-50 translate-middle text-center ROBOTOfontFamily">
