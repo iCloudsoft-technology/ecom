@@ -46,7 +46,7 @@ const StepForm = () => {
             {step == 1 && (
               <Col
                 style={{
-                  border: "1px solid grey",
+                  border: "1px solid #e9ecef",
                   paddingLeft: "15px",
                   paddingRight: "15px",
                   width: "65vw",
@@ -66,7 +66,7 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "20px",
-                      backgroundColor: "blue",
+                      backgroundColor: "#2866bc",
                     }}
                   >
                     <div
@@ -83,7 +83,7 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "180px",
-                      backgroundColor: "blue",
+                      backgroundColor: "#2866bc",
                       display: "flex",
                       justifyContent: "space-around",
                       alignItems: "center",
@@ -111,7 +111,7 @@ const StepForm = () => {
                         height: 0,
                         borderTop: "35px solid transparent",
                         borderBottom: "35px solid transparent",
-                        borderLeft: "20px solid blue", // Change borderRight to borderLeft
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
                       }}
                     ></div>
                   </div>
@@ -119,7 +119,7 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "20px",
-                      backgroundColor: "blue",
+                      backgroundColor: "#e9ecef",
                     }}
                   >
                     <div
@@ -136,11 +136,21 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "180px",
-                      backgroundColor: "blue",
-                      clipPath:
-                        "polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 50%)",
+                      backgroundColor: "#e9ecef",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
                     }}
-                  ></div>
+                  >
+                    <div>2</div>
+                    <div>Order</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
                   <div
                     style={{
                       height: "70px",
@@ -154,7 +164,7 @@ const StepForm = () => {
                         height: 0,
                         borderTop: "35px solid transparent",
                         borderBottom: "35px solid transparent",
-                        borderLeft: "20px solid blue", // Change borderRight to borderLeft
+                        borderLeft: "20px solid #e9ecef", // Change borderRight to borderLeft
                       }}
                     ></div>
                   </div>
@@ -162,7 +172,7 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "20px",
-                      backgroundColor: "blue",
+                      backgroundColor: "#e9ecef",
                     }}
                   >
                     <div
@@ -179,11 +189,21 @@ const StepForm = () => {
                     style={{
                       height: "70px",
                       width: "180px",
-                      backgroundColor: "blue",
-                      clipPath:
-                        "polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 50%)",
+                      backgroundColor: "#e9ecef",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
                     }}
-                  ></div>
+                  >
+                    <div>3</div>
+                    <div>Payment</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
                   <div
                     style={{
                       height: "70px",
@@ -197,7 +217,7 @@ const StepForm = () => {
                         height: 0,
                         borderTop: "35px solid transparent",
                         borderBottom: "35px solid transparent",
-                        borderLeft: "20px solid blue", // Change borderRight to borderLeft
+                        borderLeft: "20px solid #e9ecef", // Change borderRight to borderLeft
                       }}
                     ></div>
                   </div>
@@ -568,12 +588,180 @@ const StepForm = () => {
             {step == 2 && (
               <Col
                 style={{
-                  border: "1px solid grey",
+                  border: "1px solid #e9ecef",
                   padding: "20px",
                   width: "65vw",
                   flex: "none",
                 }}
               >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#2866bc",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#2866bc",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>1</div>
+                    <div>Address</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#2866bc",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#2866bc",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>2</div>
+                    <div>Order</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#e9ecef",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#e9ecef",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>3</div>
+                    <div>Payment</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #e9ecef", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                </div>
                 <Row>
                   {cartItems.map((product) => (
                     <div className="row d-flex align-items-center mb-2 bg-white">
@@ -648,12 +836,180 @@ const StepForm = () => {
             {step == 3 && (
               <Col
                 style={{
-                  border: "1px solid grey",
+                  border: "1px solid #e9ecef",
                   padding: "20px",
                   width: "65vw",
                   flex: "none",
                 }}
               >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#2866bc",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#2866bc",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>1</div>
+                    <div>Address</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#2866bc",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#2866bc",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>2</div>
+                    <div>Order</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "#2866bc",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid white", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "180px",
+                      backgroundColor: "#2866bc",
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div>3</div>
+                    <div>Payment</div>
+                    <div>
+                      <FaAddressBook
+                        style={{ color: "white", fontSize: "1.5em" }}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      height: "70px",
+                      width: "20px",
+                      backgroundColor: "white",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: 0,
+                        height: 0,
+                        borderTop: "35px solid transparent",
+                        borderBottom: "35px solid transparent",
+                        borderLeft: "20px solid #2866bc", // Change borderRight to borderLeft
+                      }}
+                    ></div>
+                  </div>
+                </div>
                 <Row
                   style={{
                     marginLeft: "0px",
